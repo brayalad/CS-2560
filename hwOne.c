@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main() {
-   printf("Hello, my name is Bryan Ayala\n");
+   printf("Goodbye, I finished my CS 256 HW1\n");
    return 0;
 }
