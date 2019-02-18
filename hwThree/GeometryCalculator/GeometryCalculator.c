@@ -15,7 +15,7 @@ static double pi = 3.14159;
 void areaOfCircle(int radius){
 
 	 printf("\nRadius: %d\nArea of Circle: %f\n\n",radius, (pi * (radius * radius)));
-	 
+
 }
 
 void areaOfRectangle(int length, int width){
@@ -27,7 +27,7 @@ void areaOfRectangle(int length, int width){
 void areaOfTriangle(int base, int height){
 
 	printf("\nBase: %d\nHeight: %d\nArea of Triangle: %d\n\n", base, height, ((base * height) / 2));
-	
+
 }
 
 void printMenu(){
@@ -44,7 +44,7 @@ void printMenu(){
 void runProgram(){
 
 	bool runProgram = true;
-	
+
 	int userInput;
 	int radius;
 	int length;
@@ -59,7 +59,7 @@ void runProgram(){
 		scanf("%d",&userInput);
 
 		if(userInput == 1){
-			
+
 			printf("\nEnter radius: ");
 			scanf("%d", &radius);
 
@@ -82,25 +82,25 @@ void runProgram(){
 			else
 			printf("Length and width must both be positive.\n"
 					"Please try again\n\n");
-			
+
 		}
 		else if(userInput == 3){
 
 			printf("\nEnter base: ");
 			scanf("%d", &base);
-			printf("\nEnter heigth: ");
+			printf("\nEnter heigt: ");
 			scanf("%d", &height);
 
 			if(base >  0 && height > 0)
 				areaOfTriangle(base, height);
-			else 
+			else
 				printf("Base and height must both be positive.\n"
 					   "Please try again\n\n");
 		}
 		else if(userInput == 4){
 			printf("\nThank your for using this program\n");
 			exit(0);
-		} 
+		}
 		else{
 			printf("\nInput not valid.\n"
 				   "Please choose a valid menu option.\n\n");
@@ -115,3 +115,5 @@ int main(){
 
 	return 0;
 }
+
+

@@ -60,7 +60,7 @@ void printGrid(){
 			printf("Row %d   ", (i+1));
 		else
 			printf("Row %d    ", (i+1));
-		for(int j=0; j<amountOfRows; ++j)
+		for(int j=0; j<amountOfColumns; ++j)
 			printf("%c ", theaterSeats[i][j]);
 		printf("\n");
 	}

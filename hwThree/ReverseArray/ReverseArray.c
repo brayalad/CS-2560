@@ -45,7 +45,7 @@ int main(){
 		scanf("%d", &ARRAY_SIZE);
 
 		if(ARRAY_SIZE <= 0)
-			printf("\nSize must be greater than 0.\nPlease try gain\n\n");
+			printf("\nSize must be greater than 0.\nPlease try gain.x\n\n");
 
 	}while(ARRAY_SIZE <= 0);
 

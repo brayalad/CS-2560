@@ -22,7 +22,7 @@ void initializeBoard(){
 
 void printBoard(){
 
-	printf("\n   1   2   3\n");
+	printf("\n    1   2   3\n");
 	printf("  -----------\n");
 	for(int i=0; i<3; ++i){
 
