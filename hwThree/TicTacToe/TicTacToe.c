@@ -1,17 +1,37 @@
 /*
- * TicTacToe.c
- *
- *  Created on: Feb 16, 2019
- *      Author: BRYAN
+	TicTacToe.c
+	
+	Write a program that allows two players to play a game of tic-tac-toe. Use a two-
+	dimensional char arry with three rows and three columns as the game board. Each
+	element of array should be initialzed with an asterisk(*). The program should run a
+	loop that does the following:
+		* Displays the contents of the board array.
+		* Allows player 1 to select a location on the board for an X. The program should ask
+		  the user to enter the row and column numbers.
+		* Allows player 2 to select a location on the board for an O. The program should ask
+		  the user to enter the row and column numbers.
+		* Determines whether a player has won, or a tie has occurred. If a player has won,
+		  the prgram should declare the player the winner and end. If a tie has occurred, the 
+		  program should display an appropriate message and end.
+	Player 1 wins when there are three Xs in a row on the game board. The Xs can appear in a 
+	row, in a column, or a diagonally across the board. Player 2 wins when there are three Os in
+	a row on the game board. The Os can appear in a row, in a column, or diagnolly across 
+	the board. A tie occurs when all of the location on the board are full, but there is no winner.
+
+	Created on: Feb 16, 2019
+		Author: bryanayala
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
+/*Two-dimentional array to represent the game board*/
 char gameBoard [3][3];
 
-
+/*
+	Initializes the board with asteriks (*)
+*/
 void initializeBoard(){
 
 	for(int i=0; i<3; ++i)
@@ -20,6 +40,10 @@ void initializeBoard(){
 
 }
 
+/*
+	Prints the two-dimentional array representing the 
+	game board to the console
+*/
 void printBoard(){
 
 	printf("\n    1   2   3\n");
@@ -39,6 +63,9 @@ void printBoard(){
 
 }
 
+/*
+	Checks for an error in user input and informs the user of solutions
+*/
 void checkInputError(int row, int column){
 
 	printf("\nInvalid input detected.\n");
@@ -56,6 +83,11 @@ void checkInputError(int row, int column){
 	printBoard();
 }
 
+/*
+	Function that allows player 1 to take their turn in the game.
+	Player 1 inputs both the row and column they wish to take their 
+	turn on and adds an X
+*/
 void playerOne(){
 
 	int playerOneRow;
@@ -72,6 +104,7 @@ void playerOne(){
 	playerOneRow--;
 	playerOneColumn--;
 
+	/*Checks if all user input is valid*/
 	if(playerOneRow >= 0 && playerOneRow <= 2 && playerOneColumn >=0 && playerOneColumn <= 2){
 		if(gameBoard[playerOneRow][playerOneColumn] == '*'){
 			gameBoard[playerOneRow][playerOneColumn] = 'X';
@@ -87,6 +120,11 @@ void playerOne(){
 	}
 }
 
+/*
+	Function that allows player 2 to take their turn in the game.
+	Player 2 inputs both the row and column they wish to take their 
+	turn on and adds an O
+*/
 void playerTwo(){
 
 	int playerTwoRow;
@@ -103,6 +141,7 @@ void playerTwo(){
 	playerTwoRow--;
 	playerTwoColumn--;
 
+	/*Checks if all user input is valid*/
 	if(playerTwoRow >= 0 && playerTwoRow <= 2 && playerTwoColumn >=0 && playerTwoColumn <= 2){
 		if(gameBoard[playerTwoRow][playerTwoColumn] == '*'){
 			gameBoard[playerTwoRow][playerTwoColumn] = 'O';
@@ -118,6 +157,9 @@ void playerTwo(){
 	}
 }
 
+/*
+	Function checks after every turn if a player has won or if their is a tie
+*/
 void checkGameOver(){
 
 	/* Checks if Player One Won */
@@ -187,6 +229,8 @@ void checkGameOver(){
 		printf("\nGAME OVER\nPLAYER TWO WINS\n");
 		exit(0);
 	}
+
+	/*Checks for a tie*/
 	else{
 		bool tie = true;
 		for(int i=0; i<3; ++i)
@@ -201,7 +245,13 @@ void checkGameOver(){
 
 }
 
-
+/*
+	Main function of the program. This is the begining point
+	of the program. The main function uses a while loop that 
+	that runs after the board is initialized. The loop allows 
+	both users to take their respective turns and check if the 
+	game is over after every player's turn is taken
+*/
 int main(){
 
 	initializeBoard();

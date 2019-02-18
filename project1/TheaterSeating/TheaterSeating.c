@@ -1,8 +1,51 @@
 /*
- * TheaterSeating.c
- *
- *  Created on: Feb 17, 2019
- *      Author: BRYAN
+	TheaterSeating.c
+	
+	Here is the assignment: Write a program that can be used by a small theater to sell
+	tickets for perfromances. The theater's auditorium has 15 rows of seats, with 30 seats
+	in each row. The program should display a screen that shows which seats are available
+	and which are taken. For example, the following screen shows a chart depicting each 
+	seat in the theater. Seats that are taken are represented by an * symbol, and seats that
+	are available are represented by a # symbol.
+
+						Seats
+	        123456789012345678901234567890
+	Row 1   ***###***###*########*****####
+	Row 2   ####*************####*******##
+	Row 3   **###**********########****###
+	Row 4   **######***************##*****
+	Row 5   ************####***######*****
+	Row 6   ***###***###*########*****####
+	Row 7   ####*************####*******##
+	Row 8   **###**********########****###
+	Row 9   **######***************##*****
+	Row 10  ************####***######*****
+	Row 11  ***###***###*########*****####
+	Row 12  ####*************####*******##
+	Row 13  **###**********########****###
+	Row 14  **######***************##*****
+	Row 15  ************####***######*****
+
+	Here is a list of tasks ths program must perform:
+		* When the program begins, it should ask the user to enter the seat prices for each
+		  row. The prices can be stored in a separate array. (Alternatively, the prices may be 
+		  read from a file).
+		* Once the prices are entered, the program should display a seating chart similar to 
+		  one should above. The user may enter the row and seat numbers for tickets being 
+		  sold. Every time a ticket or group of tickets is purchased, the program should display
+		  the total ticket prices and update the seating chart.
+		* The program should keep a total of all ticket sales. The user should be given an 
+		  option of viewing this ammount.
+		* The program should also give the user an option to see a list of how many seats 
+		  have been sold, how many seats are available in each row, and how many seats are 
+		  available in the entire auditorium
+
+	Input Validation: When tickets are being sold, do not accept row or seat numbers that 
+	do not exist. When someone requests a particular seat, the program should make sure 
+	that seat is available before it sold.
+
+	Created on: Feb 17, 2019
+		Author: bryanayala
  */
 
 
@@ -55,21 +98,21 @@ void printGrid(){
 	printf("                                    Seats\n");
 	printf("         0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3\n");
 	printf("         1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0\n\n");
-	for(int i=0; i<amountOfRows; ++i){
-		if(i>8)
-			printf("Row %d   ", (i+1));
+	for(int rowIndex=0; rowIndex<amountOfRows; ++rowIndex){
+		if(rowIndex>8)
+			printf("Row %d   ", (rowIndex+1));
 		else
-			printf("Row %d    ", (i+1));
-		for(int j=0; j<amountOfColumns; ++j)
-			printf("%c ", theaterSeats[i][j]);
+			printf("Row %d    ", (rowIndex+1));
+		for(int columnIndex=0; columnIndex<amountOfColumns; ++columnIndex)
+			printf("%c ", theaterSeats[rowIndex][columnIndex]);
 		printf("\n");
 	}
 }
 
 void initailizeGrid(){
-	for(int i=0; i<amountOfRows; ++i)
-		for(int j=0; j<amountOfColumns; ++j)
-			theaterSeats[i][j] = '*';
+	for(int rowIndex=0; rowIndex<amountOfRows; ++rowIndex)
+		for(int columnIndex=0; columnIndex<amountOfColumns; ++columnIndex)
+			theaterSeats[rowIndex][columnIndex] = '*';
 }
 
 void calculateTicketsSold(){
@@ -96,8 +139,8 @@ void calculateTicketsSold(){
 				}
 			}
 
-			for(int i=0; i<seatsSold;++i)
-				printf("Seat at Row %d and Column %d is sold.\n", (*(ssp + i)).row, (*(ssp + i)).column);
+			for(int pointerIndex=0; pointerIndex<seatsSold;++pointerIndex)
+				printf("Seat at Row %d and Column %d is sold.\n", (*(ssp + pointerIndex)).row, (*(ssp + pointerIndex)).column);
 
 			free(ssp);
 		}
@@ -109,12 +152,12 @@ void calcualteAvailableRows(){
 	int availableSeats = 0;
 	printf("\nAvailable Seats by row\n");
 	printf("----------------------\n");
-	for(int i=0; i<amountOfRows; ++i){
-		for(int j=0; j<30; ++j){
-			if(theaterSeats[i][j] == '*')
+	for(int rowIndex=0; rowIndex<amountOfRows; ++rowIndex){
+		for(int columnIndex=0; columnIndex<amountOfColumns; ++columnIndex){
+			if(theaterSeats[rowIndex][columnIndex] == '*')
 				availableSeats++;
 		}
-		printf("Row %d: %d\n", (i+1), availableSeats);
+		printf("Row %d: %d\n", (rowIndex+1), availableSeats);
 		availableSeats = 0;
 	}
 
@@ -151,8 +194,8 @@ void calculateAvailableSeats(){
 					}
 				}
 
-				for(int i=0; i<(totalSeats - seatsSold);++i)
-					printf("Seat at Row %d and Column %d is available.\n", (*(asp + i)).row, (*(asp + i)).column);
+				for(int pointerIndex=0; pointerIndex<(totalSeats - seatsSold);++pointerIndex)
+					printf("Seat at Row %d and Column %d is available.\n", (*(asp + pointerIndex)).row, (*(asp + pointerIndex)).column);
 
 				free(asp);
 			}
