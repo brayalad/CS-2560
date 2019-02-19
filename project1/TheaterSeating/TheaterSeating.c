@@ -53,20 +53,31 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
+/*Constant integer to hold the amount of rows*/
 const static int amountOfRows = 15;
+/*Constant integer to hold the amount of columns*/
 const static int amountOfColumns = 30;
+/*Constant integer to hold the total amount of seats*/
 const static int totalSeats = 450;
 
+/*Two-Dimensional array to represent the auditorium and its seats*/
 static char theaterSeats[15][30];
+/*Array holding the prices of seats by row*/
 static double seatPrices[15];
 
+/*Variable that keeps count of amount of money in ticket sales*/
 static double ticketSales = 0;
+/*Variable that keeps count of the amount of tickets sold*/
 static int seatsSold = 0;
 
+/*Structure that represents a seat in the auditorium and stores the row and column it is in*/
 typedef struct seat{
 	int row, column;
 }SEAT;
 
+/*
+	This method reads the ticket prices for each row from the text file called "SeatPrices.txt"
+*/
 void readSeatPrices(){
 
 	int index;
@@ -94,6 +105,11 @@ void readSeatPrices(){
 
 }
 
+/*
+	Prints out the two-dimensional array representing the auditorium seating chart.
+	It uses a nested for loop to print all the rows and seats.
+	It also is updated as seats are sold.
+*/
 void printGrid(){
 	printf("                                    Seats\n");
 	printf("         0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3\n");
@@ -109,12 +125,19 @@ void printGrid(){
 	}
 }
 
+/*
+	Initializes the two-dimensional array with the astrisk (*)
+*/
 void initailizeGrid(){
 	for(int rowIndex=0; rowIndex<amountOfRows; ++rowIndex)
 		for(int columnIndex=0; columnIndex<amountOfColumns; ++columnIndex)
 			theaterSeats[rowIndex][columnIndex] = '*';
 }
 
+/*
+	Determines what seats have already been sold and prints the information
+	out to the user.
+*/
 void calculateTicketsSold(){
 
 
@@ -147,6 +170,9 @@ void calculateTicketsSold(){
 	}
 }
 
+/*
+	Calculates the ammount of seats available by row and displays that information to the user
+*/
 void calcualteAvailableRows(){
 
 	int availableSeats = 0;
@@ -180,6 +206,10 @@ void calcualteAvailableRows(){
 
 }
 
+/*
+	Determines what seats available for purchase and prints the information
+	out to the user.
+*/
 void calculateAvailableSeats(){
 
 	if(seatsSold == 0){
@@ -223,7 +253,12 @@ void calculateAvailableSeats(){
 }
 
 
-
+/*
+	Method ask user to choose a row and seat number. If the seat is 
+	available, the user is shown the price of the ticket.
+	The user then decides if they want to purchase the ticket or not. 
+	If they do buy the ticket, the ticket is sold and the auditorium is updated.
+*/
 void chooseSeat(){
 
 	int row;
@@ -276,6 +311,9 @@ void chooseSeat(){
 	}
 }
 
+/*
+	Method holds the while loop that runs the program.
+*/
 void runProgram(){
 
 	int userInput;
@@ -323,6 +361,11 @@ void runProgram(){
 
 }
 
+/*
+	Main method of the program and start of the program.
+	It calls methods repsonsible for reading seat prices, 
+	initalizes the grid, and starts to run the program.
+*/
 int main(){
 
 	readSeatPrices();
