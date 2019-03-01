@@ -1,10 +1,10 @@
 /*
 	TheaterSeating.c
-	
+
 	Here is the assignment: Write a program that can be used by a small theater to sell
 	tickets for perfromances. The theater's auditorium has 15 rows of seats, with 30 seats
 	in each row. The program should display a screen that shows which seats are available
-	and which are taken. For example, the following screen shows a chart depicting each 
+	and which are taken. For example, the following screen shows a chart depicting each
 	seat in the theater. Seats that are taken are represented by an * symbol, and seats that
 	are available are represented by a # symbol.
 
@@ -28,20 +28,20 @@
 
 	Here is a list of tasks ths program must perform:
 		* When the program begins, it should ask the user to enter the seat prices for each
-		  row. The prices can be stored in a separate array. (Alternatively, the prices may be 
+		  row. The prices can be stored in a separate array. (Alternatively, the prices may be
 		  read from a file).
-		* Once the prices are entered, the program should display a seating chart similar to 
-		  one should above. The user may enter the row and seat numbers for tickets being 
+		* Once the prices are entered, the program should display a seating chart similar to
+		  one should above. The user may enter the row and seat numbers for tickets being
 		  sold. Every time a ticket or group of tickets is purchased, the program should display
 		  the total ticket prices and update the seating chart.
-		* The program should keep a total of all ticket sales. The user should be given an 
+		* The program should keep a total of all ticket sales. The user should be given an
 		  option of viewing this ammount.
-		* The program should also give the user an option to see a list of how many seats 
-		  have been sold, how many seats are available in each row, and how many seats are 
+		* The program should also give the user an option to see a list of how many seats
+		  have been sold, how many seats are available in each row, and how many seats are
 		  available in the entire auditorium
 
-	Input Validation: When tickets are being sold, do not accept row or seat numbers that 
-	do not exist. When someone requests a particular seat, the program should make sure 
+	Input Validation: When tickets are being sold, do not accept row or seat numbers that
+	do not exist. When someone requests a particular seat, the program should make sure
 	that seat is available before it sold.
 
 	Created on: Feb 17, 2019
@@ -53,20 +53,31 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
+/*Constant integer to hold the amount of rows*/
 const static int amountOfRows = 15;
+/*Constant integer to hold the amount of columns*/
 const static int amountOfColumns = 30;
+/*Constant integer to hold the total amount of seats*/
 const static int totalSeats = 450;
 
+/*Two-Dimensional array to represent the auditorium and its seats*/
 static char theaterSeats[15][30];
+/*Array holding the prices of seats by row*/
 static double seatPrices[15];
 
+/*Variable that keeps count of amount of money in ticket sales*/
 static double ticketSales = 0;
+/*Variable that keeps count of the amount of tickets sold*/
 static int seatsSold = 0;
 
+/*Structure that represents a seat in the auditorium and stores the row and column it is in*/
 typedef struct seat{
 	int row, column;
 }SEAT;
 
+/*
+	This method reads the ticket prices for each row from the text file called "SeatPrices.txt"
+*/
 void readSeatPrices(){
 
 	int index;
@@ -94,6 +105,11 @@ void readSeatPrices(){
 
 }
 
+/*
+	Prints out the two-dimensional array representing the auditorium seating chart.
+	It uses a nested for loop to print all the rows and seats.
+	It also is updated as seats are sold.
+*/
 void printGrid(){
 	printf("                                    Seats\n");
 	printf("         0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3\n");
@@ -109,12 +125,19 @@ void printGrid(){
 	}
 }
 
+/*
+	Initializes the two-dimensional array with the astrisk (*)
+*/
 void initailizeGrid(){
 	for(int rowIndex=0; rowIndex<amountOfRows; ++rowIndex)
 		for(int columnIndex=0; columnIndex<amountOfColumns; ++columnIndex)
 			theaterSeats[rowIndex][columnIndex] = '*';
 }
 
+/*
+	Determines what seats have already been sold and prints the information
+	out to the user.
+*/
 void calculateTicketsSold(){
 
 
@@ -140,13 +163,16 @@ void calculateTicketsSold(){
 			}
 
 			for(int pointerIndex=0; pointerIndex<seatsSold;++pointerIndex)
-				printf("Seat at Row %d and Column %d is sold.\n", (*(ssp + pointerIndex)).row, (*(ssp + pointerIndex)).column);
+				printf("Seat %d at Row %d is sold.\n", (*(ssp + pointerIndex)).column, (*(ssp + pointerIndex)).row);
 
 			free(ssp);
 		}
 	}
 }
 
+/*
+	Calculates the ammount of seats available by row and displays that information to the user
+*/
 void calcualteAvailableRows(){
 
 	int availableSeats = 0;
@@ -157,12 +183,33 @@ void calcualteAvailableRows(){
 			if(theaterSeats[rowIndex][columnIndex] == '*')
 				availableSeats++;
 		}
-		printf("Row %d: %d\n", (rowIndex+1), availableSeats);
+		if(rowIndex < 9){
+			if(availableSeats < 10){
+				printf("Row %d: %d\n", (rowIndex+1), availableSeats);
+			}
+			else{
+				printf("Row %d:  %d\n", (rowIndex+1), availableSeats);
+			}
+		}
+		else{
+			if(availableSeats < 10){
+					printf("Row %d:  %d\n", (rowIndex+1), availableSeats);
+				}
+				else{
+					printf("Row %d: %d\n", (rowIndex+1), availableSeats);
+				}
+		}
+
+
 		availableSeats = 0;
 	}
 
 }
 
+/*
+	Determines what seats available for purchase and prints the information
+	out to the user.
+*/
 void calculateAvailableSeats(){
 
 	if(seatsSold == 0){
@@ -195,7 +242,7 @@ void calculateAvailableSeats(){
 				}
 
 				for(int pointerIndex=0; pointerIndex<(totalSeats - seatsSold);++pointerIndex)
-					printf("Seat at Row %d and Column %d is available.\n", (*(asp + pointerIndex)).row, (*(asp + pointerIndex)).column);
+					printf("Seat %d at Row %d is available.\n", (*(asp + pointerIndex)).column, (*(asp + pointerIndex)).row);
 
 				free(asp);
 			}
@@ -205,6 +252,13 @@ void calculateAvailableSeats(){
 
 }
 
+
+/*
+	Method ask user to choose a row and seat number. If the seat is 
+	available, the user is shown the price of the ticket.
+	The user then decides if they want to purchase the ticket or not. 
+	If they do buy the ticket, the ticket is sold and the auditorium is updated.
+*/
 void chooseSeat(){
 
 	int row;
@@ -213,7 +267,7 @@ void chooseSeat(){
 	printf("Enter the row number: ");
 	scanf("%d", &row);
 
-	printf("Enter the column number: ");
+	printf("Enter the seat number: ");
 	scanf("%d", &column);
 
 	row--;
@@ -221,10 +275,28 @@ void chooseSeat(){
 
 	if(row >= 0 && row < amountOfRows && column >= 0 && column < amountOfColumns){
 		if(theaterSeats[row][column] == '*'){
-			theaterSeats[row][column] = '#';
-			printf("Price of seat chosen is $%.2lf\n", seatPrices[row]);
-			ticketSales = ticketSales + seatPrices[row];
-			seatsSold++;
+
+			int purchaseDecision;
+			do {
+				printf("\nPrice of seat chosen is $%.2lf\n", seatPrices[row]);
+				printf("Would you like to purchase?\n"
+						"1. Yes\n"
+						"2. No\n"
+						"Enter decision: ");
+				scanf("%d", &purchaseDecision);
+
+				if(purchaseDecision == 1){
+					theaterSeats[row][column] = '#';
+					ticketSales = ticketSales + seatPrices[row];
+					seatsSold++;
+					printf("You have purchased seat %d at row %d for $%.2lf\n\n", column, row, seatPrices[row]);
+				}
+				else if(purchaseDecision < 0 || purchaseDecision > 2){
+					printf("\nInvalid Input.\nPlease try again\n");
+
+				}
+			} while(purchaseDecision < 0 || purchaseDecision > 2);
+
 		}
 		else{
 			printf("\nSeat chosen has already been sold.\n"
@@ -239,6 +311,9 @@ void chooseSeat(){
 	}
 }
 
+/*
+	Method holds the while loop that runs the program.
+*/
 void runProgram(){
 
 	int userInput;
@@ -250,7 +325,7 @@ void runProgram(){
 			   "3. View ticket sales\n"
 			   "4. See seats sold\n"
 			   "5. See seats available by row\n"
-			   "6. See amount of seats available\n"
+			   "6. See seats available for purchase\n"
 			   "7. End Program\n");
 
 		printf("\nEnter menu option: ");
@@ -286,6 +361,11 @@ void runProgram(){
 
 }
 
+/*
+	Main method of the program and start of the program.
+	It calls methods repsonsible for reading seat prices, 
+	initalizes the grid, and starts to run the program.
+*/
 int main(){
 
 	readSeatPrices();
