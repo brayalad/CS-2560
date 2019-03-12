@@ -20,7 +20,7 @@ static ParkingMeter meters[amountOfMeters];
 static PoliceOfficer officer;
 
 
-string getInput();
+static string getInput();
 void seeAllMeters();
 void makePoliceOfficer();
 ParkedCar getParkedCar(int minParked);

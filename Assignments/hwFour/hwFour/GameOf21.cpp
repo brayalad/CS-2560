@@ -14,7 +14,7 @@ static Die userDie;
 static Player computer;
 static Player user;
 */
-string getInput(){
+static string getInput(){
     string userInput;
     getline(cin,userInput);
     return userInput;

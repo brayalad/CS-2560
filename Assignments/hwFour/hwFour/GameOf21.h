@@ -17,7 +17,7 @@ static Die userDie;
 static Player computer;
 static Player user;
 
-string getline();
+static string getInput();
 void newGame();
 void winner(int userScore, int computerScore);
 void runGame();

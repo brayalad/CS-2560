@@ -21,7 +21,7 @@ static ParkingMeter meters[amountOfMeters];
 static PoliceOfficer officer;
 */
 
-string getInput(){
+static string getInput(){
     string userInput;
     getline(cin,userInput);
     return userInput;
