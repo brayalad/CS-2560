@@ -7,18 +7,10 @@
 
 using namespace std;
 
-vector<string> availableSurgeries = {"Coronary Artery Bypass",
-                                     "Low Back Pain Surgery",
-                                     "Partial Colectomy",
-                                     "Hernia Repair",
-                                     "Open Heart Surgery"};
-vector<string> availableMedications = {"Stimulants",
-                                       "Inhalants",
-                                       "Depressants",
-                                       "Pain Killers",
-                                       "Steroids"};
-Surgery surgery(availableSurgeries);
-Pharmacy pharmacy(availableMedications);
+vector<string> availableSurgeries;
+vector<string> availableMedications;
+Surgery *surgery;
+Pharmacy *pharmacy;
 
 
 string getInput(){
@@ -50,7 +42,7 @@ void paySurgery(PatientAccount *patient){
         }while(!valid);
 
         if((choice-1) >= 0 && (choice-1) < availableSurgeries.size()){
-            surgery.updatePatientCharges(patient, (choice-1));
+            surgery->updatePatientCharges(patient, (choice-1));
             break;
         }
         else{
@@ -84,7 +76,7 @@ void buyMedication(PatientAccount *patient){
         }while(!valid);
 
         if((choice-1)>=0 && (choice-1)<availableMedications.size()){
-            pharmacy.updatePatientCharges(patient, (choice-1));
+            pharmacy->updatePatientCharges(patient, (choice-1));
             break;
         }
         else{
@@ -146,6 +138,22 @@ void newPatient(int argc=0,string argv=""){
 
 int main(int argc, char **argv) {
 
+    availableSurgeries = {"Coronary Artery Bypass",
+                          "Low Back Pain Surgery",
+                          "Partial Colectomy",
+                          "Hernia Repair",
+                          "Open Heart Surgery"};
+    availableMedications = {"Stimulants",
+                            "Inhalants",
+                            "Depressants",
+                            "Pain Killers",
+                            "Steroids"};
+
+    surgery = new Surgery(availableSurgeries);
+    pharmacy = new Pharmacy(availableMedications);
+
+
+
     cout << "Patient Fees Program\n" << endl;
 
     if(argc>1) {
@@ -168,6 +176,9 @@ int main(int argc, char **argv) {
     }
 
     cout << "Thank you for using this program!" << endl;
+
+    delete(surgery);
+    delete(pharmacy);
 
     return 0;
 }
