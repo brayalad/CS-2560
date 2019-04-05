@@ -1,9 +1,10 @@
 //
-// Created by Bryan Ayala on 2019-03-03.
+// Employee.h
 //
 
-#ifndef HWFIVE_EMPLOYEE_H
-#define HWFIVE_EMPLOYEE_H
+#ifndef EXCEPTIONS_EMPLOYEE_H
+#define EXCEPTIONS_EMPLOYEE_H
+
 
 #include <string>
 
@@ -16,6 +17,7 @@ private:
     std::string hireDate;
 
 public:
+    class InvalidEmployeeNumber {};
     Employee(std::string employeeName, int employeeNumber, std::string hireDate);
 
     void setName(std::string employeeName);
@@ -29,4 +31,4 @@ public:
 };
 
 
-#endif //HWFIVE_EMPLOYEE_H
+#endif //EXCEPTIONS_EMPLOYEE_H

@@ -1,5 +1,5 @@
 //
-// Created by Bryan Ayala on 2019-03-03.
+// Employee.cpp
 //
 
 #include "Employee.h"
@@ -21,7 +21,7 @@ void Employee::setNumber(int employeeNumber) {
         this->employeeNumber = employeeNumber;
     }
     else{
-        throw "InvalidEmployeeNumber";
+        throw InvalidEmployeeNumber();
     }
 }
 

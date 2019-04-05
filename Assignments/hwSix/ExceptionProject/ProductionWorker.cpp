@@ -1,5 +1,5 @@
 //
-// Created by Bryan Ayala on 2019-03-03.
+// ProductionWorker.cpp
 //
 
 #include "ProductionWorker.h"
@@ -15,7 +15,7 @@ ProductionWorker::ProductionWorker(string employeeName, int employeeNumber, stri
 
 void ProductionWorker::setShift(int shift) {
     if(shift < 1 || shift > 2) {
-        throw "InvalidShift";
+        throw InvalidShift();
     }
     else{
         this->shift = shift;
@@ -24,7 +24,7 @@ void ProductionWorker::setShift(int shift) {
 
 void ProductionWorker::setHourlyPay(double hourlyPay) {
     if(hourlyPay < 0){
-        throw "InvalidPayRate";
+        throw InvalidPayRate();
     }
     else {
         this->hourlyPay = hourlyPay;
@@ -38,4 +38,3 @@ int ProductionWorker::getShift() const{
 double ProductionWorker::getHourlyPay() const{
     return hourlyPay;
 }
-
