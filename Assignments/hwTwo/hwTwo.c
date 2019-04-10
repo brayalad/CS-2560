@@ -1,5 +1,10 @@
-/*
- * hwTwo.c
+/**
+ * 
+ * @file hwTwo.c
+ * @author bryanayala
+ * @date 5 Feb 2019
+ * @brief HW 2 for CS 2560.
+ * 
  *
  * CALIFORNIA STATE POLYTECHNIC UNIVERSITY
  *
@@ -31,9 +36,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
- * 	Program Assignment #1:
- *
+/**
+ * 	@brief Program Assignment #1:
+ * 
  *	Write a program that computes the tax and tip on a restaurant bill for a patron with
  *	a $88.67 meal charge. The tax should be 6.75 percent of the meal cost. The tip should
  *	be 20 percent of the total after adding the tax. Display the meal cost, tax amount, tip
@@ -43,10 +48,10 @@ void restaurantBill(){
 
 	printf("\nRestaurant Bill\n-------------------------------------------------------------------------------------------------------------\n");
 
-	double mealCost = 88.67;
-	double tax = mealCost * 0.0675;
-	double tip = (mealCost + tax) * 0.2;
-	double totalCost = mealCost + tax + tip;
+	double mealCost = 88.67; /**< Cost of the meal */
+	double tax = mealCost * 0.0675; /**< The calculated tax */
+	double tip = (mealCost + tax) * 0.2; /**< The talculated tip */
+	double totalCost = mealCost + tax + tip; /**<  The calulated total cost of the meal */
 
 	printf("Meal Cost is $%.2f \n", mealCost);
 	printf("Tax is $%.2f \n", tax);
@@ -57,8 +62,8 @@ void restaurantBill(){
 
 }
 
-/*
- * 	Program Assignment #2:
+/**
+ * 	@brief Program Assignment #2:
  *
  *	Assuming the ocean's level is currently rising at about 1.5 millimeters per year, write
  *	a program that displays:
@@ -76,7 +81,7 @@ void oceanLevels(){
 
 	printf("\nOcean Levels\n-------------------------------------------------------------------------------------------------------------\n");
 
-	double currentRisingRate = 1.5;
+	double currentRisingRate = 1.5; //!< Rate of the rising tide
 
 	printf("In 5 years, the ocean level will be %.2f millimeters higher than the current level.\n",(currentRisingRate * 5));
 	printf("In 7 years, the ocean level will be %.2f millimeters higher than the current level.\n",(currentRisingRate * 7));
@@ -86,7 +91,8 @@ void oceanLevels(){
 
 }
 
-/*	Program Assignment #3
+/**	
+ *	@brief Program Assignment #3
  *
  *	Last month Joe purchased some stock in Acme Software, Inc. He re are the details of
  *	the purchase:
@@ -114,12 +120,12 @@ void stockTransaction(){
 
 	printf("\nStock Transaction\n-------------------------------------------------------------------------------------------------------------\n");
 
-	int amountOfShares = 1000;
-	double purchasedStockPrice = 45.50;
-	double soldStockPrice = 56.90;
-	double purchaseCommission = (amountOfShares * purchasedStockPrice) * 0.02;
-	double soldCommission = (amountOfShares * soldStockPrice) * 0.02;
-	double totalProfit = (amountOfShares * soldStockPrice) - (amountOfShares * purchasedStockPrice) - purchaseCommission - soldCommission;
+	int amountOfShares = 1000; /**< The amount of shares */
+	double purchasedStockPrice = 45.50; /**< The price the stock was purchased at */
+	double soldStockPrice = 56.90; /**< The price the stock was sold at */
+	double purchaseCommission = (amountOfShares * purchasedStockPrice) * 0.02; /**< The commision made from the purchase */
+	double soldCommission = (amountOfShares * soldStockPrice) * 0.02; /**< The commision made from the sale */
+	double totalProfit = (amountOfShares * soldStockPrice) - (amountOfShares * purchasedStockPrice) - purchaseCommission - soldCommission; /**< The total profit of the transation */
 
 	printf("The amount of money Joe paid for the stock is $%.2f\n", amountOfShares * purchasedStockPrice);
 	printf("The amount of commission Joe paid his broker when he bought the stock is $%.2f\n", purchaseCommission);
@@ -131,25 +137,11 @@ void stockTransaction(){
 
 }
 
-/*	Program Assignment #4
+/**	
+ * 	@brief Program Assignment #4
  *
  *	Write a program that uses a loop to display Pattern A bellow, followed by another loop
  *	that displays pattern B.
- *
- *	----------------------------------------------------------------------------
- *	Pattern A					Pattern B
- *	----------------------------------------------------------------------------
- *	+							++++++++++
- *	++							+++++++++
- *	+++							++++++++
- *	++++						+++++++
- *	+++++						++++++
- *	++++++						+++++
- *	+++++++						++++
- *	++++++++					+++
- *	+++++++++					++
- *	++++++++++					+
- *	----------------------------------------------------------------------------
  */
 void patternDisplays(){
 
@@ -180,18 +172,21 @@ void patternDisplays(){
 
 }
 
-/*
+/**
+ * @brief Program main method
+ * 
  * The main method that begins the program. The program runs on a while loop
  * until the user decides to end the program by choosing the "End Program" option.
  * The user is given a menu of options and each option runs its respective programming
  * assignment that was assigned. User input is also validated. The program checks if
  * the input is an integer and if so then checks if it is a valid option.
+ * @return ending execution code
  */
 int main(){
 
-	int booleanControl = -1; //variable used to keep the program while loop running
-	int userInput; //The users input into the console
-	char inputValidation; //variable where input is sent if it is not an integer
+	int booleanControl = -1; /**< variable used to keep the program while loop running */
+	int userInput; /**< The users input into the console */
+	char inputValidation; /**< variable where input is sent if it is not an integer */
 
 	while(booleanControl == -1){
 
@@ -203,7 +198,10 @@ int main(){
 				" 5. End Program\n");
 		printf("\nPlease choose an option to run: ");
 
-		if(scanf("%d",&userInput) == 1){ //Checks to see if user input is of the int type
+		/**
+		 * Checks to see if user input is of the int type
+		 */
+		if(scanf("%d",&userInput) == 1){ 
 
 
 			if(userInput == 1)
@@ -227,7 +225,10 @@ int main(){
 				printf("\n%d is not a valid input!\nPlease try again\n\n", userInput);
 
 		}
-		else{ //If input is not an integer, it is then disposed of
+		/**
+		 * If input is not an integer, it is then disposed of
+		 */ 
+		else{ 
 			while((inputValidation = getchar()) != '\n')
 				putchar(inputValidation);
 

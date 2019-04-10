@@ -1,3 +1,20 @@
+/**
+ * @file main.cpp
+ * @brief Patient Fees Project
+ *
+ * This program allows the user to checkout a patient from the
+ * hospital. First the user inpus information about the patient,
+ * including the amoung of days spent. While checking out, the user
+ * can also buy medications and/or surgeries. Every time something is
+ * bought, the cost of the item is added to the patients total charges.
+ * When ready to checkout, the program will display to the user all the
+ * charges accumulated and the total cost of the hospital stay.
+ *
+ * @author Bryan Ayala
+ * @date April 2019
+ * @bug No known bugs
+ */
+
 #include <utility>
 #include <iostream>
 #include <sstream>
@@ -7,18 +24,32 @@
 
 using namespace std;
 
-vector<string> availableSurgeries;
-vector<string> availableMedications;
-Surgery *surgery;
-Pharmacy *pharmacy;
+vector<string> availableSurgeries; /**< list of available surgeries*/
+vector<string> availableMedications; /**< list of available medications*/
+Surgery *surgery; /**< Surgery class global pointer*/
+Pharmacy *pharmacy; /**< Pharmacy class global pointer*/
 
-
+/**
+ * @brief Read user input
+ *
+ * returns a string representing the input of the user
+ *
+ * @return user input
+ */
 string getInput(){
     string userInput;
     getline(cin, userInput);
     return userInput;
 }
 
+/**
+ * @brief Buy a surgery
+ *
+ * This method allows the user to choose which surgery they would like to buy.
+ * The cost of the surgery chosen will be added to patient's total charges.
+ *
+ * @param patient current patient
+ */
 void paySurgery(PatientAccount *patient){
 
     ostringstream surgeryOptions;
@@ -53,6 +84,14 @@ void paySurgery(PatientAccount *patient){
 
 }
 
+/**
+ * @brief Buy a Medication
+ *
+ * This method allows the user to choose which medication they would like to buy.
+ * The cost of the medication chosen will be added to patient's total charges.
+ *
+ * @param patient current patient
+ */
 void buyMedication(PatientAccount *patient){
 
     ostringstream medicationOptions;
@@ -87,6 +126,16 @@ void buyMedication(PatientAccount *patient){
 
 }
 
+/**
+ * @brief Create new Patient
+ *
+ * User is asked to input data pertaining to the new patient.
+ * Once data is inputed, a new instance of the PatientAccount class
+ * is made.
+ *
+ * @param argc command line argument amount
+ * @param argv command line argument value
+ */
 void newPatient(int argc=0,string argv=""){
 
     string name;
@@ -132,10 +181,29 @@ void newPatient(int argc=0,string argv=""){
             cout << "\nInvalid Input\nPlease Try Again\n" << endl;
     }
 
-    cout << patient.getPatientAccount() << endl;
+    ostringstream patientAccountInfo;
+    patientAccountInfo << "\nAccount Information for: " << patient.getName()
+                   << "\nDays spend in hospital: " << patient.getDaysSpent()
+                   <<"\nHospital daily rate: $" << patient.getDailyRate()
+                   << ".00\n\nList of Charges:" << endl;
+    for (const auto &i : patient.getChargeList())
+        patientAccountInfo << "    " << i << endl;
+    patientAccountInfo << "    Hospital stay: $" << (patient.getDailyRate()*patient.getDaysSpent()) << ".00\n"
+                   << "\nTotal Charges: $" << patient.getPatientCharges() << ".00" << endl;
+
+    cout << patientAccountInfo.str() << endl;
 
 }
 
+/**
+ * @brief Program main entry
+ *
+ * Main method of the program. Program begins here.
+ *
+ * @param argc command line arguments amount
+ * @param argv command line argument values
+ * @return program exit code
+ */
 int main(int argc, char **argv) {
 
     availableSurgeries = {"Coronary Artery Bypass",
@@ -169,13 +237,13 @@ int main(int argc, char **argv) {
         userChoice=getInput();
         if(userChoice=="yes")
             newPatient();
-        else if(userChoice!="no")
-            break;
-        else
+        else if (userChoice=="no") {
+            cout << "\nThank you for using this program!" << endl;
+        } else {
             cout << "\nInvalid Input\nPlease Try Again\n" << endl;
+        }
     }
 
-    cout << "Thank you for using this program!" << endl;
 
     delete(surgery);
     delete(pharmacy);

@@ -1,9 +1,14 @@
-//
-// Created by BRYAN on 3/13/2019.
-//
+/**
+ * @file Date.cpp
+ * @brief Date class implementation
+ *
+ * Class that represents a date
+ *
+ * @author Bryan Ayala
+ * @date April 2019
+ * @bug No known bugs
+ */
 
-#include <iostream>
-#include <string>
 #include <cstdlib>
 #include <exception>
 #include <climits>
@@ -13,6 +18,11 @@ using namespace std;
 
 extern const int current_year;
 
+/**
+   * @brief Constructor
+   *
+   * Constructor for the date class
+   */
 Date::Date(int month, int day, int year) {
     setMonth(month);
     setDay(day);
@@ -20,18 +30,45 @@ Date::Date(int month, int day, int year) {
     setMonthStr(month);
 }
 
+/**
+ * @brief month setter
+ *
+ * sets the dates month
+ *
+ * @param month date's month
+ */
 void Date::setMonth(int month) {
     this->month = month;
 }
 
+/**
+ * @brief day setter
+ *
+ * sets the date's day
+ *
+ * @param day date's day
+ */
 void Date::setDay(int day) {
     this->day = day;
 }
 
+/**
+ * @brief year setter
+ *
+ * sets the date's year
+ *
+ * @param year  date's year
+ */
 void Date::setYear(int year) {
     this->year = year;
 }
 
+/**
+ * @brief monthStr setter
+ *
+ * Sets the string representation of the month
+ * @param month date's month
+ */
 void Date::setMonthStr(int month){
 
     if(month==1)
@@ -62,18 +99,10 @@ void Date::setMonthStr(int month){
         monthStr="NULL";
 }
 
-int Date::getMonth() {
-    return month;
-}
-
-int Date::getDay() {
-    return day;
-}
-
-int Date::getYear() {
-    return year;
-}
-
+/**
+ * @brief prints the date
+ * @param option printing format
+ */
 void Date::print(int option) {
 
     if(option==1)
@@ -85,6 +114,10 @@ void Date::print(int option) {
 
 }
 
+/**
+ * @brief overloading postfix ++ operator
+ * @return same date
+ */
 Date& Date::operator ++() {
 
     ++day;
@@ -115,12 +148,20 @@ Date& Date::operator ++() {
     return *this;
 }
 
+/**
+ * @brief overloading prefix ++ operator
+ * @return inremented date
+ */
 Date Date::operator ++(int) {
     Date D = *this;
     ++(*this);
     return D;
 }
 
+/**
+ * @brief overloading postfix -- operator
+ * @return same date
+ */
 Date& Date::operator --() {
 
     --day;
@@ -148,12 +189,21 @@ Date& Date::operator --() {
     return *this;
 }
 
+/**
+ * @brief overloading prefix -- operator
+ * @return decremented date
+ */
 Date Date::operator --(int) {
     Date D = *this;
     --(*this);
     return D;
 }
 
+/**
+ * @brief Overload - operator
+ * @param date date to be subtracted
+ * @return difference between dates
+ */
 int Date::operator-(const Date &date) {
 
     int difference = 0;
@@ -204,11 +254,23 @@ int Date::operator-(const Date &date) {
     return difference + 1;
 }
 
+/**
+ * @brief overload << operator
+ * @param out stream
+ * @param date date to put out
+ * @return stream
+ */
 ostream &operator<<(ostream &out, const Date &date) {
     out << date.monthStr << " " << date.day << ", " << date.year << endl;
     return out;
 }
 
+/**
+ * @brief overload >> operator
+ * @param in stream
+ * @param date date to put in
+ * @return stream
+ */
 istream &operator>>(istream &in, Date &date) {
 
 

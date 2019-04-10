@@ -1,3 +1,14 @@
+/**
+ * @file main.cpp
+ * @brief Date Modification Program
+ *
+ * Program to demonstrate operator overloading
+ *
+ * @author Bryan Ayala
+ * @date April 2019
+ * @bug No known bugs
+ */
+
 #include <iostream>
 #include <string>
 #include "Date.h"
@@ -6,12 +17,23 @@ using namespace std;
 
 extern const int current_year(2019);
 
+/**
+ * @brief Read user input
+ *
+ * returns a string representing the input of the user
+ *
+ * @return user input
+ */
 string getInput(){
     string input;
     getline(cin,input);
     return input;
 }
 
+/**
+ * @brief print date
+ * @param date date to be printed
+ */
 void printDate(Date *date){
     int choice=0;
     while(choice<1 || choice>3) {
@@ -36,6 +58,10 @@ void printDate(Date *date){
     }
 }
 
+/**
+ * @brief subtracting dates
+ * @param date difference between dates
+ */
 void subtractDates(Date *date){
     Date otherDate;
     cout << "\nEnter new date bellow:\n " << endl;
@@ -46,6 +72,10 @@ void subtractDates(Date *date){
     cin.ignore();
 }
 
+/**
+ * @brief menu with options for the date
+ * @param date current date
+ */
 void dateMenu(Date *date){
 
     string choice;
@@ -98,6 +128,12 @@ void dateMenu(Date *date){
 
 }
 
+/**
+ * @brief main entry for program
+ * @param argc command line arguments
+ * @param argv command line argument values
+ * @return program exit code
+ */
 int main(int argc, char **argv) {
 
     cout << "Date Modification Program\n" << endl;
