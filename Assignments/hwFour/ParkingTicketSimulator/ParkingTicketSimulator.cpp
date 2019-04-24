@@ -10,11 +10,11 @@
 
 using namespace std;
 
-const static int parkingTimeLimit = 60;
-const static int amountOfMeters = 20;
-static bool initiailized = false;
-static ParkingMeter meters[amountOfMeters];
-static PoliceOfficer officer;
+const int parkingTimeLimit = 60;
+const int amountOfMeters = 20;
+bool initiailized = false;
+ParkingMeter meters[amountOfMeters];
+PoliceOfficer officer;
 
 string getInput(){
     string userInput;
@@ -126,10 +126,10 @@ void patrolMeters(){
     seeAllMeters();
 
     string userInput;
-    while(true) {
+    while(userInput!="no") {
         cout << "Do you want to issue a ticket to an expired meter? (yes/no)" << endl;
         userInput = getInput();
-        if (userInput == "yes" && userInput != "no") {
+        if (userInput == "yes") {
             cout << "Enter which meter to write ticket for: ";
             int meterNumber = stoi(getInput()) - 1;
             if(meterNumber>=0 && meterNumber<amountOfMeters) {
@@ -143,40 +143,35 @@ void patrolMeters(){
             else
                 cout << "\nParking meter chosen does not exist.\nPlease input a valid meter number.\n" << endl;
         }
-        else if (userInput!="yes" && userInput=="no")
-            break;
+        else if (userInput=="no")
+            cout << "\nYou did not issue a ticket." << endl;
         else
             cout << "\nInvalid Input.\nPlease Try Again.\n" << endl;
     }
 }
 
-int main() {
+int main(int argc, char **argv) {
 
     makePoliceOfficer();
 
-    int userInput;
-    while(true){
+    string userInput;
+    while(userInput!="2"){
 
         cout << "\nWhat would you like to do?\n"
                 "   1.  Go out on patrol\n"
                 "   2.  Go home\n"
                 "\nEnter your choice: ";
 
-        try {
-            userInput = stoi(getInput());
+    
+        userInput = getInput();
 
-            if (userInput == 1)
-                patrolMeters();
-            else if (userInput == 2) {
-                cout << "\nThank You for using using this simulation" << endl;
-                break;
-            } else
-                cout << "\nInvalid Input.\nPlease Try Again.\n" << endl;
-        }
-        catch (exception& e){
-            cout << "\nInvalid Input.\nInput must be a number.\nPlease Try Again.\n" << endl;
-        }
-
+        if (userInput == "1")
+            patrolMeters();
+        else if (userInput == "2") 
+            cout << "\nThank You for using using this simulation" << endl;
+        else
+            cout << "\nInvalid Input.\nPlease Try Again.\n" << endl;
+    
     }
 
 

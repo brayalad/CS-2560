@@ -9,16 +9,13 @@
 #include "ParkingTicket.h"
 #include "ParkedCar.h"
 
-
-using namespace std;
-
 class ParkingTicket;
 
 class PoliceOfficer {
 
 private:
-    string name;
-    string badgeNumber;
+    std::string name;
+    std::string badgeNumber;
 
 public:
     PoliceOfficer(string = "", string = "");
@@ -28,9 +25,9 @@ public:
     void setName(string name);
     void setBadgeNumber(string badgeNumber);
 
-    string getName();
-    string getBadgeNumber();
-    string getPoliceOfficer();
+    const std::string& getName() const{ return name; }
+    const std::string& getBadgeNumber() const{ return badgeNumber; }
+    std::string getPoliceOfficer();
 
 };
 
