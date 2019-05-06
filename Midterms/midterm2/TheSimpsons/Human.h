@@ -1,11 +1,10 @@
-
-#ifndef SIMPSONS_HUMAN_H
-#define SIMPSONS_HUMAN_H
+//Human.h
+#pragma once
 
 #include <string>
 
-class Human {
-
+class Human
+{
 private:
     std::string name;
     int age;
@@ -21,12 +20,9 @@ public:
     void setAge(int _age);
     void setSex(char _sex);
 
-    const std::string& getName() const{ return name; };
-    int getAge() const{ return age; };
-    char getSex() const{ return sex; };
-
-
+    const std::string& getName() const;
+    int getAge() const;
+    char getSex() const;
 };
 
 
-#endif //SIMPSONS_HUMAN_H

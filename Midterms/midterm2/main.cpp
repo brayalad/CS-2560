@@ -1,124 +1,139 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
-
-class Human {
-
+class Human
+{
 private:
-    string name;
+    std::string name;
     int age;
     char sex;
-    friend class Parent;
-    friend class Child;
-    Human(){
-        setName("");
-        setAge(0);
-        setSex(' ');
+    
+    Human()
+    {
+        name = "";
+        age = 0;
+        sex = ' ';
     }
 
 protected:
-    Human(string name, int age, char sex){
-        setName(name);
-        setAge(age);
-        setSex(sex);
+    Human(std::string _name, int _age, char _sex)
+    {
+        name = _name;
+        age = _age;
+        sex = _sex;
     }
     virtual ~Human(){}
 
 public:
-    void setName(string name){
-        this->name = name;
+    void setName(std::string _name)
+    {
+        name = _name;
     }
-    void setAge(int age){
-        this->age = age;
+    void setAge(int _age){
+        age = _age;
     }
-    void setSex(char sex){
-        this->sex=sex;
+    void setSex(char _sex){
+        sex = _sex;
     }
 
-    const string& getName() const{
+    const std::string& getName() const
+    {
         return name;
     }
-    int getAge() const{
+    int getAge() const
+    {
         return age;
     }
-    int getSex() const {
+    int getSex() const
+    {
         return sex;
     }
-
-
 };
 
 
-class Child : public Human{
-
+class Child : public Human
+{
 private:
-    string momName;
-    string dadName;
+    std::string momName;
+    std::string dadName;
     int allowance;
     friend class Parent;
-    Child() : Human(){
+    
+    Child() : Human("", 0, ' ')
+    {
         momName = "";
         dadName = "";
         allowance = 0;
     }
 
 public:
-    Child(string name, int age, char sex, string momName, string dadName) : Human(name,age,sex){
-        this->momName = momName;
-        this->dadName=dadName;
+    Child(std::string _name, int _age, char _sex, std::string _momName, std::string _dadName) : Human(_name, _age, _sex)
+    {
+        momName = _momName;
+        dadName=_dadName;
         allowance = 0;
     }
-    int getAllowance() const{
+    int getAllowance() const
+    {
         return allowance;
     }
-    void printParents(){
-        cout<< "Mom: " << momName << endl;
-        cout<< "Dad: " << dadName << endl;
+    void printParents()
+    {
+        std::cout << "Mom: " << momName << std::endl;
+        std::cout << "Dad: " << dadName << std::endl;
     }
-
 };
 
-class Parent : public Human{
 
+class Parent : public Human
+{
 private:
-    vector<string> children;
-    Parent() : Human(){}
+    std::vector<std::string> children;
+    
+    Parent() : Human("", 0, ' ')
+    {
+
+    }
 
 public:
-    Parent(string name, int age, char sex) : Human(name,age,sex){}
-    void printChild(){
-        for(int i=0;i<children.size();i++){
-            cout<<children[i]<<endl;
+    Parent(std::string _name, int _age, char _sex) : Human(_name, _age, _sex)
+    {
+
+    }
+    void printChild()
+    {
+        for (int i = 0; i < children.size() ; ++i)
+        {
+            std::cout << children[i] << std::endl;
         }
     }
-    void setChild(Child child){
-        children.push_back(child.getName());
+    void setChild(Child _child)
+    {
+        children.push_back(_child.getName());
     }
-    void setChildAllowance(int allowance, Child *child){
-        child->allowance = allowance;
+    void setChildAllowance(int allowance, Child *_child)
+    {
+        _child->allowance = allowance;
     }
-
-
 };
 
 
-void printInfo(Human *human){
-    cout << "\nName: " << human->getName()
-         << "\nAge: " << human->getAge()
-         << "\nSex: " << human->getSex() << endl;
+void printInfo(Human *_human)
+{
+    std::cout << "\nName: " << _human->getName()
+              << "\nAge: " << _human->getAge()
+              << "\nSex: " << _human->getSex() << std::endl;
 }
 
 
 int main(int argc, char **argv) {
 
-    Parent homer("Homer",36,'M');
-    Parent marge("Marge",34,'F');
+    Parent homer = Parent("Homer",36,'M');
+    Parent marge = Parent("Marge",34,'F');
 
-    Child bart("Bart",12,'M',homer.getName(),marge.getName());
-    Child lisa("Lisa",10,'F',homer.getName(),marge.getName());
-    Child maggie("Maggie",2,'F',homer.getName(),marge.getName());
+    Child bart = Child("Bart",12,'M',homer.getName(),marge.getName());
+    Child lisa = Child("Lisa",10,'F',homer.getName(),marge.getName());
+    Child maggie = Child("Maggie",2,'F',homer.getName(),marge.getName());
 
     homer.setChild(bart);
     homer.setChild(lisa);
@@ -128,9 +143,9 @@ int main(int argc, char **argv) {
     marge.setChild(lisa);
     marge.setChild(maggie);
 
-    cout << "Bart Allowance: " <<  bart.getAllowance() << endl;
+    std::cout << "Bart Allowance: " <<  bart.getAllowance() << std::endl;
     homer.setChildAllowance(5,&bart);
-    cout << "Bart Allowance: " <<  bart.getAllowance() << "\n" << endl;
+    std::cout << "Bart Allowance: " <<  bart.getAllowance() << "\n" << std::endl;
 
     bart.printParents();
 

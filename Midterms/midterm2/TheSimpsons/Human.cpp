@@ -1,32 +1,49 @@
-
+//Human.cpp
 #include "Human.h"
 
-using namespace std;
-
-Human::Human() {
-    setName("");
-    setAge(0);
-    setSex(' ');
+Human::Human()
+{
+    this->name = "";
+    this->age = 0;
+    this->sex = ' ';
 }
 
-Human::Human(string _name, int _age, char _sex) {
-    setName(_name);
-    setAge(_age);
-    setSex(_sex);
+Human::Human(std::string _name, int _age, char _sex)
+{
+    this->name = std::move(_name);
+    this->age = _age;
+    this->sex = _sex;
 }
 
-Human::~Human() {
+Human::~Human() = default;
 
+void Human::setName(std::string _name)
+{
+    this->name = std::move(_name);
 }
 
-void Human::setName(std::string _name) {
-    name = _name;
+void Human::setAge(int _age)
+{
+    this->age = _age;
 }
 
-void Human::setAge(int _age) {
-    age = _age;
+void Human::setSex(char _sex)
+{
+    this->sex = _sex;
 }
 
-void Human::setSex(char _sex) {
-    sex = _sex;
+const std::string &Human::getName() const
+{
+    return name;
 }
+
+int Human::getAge() const
+{
+    return age;
+}
+
+char Human::getSex() const
+{
+    return sex;
+}
+

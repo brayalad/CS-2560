@@ -1,12 +1,11 @@
-#ifndef SIMPSONS_CHILD_H
-#define SIMPSONS_CHILD_H
+//Child.h
+#pragma once
 
-#include <string>
 #include "Human.h"
+#include <string>
 
-
-class Child : public Human{
-
+class Child : public Human
+{
 private:
     std::string momName;
     std::string dadName;
@@ -18,10 +17,4 @@ public:
     Child(std::string _name, int _age, char _sex, std::string _momName, std::string _dadName);
     int getAllowance() const;
     void printParents() const;
-
-
-
 };
-
-
-#endif //SIMPSONS_CHILD_H

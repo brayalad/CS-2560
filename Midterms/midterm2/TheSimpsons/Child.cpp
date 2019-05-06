@@ -1,25 +1,28 @@
-#include <iostream>
+//Child.cpp
 #include "Child.h"
+#include <iostream>
 
-using namespace std;
-
-Child::Child() : Human(" ",0,' ') {
+Child::Child() : Human(" ",0,' ')
+{
     momName = "";
     dadName = "";
     allowance = 0;
 }
 
-Child::Child(string _name, int _age, char _sex, string _momName, string _dadName) : Human(_name, _age, _sex) {
-    momName = _momName;
-    dadName = _dadName;
+Child::Child(std::string _name, int _age, char _sex, std::string _momName, std::string _dadName) : Human(std::move(_name), _age, _sex)
+{
+    momName = std::move(_momName);
+    dadName = std::move(_dadName);
     allowance = 0;
 }
 
-int Child::getAllowance() const {
+int Child::getAllowance() const
+{
     return allowance;
 }
 
-void Child::printParents() const{
-    cout << getName() << "'s Mother: " << momName << endl;
-    cout << getName() << "'s Father: " << dadName << endl;
+void Child::printParents() const
+{
+    std::cout << getName() << "'s Mother: " << momName << std::endl;
+    std::cout << getName() << "'s Father: " << dadName << std::endl;
 }
