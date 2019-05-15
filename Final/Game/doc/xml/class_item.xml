@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_item" kind="class" language="C++" prot="public">
+    <compoundname>Item</compoundname>
+    <includes refid="_item_8h" local="no">Item.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_item_1a973928e2be55a5919a575e0965f1c355" prot="private" static="no" mutable="no">
+        <type><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref></type>
+        <definition>GameData Item::gameData</definition>
+        <argsstring></argsstring>
+        <name>gameData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shared pointer to other classes of the program </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Item.h" line="20" column="1" bodyfile="headers/Item.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_item_1a9aace105f8e96bc5372e9a140604908e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; sf::Sprite &gt;</type>
+        <definition>std::vector&lt;sf::Sprite&gt; Item::asteroids</definition>
+        <argsstring></argsstring>
+        <name>asteroids</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vector holding the asteroid sprites that are currently displayed on the screen </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Item.h" line="25" column="1" bodyfile="headers/Item.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_item_1a1357ed1e280ee7b207d893bc860eddba" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; sf::Sprite &gt;</type>
+        <definition>std::vector&lt;sf::Sprite&gt; Item::coins</definition>
+        <argsstring></argsstring>
+        <name>coins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vector holding the coin sprites that are currently displayed on the screen </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Item.h" line="30" column="1" bodyfile="headers/Item.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_item_1aaded2a7e8d7d74ceb9838fc0d9da2ea3" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Item::Item</definition>
+        <argsstring>(GameData _gameData)</argsstring>
+        <name>Item</name>
+        <param>
+          <type><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref></type>
+          <declname>_gameData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constuctor for the Items class. Sets up the different spirtes with assets from the asset manager class <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_gameData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the shared pointer to ouside game classes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Item.h" line="38" column="1" bodyfile="Item.cpp" bodystart="5" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_item_1acbef638becdf16de85c9602a93d47518" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Item::spawnAsteroid</definition>
+        <argsstring>()</argsstring>
+        <name>spawnAsteroid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method creates new asteroid sprites and adds them to the asteroid vector </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Item.h" line="43" column="1" bodyfile="Item.cpp" bodystart="10" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_item_1ad79f9b2e0ad9cb922cd7678fc8dc628e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Item::spawnCoin</definition>
+        <argsstring>()</argsstring>
+        <name>spawnCoin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates new coin sprites and adds them to the coin vector </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Item.h" line="47" column="1" bodyfile="Item.cpp" bodystart="23" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_item_1ac28d0cbacc49ab30bdd0c593600a75be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Item::moveItems</definition>
+        <argsstring>(float frameRate)</argsstring>
+        <name>moveItems</name>
+        <param>
+          <type>float</type>
+          <declname>frameRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Moves the items in both vectors from right to left <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frameRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>rate at which to move the items </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Item.h" line="52" column="1" bodyfile="Item.cpp" bodystart="37" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_item_1a468f79141232febc578c8cefe32b2791" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Item::drawItems</definition>
+        <argsstring>()</argsstring>
+        <name>drawItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the contents and changes to the game window </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Item.h" line="56" column="1" bodyfile="Item.cpp" bodystart="68" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_item_1a040b4ff526f1ab5340b3a7ea630037ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; sf::Sprite &gt; &amp;</type>
+        <definition>const std::vector&lt; sf::Sprite &gt; &amp; Item::getAsteroids</definition>
+        <argsstring>() const</argsstring>
+        <name>getAsteroids</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get method for the asteroids on the screen <simplesect kind="return"><para>vector of asteroid sprites on the screen </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Item.h" line="62" column="1" bodyfile="Item.cpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_item_1a272b51e3dad8000fe006b0aa5b4ec259" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; sf::Sprite &gt; &amp;</type>
+        <definition>std::vector&lt; sf::Sprite &gt; &amp; Item::getCoins</definition>
+        <argsstring>()</argsstring>
+        <name>getCoins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get method for the coins on the screen <simplesect kind="return"><para>vector of coin sprites on the screen </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Item.h" line="67" column="1" bodyfile="Item.cpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The item class represents an item in the game. In this game it is either a an asteroid or a coin. This class is responsible for the items in the game. This means moving them from the right side of the screen to the left and updating the screen accordingling </para>
+    </detaileddescription>
+    <location file="headers/Item.h" line="15" column="1" bodyfile="headers/Item.h" bodystart="14" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_item_1a9aace105f8e96bc5372e9a140604908e" prot="private" virt="non-virtual"><scope>Item</scope><name>asteroids</name></member>
+      <member refid="class_item_1a1357ed1e280ee7b207d893bc860eddba" prot="private" virt="non-virtual"><scope>Item</scope><name>coins</name></member>
+      <member refid="class_item_1a468f79141232febc578c8cefe32b2791" prot="public" virt="non-virtual"><scope>Item</scope><name>drawItems</name></member>
+      <member refid="class_item_1a973928e2be55a5919a575e0965f1c355" prot="private" virt="non-virtual"><scope>Item</scope><name>gameData</name></member>
+      <member refid="class_item_1a040b4ff526f1ab5340b3a7ea630037ba" prot="public" virt="non-virtual"><scope>Item</scope><name>getAsteroids</name></member>
+      <member refid="class_item_1a272b51e3dad8000fe006b0aa5b4ec259" prot="public" virt="non-virtual"><scope>Item</scope><name>getCoins</name></member>
+      <member refid="class_item_1aaded2a7e8d7d74ceb9838fc0d9da2ea3" prot="public" virt="non-virtual"><scope>Item</scope><name>Item</name></member>
+      <member refid="class_item_1ac28d0cbacc49ab30bdd0c593600a75be" prot="public" virt="non-virtual"><scope>Item</scope><name>moveItems</name></member>
+      <member refid="class_item_1acbef638becdf16de85c9602a93d47518" prot="public" virt="non-virtual"><scope>Item</scope><name>spawnAsteroid</name></member>
+      <member refid="class_item_1ad79f9b2e0ad9cb922cd7678fc8dc628e" prot="public" virt="non-virtual"><scope>Item</scope><name>spawnCoin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

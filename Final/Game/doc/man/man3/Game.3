@@ -1,0 +1,86 @@
+.TH "Game" 3 "Tue May 14 2019" "Space Race" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Game
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Game\&.h>\fP
+.PP
+Inherits \fBGameState\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGame\fP (\fBGameData\fP _gameData)"
+.br
+.ti -1c
+.RI "void \fBinitialize\fP () override"
+.br
+.ti -1c
+.RI "void \fBhandleInput\fP () override"
+.br
+.ti -1c
+.RI "void \fBupdate\fP (float frameRate) override"
+.br
+.ti -1c
+.RI "void \fBdraw\fP () override"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBGame\fP class is responsible for the current game turn being played\&. It is dervived from the \fBGameState\fP class, meaning that it is one of the possible states that the video game can be in at any given time\&. The state that this class represents is that state of the game while the user is playing a turn\&. It is responsible for drawing and updated the window during the game turn and handling any events that it recieves\&. 
+.PP
+Definition at line 21 of file Game\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Game::Game (\fBGameData\fP _gameData)\fC [explicit]\fP"
+The \fBGame\fP constructor responsible for setting up the window enviorment for the game turn\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI_gameData\fP The shared pointer to Manager classes 
+.RE
+.PP
+
+.PP
+Definition at line 6 of file Game\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Game::draw ()\fC [override]\fP, \fC [virtual]\fP"
+Draws changes made to the window and displays them, and any other class needed to the screen\&. 
+.PP
+Reimplemented from \fBGameState\fP\&.
+.PP
+Definition at line 139 of file Game\&.cpp\&.
+.SS "void Game::handleInput ()\fC [override]\fP, \fC [virtual]\fP"
+Handles any user input recieved by the \fBUserInput\fP class 
+.PP
+Reimplemented from \fBGameState\fP\&.
+.PP
+Definition at line 33 of file Game\&.cpp\&.
+.SS "void Game::initialize ()\fC [override]\fP, \fC [virtual]\fP"
+Sets up the window for the current game turn to begin 
+.PP
+Reimplemented from \fBGameState\fP\&.
+.PP
+Definition at line 19 of file Game\&.cpp\&.
+.SS "void Game::update (float frameRate)\fC [override]\fP, \fC [virtual]\fP"
+Updates the different parts of the window whenever there are changes\&. This means updating positions of the spaceship and space items 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIframeRate\fP The rate at which to update changes 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBGameState\fP\&.
+.PP
+Definition at line 75 of file Game\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Space Race from the source code\&.

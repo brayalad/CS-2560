@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="_global_variables_8h" kind="file" language="C++">
+    <compoundname>GlobalVariables.h</compoundname>
+    <includedby refid="_game_8cpp" local="yes">Game.cpp</includedby>
+    <includedby refid="_game_over_8cpp" local="yes">GameOver.cpp</includedby>
+    <includedby refid="_engine_8h" local="yes">headers/Engine.h</includedby>
+    <includedby refid="_space_ship_8h" local="yes">headers/SpaceShip.h</includedby>
+    <includedby refid="_score_keeper_8h" local="yes">headers/ScoreKeeper.h</includedby>
+    <includedby refid="_item_8cpp" local="yes">Item.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="_main_menu_8cpp" local="yes">MainMenu.cpp</includedby>
+    <invincdepgraph>
+      <node id="204">
+        <label>Game.cpp</label>
+        <link refid="_game_8cpp"/>
+      </node>
+      <node id="215">
+        <label>ScoreKeeper.cpp</label>
+        <link refid="_score_keeper_8cpp"/>
+      </node>
+      <node id="203">
+        <label>headers/GlobalVariables.h</label>
+        <link refid="_global_variables_8h"/>
+        <childnode refid="204" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
+        </childnode>
+      </node>
+      <node id="210">
+        <label>headers/Item.h</label>
+        <link refid="_item_8h"/>
+        <childnode refid="208" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+      </node>
+      <node id="209">
+        <label>MainMenu.cpp</label>
+        <link refid="_main_menu_8cpp"/>
+      </node>
+      <node id="207">
+        <label>Engine.cpp</label>
+        <link refid="_engine_8cpp"/>
+      </node>
+      <node id="217">
+        <label>headers/MainMenu.h</label>
+        <link refid="_main_menu_8h"/>
+        <childnode refid="207" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>SpaceShip.cpp</label>
+        <link refid="_space_ship_8cpp"/>
+      </node>
+      <node id="206">
+        <label>headers/Engine.h</label>
+        <link refid="_engine_8h"/>
+        <childnode refid="207" relation="include">
+        </childnode>
+        <childnode refid="208" relation="include">
+        </childnode>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+      </node>
+      <node id="211">
+        <label>Item.cpp</label>
+        <link refid="_item_8cpp"/>
+      </node>
+      <node id="216">
+        <label>headers/GameOver.h</label>
+        <link refid="_game_over_8h"/>
+        <childnode refid="204" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+      </node>
+      <node id="205">
+        <label>GameOver.cpp</label>
+        <link refid="_game_over_8cpp"/>
+      </node>
+      <node id="218">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="212">
+        <label>headers/SpaceShip.h</label>
+        <link refid="_space_ship_8h"/>
+        <childnode refid="208" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+      </node>
+      <node id="214">
+        <label>headers/ScoreKeeper.h</label>
+        <link refid="_score_keeper_8h"/>
+        <childnode refid="208" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+      </node>
+      <node id="208">
+        <label>headers/Game.h</label>
+        <link refid="_game_8h"/>
+        <childnode refid="204" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_global_variables_8h_1a2cd109632a6dcccaa80b43561b1ab700" prot="public" static="no">
+        <name>SCREEN_WIDTH</name>
+        <initializer>1280</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defining varialbes that are used throught the whole program </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GlobalVariables.h" line="7" column="9" bodyfile="headers/GlobalVariables.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_variables_8h_1a6974d08a74da681b3957b2fead2608b8" prot="public" static="no">
+        <name>SCREEN_HEIGHT</name>
+        <initializer>720</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GlobalVariables.h" line="8" column="9" bodyfile="headers/GlobalVariables.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_variables_8h_1a1811efff299e4d80a481decf69ded942" prot="public" static="no">
+        <name>GAME_BACKGROUND_FILEPATH</name>
+        <initializer>&quot;Resources/textures/space.png&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GlobalVariables.h" line="10" column="9" bodyfile="headers/GlobalVariables.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_variables_8h_1ae522dd0ecdf21fe585e5b033e78b019f" prot="public" static="no">
+        <name>PLAY_BUTTON_FILEPATH</name>
+        <initializer>&quot;Resources/textures/PlayButton.png&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GlobalVariables.h" line="12" column="9" bodyfile="headers/GlobalVariables.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_variables_8h_1ac4f68da16f7648a2a6649c8f631f9b81" prot="public" static="no">
+        <name>ASTEROID_1_FILEPATH</name>
+        <initializer>&quot;Resources/textures/asteroid_1.png&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GlobalVariables.h" line="14" column="9" bodyfile="headers/GlobalVariables.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_variables_8h_1a79800ccf0bd8d67a03e21734076b4c27" prot="public" static="no">
+        <name>COIN_FILEPATH</name>
+        <initializer>&quot;Resources/textures/coin.png&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GlobalVariables.h" line="15" column="9" bodyfile="headers/GlobalVariables.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_variables_8h_1a3bff277bc6fd62974da7ed6ede0bb29a" prot="public" static="no">
+        <name>SPACESHIP_FILEPATH</name>
+        <initializer>&quot;Resources/textures/spaceship.png&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GlobalVariables.h" line="16" column="9" bodyfile="headers/GlobalVariables.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_variables_8h_1a182ae8f386c570c7f8ac0d70365bdd43" prot="public" static="no">
+        <name>SCORE_FONT_FILEPATH</name>
+        <initializer>&quot;Resources/fonts/promethean.ttf&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GlobalVariables.h" line="18" column="9" bodyfile="headers/GlobalVariables.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_variables_8h_1a72bf1d158b7d66a6eddbf2e278bf9fa6" prot="public" static="no">
+        <name>ITEM_MOVEMENT_SPEED</name>
+        <initializer>200.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GlobalVariables.h" line="20" column="9" bodyfile="headers/GlobalVariables.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_variables_8h_1a4ba81f513aae90f770ae1ce489d3443e" prot="public" static="no">
+        <name>ITEM_SPAWN_FREQUENCY</name>
+        <initializer>1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GlobalVariables.h" line="21" column="9" bodyfile="headers/GlobalVariables.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_variables_8h_1a6f6734e3567df4d03243fc3482cbdaa2" prot="public" static="no">
+        <name>SPACESHIP_FLYING_SPEED</name>
+        <initializer>350.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GlobalVariables.h" line="23" column="9" bodyfile="headers/GlobalVariables.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_variables_8h_1a482b88d9d263f54bb4ceb6d499701afd" prot="public" static="no">
+        <name>SPACESHIP_ROTATION_SPEED</name>
+        <initializer>100.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GlobalVariables.h" line="25" column="9" bodyfile="headers/GlobalVariables.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_variables_8h_1a0b73c5aa67be999a8922f4ddfce6e4a9" prot="public" static="no">
+        <name>TIME_BEFORE_GAME_OVER_APPEARS</name>
+        <initializer>1.5f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GlobalVariables.h" line="27" column="9" bodyfile="headers/GlobalVariables.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//GlobalVariables.h</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="_global_variables_8h_1a2cd109632a6dcccaa80b43561b1ab700" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCREEN_WIDTH<sp/>1280</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="_global_variables_8h_1a6974d08a74da681b3957b2fead2608b8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCREEN_HEIGHT<sp/>720</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="_global_variables_8h_1a1811efff299e4d80a481decf69ded942" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GAME_BACKGROUND_FILEPATH<sp/>&quot;Resources/textures/space.png&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_global_variables_8h_1ae522dd0ecdf21fe585e5b033e78b019f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PLAY_BUTTON_FILEPATH<sp/>&quot;Resources/textures/PlayButton.png&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="_global_variables_8h_1ac4f68da16f7648a2a6649c8f631f9b81" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASTEROID_1_FILEPATH<sp/>&quot;Resources/textures/asteroid_1.png&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="_global_variables_8h_1a79800ccf0bd8d67a03e21734076b4c27" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COIN_FILEPATH<sp/>&quot;Resources/textures/coin.png&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="_global_variables_8h_1a3bff277bc6fd62974da7ed6ede0bb29a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPACESHIP_FILEPATH<sp/>&quot;Resources/textures/spaceship.png&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_global_variables_8h_1a182ae8f386c570c7f8ac0d70365bdd43" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCORE_FONT_FILEPATH<sp/>&quot;Resources/fonts/promethean.ttf&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="_global_variables_8h_1a72bf1d158b7d66a6eddbf2e278bf9fa6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ITEM_MOVEMENT_SPEED<sp/>200.0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="_global_variables_8h_1a4ba81f513aae90f770ae1ce489d3443e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ITEM_SPAWN_FREQUENCY<sp/>1.0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="_global_variables_8h_1a6f6734e3567df4d03243fc3482cbdaa2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPACESHIP_FLYING_SPEED<sp/>350.0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="_global_variables_8h_1a482b88d9d263f54bb4ceb6d499701afd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPACESHIP_ROTATION_SPEED<sp/>100.0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="_global_variables_8h_1a0b73c5aa67be999a8922f4ddfce6e4a9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TIME_BEFORE_GAME_OVER_APPEARS<sp/>1.5f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="headers/GlobalVariables.h"/>
+  </compounddef>
+</doxygen>

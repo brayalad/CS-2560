@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_space_ship" kind="class" language="C++" prot="public">
+    <compoundname>SpaceShip</compoundname>
+    <includes refid="_space_ship_8h" local="no">SpaceShip.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_space_ship_1a11adcb184a65350439ef4c0a41bded39" prot="private" static="no" mutable="no">
+        <type><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref></type>
+        <definition>GameData SpaceShip::gameData</definition>
+        <argsstring></argsstring>
+        <name>gameData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shared pointer to other classes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/SpaceShip.h" line="19" column="1" bodyfile="headers/SpaceShip.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_space_ship_1a34e82402315745367541ad21cd8d4ba1" prot="private" static="no" mutable="no">
+        <type>sf::Sprite</type>
+        <definition>sf::Sprite SpaceShip::spaceShip</definition>
+        <argsstring></argsstring>
+        <name>spaceShip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sprite representing the spaceship </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/SpaceShip.h" line="23" column="1" bodyfile="headers/SpaceShip.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_space_ship_1af71cc6a7c00c1281aaba07498fe3e697" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string SpaceShip::spaceShipState</definition>
+        <argsstring></argsstring>
+        <name>spaceShipState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current state of the spaceship </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/SpaceShip.h" line="27" column="1" bodyfile="headers/SpaceShip.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_space_ship_1a61fb4e816c67cfbabc4b465b32c9fe0b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SpaceShip::rotation</definition>
+        <argsstring></argsstring>
+        <name>rotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The spaceships rotation value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/SpaceShip.h" line="31" column="1" bodyfile="headers/SpaceShip.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_space_ship_1a64344084d86854f5d08c6a4601e58cf6" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpaceShip::SpaceShip</definition>
+        <argsstring>(GameData _gameData)</argsstring>
+        <name>SpaceShip</name>
+        <param>
+          <type><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref></type>
+          <declname>_gameData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Spaceship constructor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_gameData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to other classes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/SpaceShip.h" line="39" column="1" bodyfile="SpaceShip.cpp" bodystart="5" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_space_ship_1a2bf6798a10a1a26ecd0bfbef6bea076d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpaceShip::~SpaceShip</definition>
+        <argsstring>()=default</argsstring>
+        <name>~SpaceShip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/SpaceShip.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_space_ship_1aa101a4a70560fe739f6b5d15d5ca9294" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpaceShip::draw</definition>
+        <argsstring>()</argsstring>
+        <name>draw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Draws the spacehip in its current state </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/SpaceShip.h" line="48" column="1" bodyfile="SpaceShip.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_space_ship_1a9de49446d7a2029f7d05537d2f5d6768" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpaceShip::update</definition>
+        <argsstring>(float frameRate)</argsstring>
+        <name>update</name>
+        <param>
+          <type>float</type>
+          <declname>frameRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the state of the spaceship based on user input <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frameRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/SpaceShip.h" line="53" column="1" bodyfile="SpaceShip.cpp" bodystart="29" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_space_ship_1a38ae22af5e0f792b9e26ec257b4bd47a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpaceShip::move</definition>
+        <argsstring>(char direction)</argsstring>
+        <name>move</name>
+        <param>
+          <type>char</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Moves the spaceship vertically <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The direction in which to move </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/SpaceShip.h" line="58" column="1" bodyfile="SpaceShip.cpp" bodystart="76" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_space_ship_1a7529626398ca826b83b19bd06ec0ba2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const sf::Sprite &amp;</type>
+        <definition>const sf::Sprite &amp; SpaceShip::getSpaceShip</definition>
+        <argsstring>() const</argsstring>
+        <name>getSpaceShip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get method for the spaceship <simplesect kind="return"><para>the spaceship sprite </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/SpaceShip.h" line="64" column="1" bodyfile="SpaceShip.cpp" bodystart="93" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_space_ship" kindref="compound">SpaceShip</ref> class is the class the user controls. The user can move it up or down as well as rotate the sprite. </para>
+    </detaileddescription>
+    <location file="headers/SpaceShip.h" line="13" column="1" bodyfile="headers/SpaceShip.h" bodystart="13" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_space_ship_1aa101a4a70560fe739f6b5d15d5ca9294" prot="public" virt="non-virtual"><scope>SpaceShip</scope><name>draw</name></member>
+      <member refid="class_space_ship_1a11adcb184a65350439ef4c0a41bded39" prot="private" virt="non-virtual"><scope>SpaceShip</scope><name>gameData</name></member>
+      <member refid="class_space_ship_1a7529626398ca826b83b19bd06ec0ba2e" prot="public" virt="non-virtual"><scope>SpaceShip</scope><name>getSpaceShip</name></member>
+      <member refid="class_space_ship_1a38ae22af5e0f792b9e26ec257b4bd47a" prot="public" virt="non-virtual"><scope>SpaceShip</scope><name>move</name></member>
+      <member refid="class_space_ship_1a61fb4e816c67cfbabc4b465b32c9fe0b" prot="private" virt="non-virtual"><scope>SpaceShip</scope><name>rotation</name></member>
+      <member refid="class_space_ship_1a34e82402315745367541ad21cd8d4ba1" prot="private" virt="non-virtual"><scope>SpaceShip</scope><name>spaceShip</name></member>
+      <member refid="class_space_ship_1a64344084d86854f5d08c6a4601e58cf6" prot="public" virt="non-virtual"><scope>SpaceShip</scope><name>SpaceShip</name></member>
+      <member refid="class_space_ship_1af71cc6a7c00c1281aaba07498fe3e697" prot="private" virt="non-virtual"><scope>SpaceShip</scope><name>spaceShipState</name></member>
+      <member refid="class_space_ship_1a9de49446d7a2029f7d05537d2f5d6768" prot="public" virt="non-virtual"><scope>SpaceShip</scope><name>update</name></member>
+      <member refid="class_space_ship_1a2bf6798a10a1a26ecd0bfbef6bea076d" prot="public" virt="non-virtual"><scope>SpaceShip</scope><name>~SpaceShip</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

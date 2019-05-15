@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_game_state_manager" kind="class" language="C++" prot="public">
+    <compoundname>GameStateManager</compoundname>
+    <includes refid="_game_state_manager_8h" local="no">GameStateManager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_game_state_manager_1a1f08e380e78d3394fb1b507b4d2f3c71" prot="private" static="no" mutable="no">
+        <type>std::stack&lt; <ref refid="_game_state_manager_8h_1aff87e674f0407654608d089427df6ab3" kindref="member">State</ref> &gt;</type>
+        <definition>std::stack&lt;State&gt; GameStateManager::gameStates</definition>
+        <argsstring></argsstring>
+        <name>gameStates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The stack which holds the different states of the game </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameStateManager.h" line="33" column="1" bodyfile="headers/GameStateManager.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_state_manager_1a967053486faf88c46943a523eff62469" prot="private" static="no" mutable="no">
+        <type><ref refid="_game_state_manager_8h_1aff87e674f0407654608d089427df6ab3" kindref="member">State</ref></type>
+        <definition>State GameStateManager::newState</definition>
+        <argsstring></argsstring>
+        <name>newState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The state that is to be added to the game and the stack </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameStateManager.h" line="37" column="1" bodyfile="headers/GameStateManager.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_state_manager_1a45d1c9fc132bfdbd411297a87361f093" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GameStateManager::isRemoving</definition>
+        <argsstring></argsstring>
+        <name>isRemoving</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>boolean flag to check if a state is being removed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameStateManager.h" line="42" column="1" bodyfile="headers/GameStateManager.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_state_manager_1a6451326faba5e6a059d7002973c45d41" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GameStateManager::isAdding</definition>
+        <argsstring></argsstring>
+        <name>isAdding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>boolean flag to check if a state is being added </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameStateManager.h" line="46" column="1" bodyfile="headers/GameStateManager.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_state_manager_1a3c293c4cb87cde4bb9dd2436e5f35343" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool GameStateManager::isReplacing</definition>
+        <argsstring></argsstring>
+        <name>isReplacing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>boolean flag to check if a state is being replaced </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameStateManager.h" line="50" column="1" bodyfile="headers/GameStateManager.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_state_manager_1aa9769dca27ad070cf5491a7f54c7d85e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GameStateManager::GameStateManager</definition>
+        <argsstring>()</argsstring>
+        <name>GameStateManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameStateManager.h" line="56" column="1" bodyfile="GameStateManager.cpp" bodystart="4" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_state_manager_1ac4bbd99de7c51df4377bf25d367cc527" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GameStateManager::~GameStateManager</definition>
+        <argsstring>()=default</argsstring>
+        <name>~GameStateManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default Deconstructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameStateManager.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_state_manager_1af891544d0671ad46cb561f350ed3d175" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameStateManager::addState</definition>
+        <argsstring>(State _newState, bool _isReplacing=true)</argsstring>
+        <name>addState</name>
+        <param>
+          <type><ref refid="_game_state_manager_8h_1aff87e674f0407654608d089427df6ab3" kindref="member">State</ref></type>
+          <declname>_newState</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>_isReplacing</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Method adds a new state to the stack, the top of the stack is what will be displayed onto the window <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_newState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New state to be added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_isReplacing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>boolean flag to check if state is being replaced </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameStateManager.h" line="68" column="1" bodyfile="GameStateManager.cpp" bodystart="12" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_state_manager_1aa392462be47af93a17c12d2b9f90afb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameStateManager::processStateChanges</definition>
+        <argsstring>()</argsstring>
+        <name>processStateChanges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Process a change in the games overall state. Once there is a change to the stack, the top of the stack is displayed to the window </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameStateManager.h" line="73" column="1" bodyfile="GameStateManager.cpp" bodystart="20" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_state_manager_1a5b42b1e97123439df8e476c89d3b8a68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="_game_state_manager_8h_1aff87e674f0407654608d089427df6ab3" kindref="member">State</ref> &amp;</type>
+        <definition>const State &amp; GameStateManager::getActiveState</definition>
+        <argsstring>() const</argsstring>
+        <name>getActiveState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get method for the current state of the whole program at the time of being called <simplesect kind="return"><para>The current state of the game </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameStateManager.h" line="80" column="1" bodyfile="GameStateManager.cpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="class_game_state_manager" kindref="compound">GameStateManager</ref> is responsible for managing the different states of the game. It does this by adding and removing the different states on a stack. Once a state is finished, it is removed. In this game, the game begins with the <ref refid="class_main_menu" kindref="compound">MainMenu</ref> state. Once the user decides to play a game, a new <ref refid="class_game" kindref="compound">Game</ref> state is added to the stack. Once that game is over, a game over state is added to the stack. Once the user decides to begin a new game, the game over state ends and is removed from that stack, then a new game state is presented </para>
+    </detaileddescription>
+    <location file="headers/GameStateManager.h" line="27" column="1" bodyfile="headers/GameStateManager.h" bodystart="26" bodyend="82"/>
+    <listofallmembers>
+      <member refid="class_game_state_manager_1af891544d0671ad46cb561f350ed3d175" prot="public" virt="non-virtual"><scope>GameStateManager</scope><name>addState</name></member>
+      <member refid="class_game_state_manager_1aa9769dca27ad070cf5491a7f54c7d85e" prot="public" virt="non-virtual"><scope>GameStateManager</scope><name>GameStateManager</name></member>
+      <member refid="class_game_state_manager_1a1f08e380e78d3394fb1b507b4d2f3c71" prot="private" virt="non-virtual"><scope>GameStateManager</scope><name>gameStates</name></member>
+      <member refid="class_game_state_manager_1a5b42b1e97123439df8e476c89d3b8a68" prot="public" virt="non-virtual"><scope>GameStateManager</scope><name>getActiveState</name></member>
+      <member refid="class_game_state_manager_1a6451326faba5e6a059d7002973c45d41" prot="private" virt="non-virtual"><scope>GameStateManager</scope><name>isAdding</name></member>
+      <member refid="class_game_state_manager_1a45d1c9fc132bfdbd411297a87361f093" prot="private" virt="non-virtual"><scope>GameStateManager</scope><name>isRemoving</name></member>
+      <member refid="class_game_state_manager_1a3c293c4cb87cde4bb9dd2436e5f35343" prot="private" virt="non-virtual"><scope>GameStateManager</scope><name>isReplacing</name></member>
+      <member refid="class_game_state_manager_1a967053486faf88c46943a523eff62469" prot="private" virt="non-virtual"><scope>GameStateManager</scope><name>newState</name></member>
+      <member refid="class_game_state_manager_1aa392462be47af93a17c12d2b9f90afb0" prot="public" virt="non-virtual"><scope>GameStateManager</scope><name>processStateChanges</name></member>
+      <member refid="class_game_state_manager_1ac4bbd99de7c51df4377bf25d367cc527" prot="public" virt="non-virtual"><scope>GameStateManager</scope><name>~GameStateManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

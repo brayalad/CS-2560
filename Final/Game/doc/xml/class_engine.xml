@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_engine" kind="class" language="C++" prot="public">
+    <compoundname>Engine</compoundname>
+    <includes refid="_engine_8h" local="no">Engine.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_engine_1adf54912d626139638292a1e1c086d8c5" prot="private" static="no" mutable="no">
+        <type>const float</type>
+        <definition>const float Engine::frameRate</definition>
+        <argsstring></argsstring>
+        <name>frameRate</name>
+        <initializer>= 1.0f / 60.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The frame rate at which the game will run. Setting this avoids different rendering speeds based on where game is being ran. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Engine.h" line="59" column="1" bodyfile="headers/Engine.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_engine_1ad15b607cfc5e57f53e3a2d2378e2b297" prot="private" static="no" mutable="no">
+        <type>sf::Clock</type>
+        <definition>sf::Clock Engine::clock</definition>
+        <argsstring></argsstring>
+        <name>clock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clock keeping track of the time that has passed. Used to control framerate if needed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Engine.h" line="64" column="1" bodyfile="headers/Engine.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_engine_1a5882926138197196a108c10d92b44a5e" prot="private" static="no" mutable="no">
+        <type><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref></type>
+        <definition>GameData Engine::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <initializer>= std::make_shared&lt;<ref refid="struct_game_components" kindref="compound">GameComponents</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Instance of the typedef GameData that is a shared pointer that points the a struct containing all needed class instances. This makes a shared pointer and that pointer is passed around the game, allowing those specific encapsulated game components to be accessed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Engine.h" line="72" column="1" bodyfile="headers/Engine.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_engine_1a47e331ce6aa8fe844516373a695a4f8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Engine</definition>
+        <argsstring>(int width, int height, const std::string &amp;title)</argsstring>
+        <name>Engine</name>
+        <param>
+          <type>int</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="class_engine" kindref="compound">Engine</ref> class constructor is in charge of setting the enviorment up for the game. It creates the game window and loads the needed assets to the <ref refid="class_asset_manager" kindref="compound">AssetManager</ref> instance contained within the GameData typedef. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The width value of the window. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The height value of the window. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The title that will be displayed on the window. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Engine.h" line="83" column="1" bodyfile="Engine.cpp" bodystart="8" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_engine_1a1a210cf30d6bd330b3649439ecd6d6cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Engine::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The run method is the game loop. It begings the game by beggining a loop that will listen for events throught the game. Whenever an event is triggered, it will deal with the event by passing it on to the class responsible to handle it </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Engine.h" line="91" column="1" bodyfile="Engine.cpp" bodystart="23" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="class_engine" kindref="compound">Engine</ref> class is in charge of running the game. It contains the continous loop that runs the game and also checks for events and either deals with those events or calls on another class in the game to handle if neeeded; </para>
+    </detaileddescription>
+    <location file="headers/Engine.h" line="51" column="1" bodyfile="headers/Engine.h" bodystart="50" bodyend="93"/>
+    <listofallmembers>
+      <member refid="class_engine_1ad15b607cfc5e57f53e3a2d2378e2b297" prot="private" virt="non-virtual"><scope>Engine</scope><name>clock</name></member>
+      <member refid="class_engine_1a5882926138197196a108c10d92b44a5e" prot="private" virt="non-virtual"><scope>Engine</scope><name>data</name></member>
+      <member refid="class_engine_1a47e331ce6aa8fe844516373a695a4f8d" prot="public" virt="non-virtual"><scope>Engine</scope><name>Engine</name></member>
+      <member refid="class_engine_1adf54912d626139638292a1e1c086d8c5" prot="private" virt="non-virtual"><scope>Engine</scope><name>frameRate</name></member>
+      <member refid="class_engine_1a1a210cf30d6bd330b3649439ecd6d6cc" prot="public" virt="non-virtual"><scope>Engine</scope><name>run</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

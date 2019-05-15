@@ -1,0 +1,61 @@
+\hypertarget{class_engine}{}\section{Engine Class Reference}
+\label{class_engine}\index{Engine@{Engine}}
+
+
+{\ttfamily \#include $<$Engine.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine_a47e331ce6aa8fe844516373a695a4f8d}{Engine}} (int width, int height, const std\+::string \&title)
+\item 
+void \mbox{\hyperlink{class_engine_a1a210cf30d6bd330b3649439ecd6d6cc}{run}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_engine}{Engine}} class is in charge of running the game. It contains the continous loop that runs the game and also checks for events and either deals with those events or calls on another class in the game to handle if neeeded; 
+
+Definition at line 50 of file Engine.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_engine_a47e331ce6aa8fe844516373a695a4f8d}\label{class_engine_a47e331ce6aa8fe844516373a695a4f8d}} 
+\index{Engine@{Engine}!Engine@{Engine}}
+\index{Engine@{Engine}!Engine@{Engine}}
+\subsubsection{\texorpdfstring{Engine()}{Engine()}}
+{\footnotesize\ttfamily Engine\+::\+Engine (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{const std\+::string \&}]{title }\end{DoxyParamCaption})}
+
+The \mbox{\hyperlink{class_engine}{Engine}} class constructor is in charge of setting the enviorment up for the game. It creates the game window and loads the needed assets to the \mbox{\hyperlink{class_asset_manager}{Asset\+Manager}} instance contained within the Game\+Data typedef. 
+\begin{DoxyParams}{Parameters}
+{\em width} & The width value of the window. \\
+\hline
+{\em height} & The height value of the window. \\
+\hline
+{\em title} & The title that will be displayed on the window. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 8 of file Engine.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_engine_a1a210cf30d6bd330b3649439ecd6d6cc}\label{class_engine_a1a210cf30d6bd330b3649439ecd6d6cc}} 
+\index{Engine@{Engine}!run@{run}}
+\index{run@{run}!Engine@{Engine}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Engine\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The run method is the game loop. It begings the game by beggining a loop that will listen for events throught the game. Whenever an event is triggered, it will deal with the event by passing it on to the class responsible to handle it 
+
+Definition at line 23 of file Engine.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{_engine_8h}{Engine.\+h}}\item 
+\mbox{\hyperlink{_engine_8cpp}{Engine.\+cpp}}\end{DoxyCompactItemize}

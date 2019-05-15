@@ -1,0 +1,70 @@
+.TH "GameState" 3 "Tue May 14 2019" "Space Race" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GameState
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GameState\&.h>\fP
+.PP
+Inherited by \fBGame\fP, \fBGameOver\fP, and \fBMainMenu\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBinitialize\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBhandleInput\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBupdate\fP (float frameRate)"
+.br
+.ti -1c
+.RI "virtual void \fBdraw\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBGameState\fP class is meant to act more as a template or interface\&. There are three states that the program can be at any time\&. The user can be in the main menu, playing a game turn, or be in a game over state\&. This class acts as a blueprint to what states of the game are able to do\&. 
+.PP
+Definition at line 10 of file GameState\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void GameState::draw ()\fC [inline]\fP, \fC [virtual]\fP"
+Display its components to the window 
+.PP
+Reimplemented in \fBGame\fP, \fBGameOver\fP, and \fBMainMenu\fP\&.
+.PP
+Definition at line 32 of file GameState\&.h\&.
+.SS "virtual void GameState::handleInput ()\fC [inline]\fP, \fC [virtual]\fP"
+Handle any user input as appropriate based on the state 
+.PP
+Reimplemented in \fBGame\fP, \fBGameOver\fP, and \fBMainMenu\fP\&.
+.PP
+Definition at line 22 of file GameState\&.h\&.
+.SS "virtual void GameState::initialize ()\fC [inline]\fP, \fC [virtual]\fP"
+Initializes what is needed and sets up the enviorment for the state This includes things like loading and setting assets such as textures and fonts 
+.PP
+Reimplemented in \fBGame\fP, \fBGameOver\fP, and \fBMainMenu\fP\&.
+.PP
+Definition at line 18 of file GameState\&.h\&.
+.SS "virtual void GameState::update (float frameRate)\fC [inline]\fP, \fC [virtual]\fP"
+Update the components of the current states however needed based on the types of events\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIframeRate\fP The rate at which the components are updated 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBGame\fP\&.
+.PP
+Definition at line 28 of file GameState\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Space Race from the source code\&.

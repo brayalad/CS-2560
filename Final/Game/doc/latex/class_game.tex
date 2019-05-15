@@ -1,0 +1,120 @@
+\hypertarget{class_game}{}\section{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+Inheritance diagram for Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_a57536075cd1bb2ffd645ff05bd1ff9b8}{Game}} (\mbox{\hyperlink{_engine_8h_a5bbe002e9f7f45a67e8fda9dbe980a3f}{Game\+Data}} \+\_\+game\+Data)
+\item 
+void \mbox{\hyperlink{class_game_ae2cce13c2c6358709513a06932df939a}{initialize}} () override
+\item 
+void \mbox{\hyperlink{class_game_a59b929e54a2879beab72fc6ce724c313}{handle\+Input}} () override
+\item 
+void \mbox{\hyperlink{class_game_a5470c86c0d379e7cb50175b5079fd559}{update}} (float frame\+Rate) override
+\item 
+void \mbox{\hyperlink{class_game_a9dbbb6429980a91196ed07d299404304}{draw}} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_game}{Game}} class is responsible for the current game turn being played. It is dervived from the \mbox{\hyperlink{class_game_state}{Game\+State}} class, meaning that it is one of the possible states that the video game can be in at any given time. The state that this class represents is that state of the game while the user is playing a turn. It is responsible for drawing and updated the window during the game turn and handling any events that it recieves. 
+
+Definition at line 21 of file Game.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_a57536075cd1bb2ffd645ff05bd1ff9b8}\label{class_game_a57536075cd1bb2ffd645ff05bd1ff9b8}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\subsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_engine_8h_a5bbe002e9f7f45a67e8fda9dbe980a3f}{Game\+Data}}}]{\+\_\+game\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+The \mbox{\hyperlink{class_game}{Game}} constructor responsible for setting up the window enviorment for the game turn. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+game\+Data} & The shared pointer to Manager classes \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file Game.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_a9dbbb6429980a91196ed07d299404304}\label{class_game_a9dbbb6429980a91196ed07d299404304}} 
+\index{Game@{Game}!draw@{draw}}
+\index{draw@{draw}!Game@{Game}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Game\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draws changes made to the window and displays them, and any other class needed to the screen. 
+
+Reimplemented from \mbox{\hyperlink{class_game_state_adf753ecc90e0b309c849b117036e619e}{Game\+State}}.
+
+
+
+Definition at line 139 of file Game.\+cpp.
+
+\mbox{\Hypertarget{class_game_a59b929e54a2879beab72fc6ce724c313}\label{class_game_a59b929e54a2879beab72fc6ce724c313}} 
+\index{Game@{Game}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!Game@{Game}}
+\subsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void Game\+::handle\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handles any user input recieved by the \mbox{\hyperlink{class_user_input}{User\+Input}} class 
+
+Reimplemented from \mbox{\hyperlink{class_game_state_a734dd3521eb3056ee7d3f3e7c982b5a9}{Game\+State}}.
+
+
+
+Definition at line 33 of file Game.\+cpp.
+
+\mbox{\Hypertarget{class_game_ae2cce13c2c6358709513a06932df939a}\label{class_game_ae2cce13c2c6358709513a06932df939a}} 
+\index{Game@{Game}!initialize@{initialize}}
+\index{initialize@{initialize}!Game@{Game}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Game\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Sets up the window for the current game turn to begin 
+
+Reimplemented from \mbox{\hyperlink{class_game_state_a22d3404f53895a23359557a713194736}{Game\+State}}.
+
+
+
+Definition at line 19 of file Game.\+cpp.
+
+\mbox{\Hypertarget{class_game_a5470c86c0d379e7cb50175b5079fd559}\label{class_game_a5470c86c0d379e7cb50175b5079fd559}} 
+\index{Game@{Game}!update@{update}}
+\index{update@{update}!Game@{Game}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+::update (\begin{DoxyParamCaption}\item[{float}]{frame\+Rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Updates the different parts of the window whenever there are changes. This means updating positions of the spaceship and space items 
+\begin{DoxyParams}{Parameters}
+{\em frame\+Rate} & The rate at which to update changes \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_game_state_a52648f2b2e90f0e1e41a1763ebb061ba}{Game\+State}}.
+
+
+
+Definition at line 75 of file Game.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{_game_8h}{Game.\+h}}\item 
+\mbox{\hyperlink{_game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}

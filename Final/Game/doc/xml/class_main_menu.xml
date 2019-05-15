@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_main_menu" kind="class" language="C++" prot="public">
+    <compoundname>MainMenu</compoundname>
+    <basecompoundref refid="class_game_state" prot="public" virt="non-virtual">GameState</basecompoundref>
+    <includes refid="_main_menu_8h" local="no">MainMenu.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_main_menu_1a8ed7e8d0c1ec699465a0f26ea709b1dc" prot="private" static="no" mutable="no">
+        <type><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref></type>
+        <definition>GameData MainMenu::gameData</definition>
+        <argsstring></argsstring>
+        <name>gameData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>shared pointer to outside game classes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/MainMenu.h" line="20" column="1" bodyfile="headers/MainMenu.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_menu_1ad2184bf04360e344c82207878fc5677e" prot="private" static="no" mutable="no">
+        <type>sf::Sprite</type>
+        <definition>sf::Sprite MainMenu::background</definition>
+        <argsstring></argsstring>
+        <name>background</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sprite representing the background </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/MainMenu.h" line="25" column="1" bodyfile="headers/MainMenu.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_menu_1a043a6dd14b28ea2f255284369ddac694" prot="private" static="no" mutable="no">
+        <type>sf::Sprite</type>
+        <definition>sf::Sprite MainMenu::playButton</definition>
+        <argsstring></argsstring>
+        <name>playButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sprite representng the play button </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/MainMenu.h" line="29" column="1" bodyfile="headers/MainMenu.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_menu_1a5dd0bbd3492b7d5cc55e78597cbff4c3" prot="private" static="no" mutable="no">
+        <type>sf::Text</type>
+        <definition>sf::Text MainMenu::title</definition>
+        <argsstring></argsstring>
+        <name>title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Text representing the title </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/MainMenu.h" line="34" column="1" bodyfile="headers/MainMenu.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_main_menu_1a8d497d8355d40b03a6347190b13b2984" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainMenu::MainMenu</definition>
+        <argsstring>(GameData _gameData)</argsstring>
+        <name>MainMenu</name>
+        <param>
+          <type><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref></type>
+          <declname>_gameData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor that sets up the window for the main menu. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_gameData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the outside game classes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/MainMenu.h" line="41" column="1" bodyfile="MainMenu.cpp" bodystart="6" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_1a039698cefc631351e79f097c41e39d1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MainMenu::initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>initialize</name>
+        <reimplements refid="class_game_state_1a22d3404f53895a23359557a713194736">initialize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prepare the class to be displayed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/MainMenu.h" line="46" column="1" bodyfile="MainMenu.cpp" bodystart="11" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_1aa73613e97c322cba65028f3693b8c665" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MainMenu::handleInput</definition>
+        <argsstring>() override</argsstring>
+        <name>handleInput</name>
+        <reimplements refid="class_game_state_1a734dd3521eb3056ee7d3f3e7c982b5a9">handleInput</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle user input while in this state. For this state, it checks if the user has clicked on the play button </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/MainMenu.h" line="51" column="1" bodyfile="MainMenu.cpp" bodystart="27" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_1a54ec1eed16b49cac99d640feab93e119" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MainMenu::draw</definition>
+        <argsstring>() override</argsstring>
+        <name>draw</name>
+        <reimplements refid="class_game_state_1adf753ecc90e0b309c849b117036e619e">draw</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Draws the different parts of the class to the screen </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/MainMenu.h" line="55" column="1" bodyfile="MainMenu.cpp" bodystart="45" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_main_menu" kindref="compound">MainMenu</ref> class represents the main menu state of the game. Whenever the program is started, the user is presented with the Main menu. While in this state, the user can choose to begin a new game turn. If so, a new game state will be created and added to the stack </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="27">
+        <label>MainMenu</label>
+        <link refid="class_main_menu"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>GameState</label>
+        <link refid="class_game_state"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="29">
+        <label>MainMenu</label>
+        <link refid="class_main_menu"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>GameState</label>
+        <link refid="class_game_state"/>
+      </node>
+    </collaborationgraph>
+    <location file="headers/MainMenu.h" line="15" column="1" bodyfile="headers/MainMenu.h" bodystart="14" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_main_menu_1ad2184bf04360e344c82207878fc5677e" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>background</name></member>
+      <member refid="class_main_menu_1a54ec1eed16b49cac99d640feab93e119" prot="public" virt="virtual"><scope>MainMenu</scope><name>draw</name></member>
+      <member refid="class_main_menu_1a8ed7e8d0c1ec699465a0f26ea709b1dc" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>gameData</name></member>
+      <member refid="class_main_menu_1aa73613e97c322cba65028f3693b8c665" prot="public" virt="virtual"><scope>MainMenu</scope><name>handleInput</name></member>
+      <member refid="class_main_menu_1a039698cefc631351e79f097c41e39d1c" prot="public" virt="virtual"><scope>MainMenu</scope><name>initialize</name></member>
+      <member refid="class_main_menu_1a8d497d8355d40b03a6347190b13b2984" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>MainMenu</name></member>
+      <member refid="class_main_menu_1a043a6dd14b28ea2f255284369ddac694" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>playButton</name></member>
+      <member refid="class_main_menu_1a5dd0bbd3492b7d5cc55e78597cbff4c3" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>title</name></member>
+      <member refid="class_game_state_1a52648f2b2e90f0e1e41a1763ebb061ba" prot="public" virt="virtual"><scope>MainMenu</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

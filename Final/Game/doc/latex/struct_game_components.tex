@@ -1,0 +1,60 @@
+\hypertarget{struct_game_components}{}\section{Game\+Components Struct Reference}
+\label{struct_game_components}\index{GameComponents@{GameComponents}}
+
+
+{\ttfamily \#include $<$Engine.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_state_manager}{Game\+State\+Manager}} \mbox{\hyperlink{struct_game_components_a9ff8e64fce57ab014b3b7909d22261b1}{game\+Manager}}
+\item 
+sf\+::\+Render\+Window \mbox{\hyperlink{struct_game_components_a0a416384259309e866d443f495855d07}{window}}
+\item 
+\mbox{\hyperlink{class_asset_manager}{Asset\+Manager}} \mbox{\hyperlink{struct_game_components_ad2071710bf91aed4401f9b83377d4b36}{assets}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure holding the different components of the game Holds instances of each one of the different classes used throught the game and groups them together so that they can be easilly passed along to different classes of the game 
+
+Definition at line 18 of file Engine.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_game_components_ad2071710bf91aed4401f9b83377d4b36}\label{struct_game_components_ad2071710bf91aed4401f9b83377d4b36}} 
+\index{GameComponents@{GameComponents}!assets@{assets}}
+\index{assets@{assets}!GameComponents@{GameComponents}}
+\subsubsection{\texorpdfstring{assets}{assets}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_asset_manager}{Asset\+Manager}} Game\+Components\+::assets}
+
+The \mbox{\hyperlink{class_asset_manager}{Asset\+Manager}} holds all the different assets that are needed by the game. Stores these assets in a map contained by the class itself 
+
+Definition at line 34 of file Engine.\+h.
+
+\mbox{\Hypertarget{struct_game_components_a9ff8e64fce57ab014b3b7909d22261b1}\label{struct_game_components_a9ff8e64fce57ab014b3b7909d22261b1}} 
+\index{GameComponents@{GameComponents}!gameManager@{gameManager}}
+\index{gameManager@{gameManager}!GameComponents@{GameComponents}}
+\subsubsection{\texorpdfstring{gameManager}{gameManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_state_manager}{Game\+State\+Manager}} Game\+Components\+::game\+Manager}
+
+The \mbox{\hyperlink{class_game_state_manager}{Game\+State\+Manager}} is in charge of handling and displaying each of the 3 different states in the game. 
+
+Definition at line 24 of file Engine.\+h.
+
+\mbox{\Hypertarget{struct_game_components_a0a416384259309e866d443f495855d07}\label{struct_game_components_a0a416384259309e866d443f495855d07}} 
+\index{GameComponents@{GameComponents}!window@{window}}
+\index{window@{window}!GameComponents@{GameComponents}}
+\subsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window Game\+Components\+::window}
+
+The Render\+Window is the window in which the game will be run and displayed in. 
+
+Definition at line 29 of file Engine.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{_engine_8h}{Engine.\+h}}\end{DoxyCompactItemize}

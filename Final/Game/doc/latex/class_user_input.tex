@@ -1,0 +1,91 @@
+\hypertarget{class_user_input}{}\section{User\+Input Class Reference}
+\label{class_user_input}\index{UserInput@{UserInput}}
+
+
+{\ttfamily \#include $<$User\+Input.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_input_ace219b17c2e355536141cda8a241e6f9}{User\+Input}} ()=default
+\item 
+\mbox{\hyperlink{class_user_input_aa4db2151dcad8d3a522682aaa784991b}{$\sim$\+User\+Input}} ()=default
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_user_input_a38692411e807e12f638d9f29f46d944d}{is\+Sprite\+Clicked}} (const sf\+::\+Sprite \&object, sf\+::\+Mouse\+::\+Button button, sf\+::\+Render\+Window \&window)
+\item 
+static bool \mbox{\hyperlink{class_user_input_aa26c28cfd6d9a7d573edbc08fa123ace}{is\+Keyboard\+Clicked}} (sf\+::\+Keyboard\+::\+Key key)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_user_input}{User\+Input}} is repsponsible for checking for user input Checks for either mouse clicks or keyboard clicks. Is used to check if their has been user input and if so respond to that certain kind of event 
+
+Definition at line 12 of file User\+Input.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_user_input_ace219b17c2e355536141cda8a241e6f9}\label{class_user_input_ace219b17c2e355536141cda8a241e6f9}} 
+\index{UserInput@{UserInput}!UserInput@{UserInput}}
+\index{UserInput@{UserInput}!UserInput@{UserInput}}
+\subsubsection{\texorpdfstring{UserInput()}{UserInput()}}
+{\footnotesize\ttfamily User\+Input\+::\+User\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default constructor \mbox{\Hypertarget{class_user_input_aa4db2151dcad8d3a522682aaa784991b}\label{class_user_input_aa4db2151dcad8d3a522682aaa784991b}} 
+\index{UserInput@{UserInput}!````~UserInput@{$\sim$UserInput}}
+\index{````~UserInput@{$\sim$UserInput}!UserInput@{UserInput}}
+\subsubsection{\texorpdfstring{$\sim$UserInput()}{~UserInput()}}
+{\footnotesize\ttfamily User\+Input\+::$\sim$\+User\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default deconstructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_user_input_aa26c28cfd6d9a7d573edbc08fa123ace}\label{class_user_input_aa26c28cfd6d9a7d573edbc08fa123ace}} 
+\index{UserInput@{UserInput}!isKeyboardClicked@{isKeyboardClicked}}
+\index{isKeyboardClicked@{isKeyboardClicked}!UserInput@{UserInput}}
+\subsubsection{\texorpdfstring{isKeyboardClicked()}{isKeyboardClicked()}}
+{\footnotesize\ttfamily bool User\+Input\+::is\+Keyboard\+Clicked (\begin{DoxyParamCaption}\item[{sf\+::\+Keyboard\+::\+Key}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Static method that checks if a certain key has been pressed 
+\begin{DoxyParams}{Parameters}
+{\em key} & Key being checked \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the key passed in was pressed. 
+\end{DoxyReturn}
+
+
+Definition at line 19 of file User\+Input.\+cpp.
+
+\mbox{\Hypertarget{class_user_input_a38692411e807e12f638d9f29f46d944d}\label{class_user_input_a38692411e807e12f638d9f29f46d944d}} 
+\index{UserInput@{UserInput}!isSpriteClicked@{isSpriteClicked}}
+\index{isSpriteClicked@{isSpriteClicked}!UserInput@{UserInput}}
+\subsubsection{\texorpdfstring{isSpriteClicked()}{isSpriteClicked()}}
+{\footnotesize\ttfamily bool User\+Input\+::is\+Sprite\+Clicked (\begin{DoxyParamCaption}\item[{const sf\+::\+Sprite \&}]{object,  }\item[{sf\+::\+Mouse\+::\+Button}]{button,  }\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Static method that checks if a sprite has been clicked on 
+\begin{DoxyParams}{Parameters}
+{\em object} & The sprite being checked if has been clicked \\
+\hline
+{\em button} & The botton pressed on the mouse \\
+\hline
+{\em window} & The games window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the object sprite passed in has been clicked by the mouse button passed in, in the window passed in 
+\end{DoxyReturn}
+
+
+Definition at line 4 of file User\+Input.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{_user_input_8h}{User\+Input.\+h}}\item 
+\mbox{\hyperlink{_user_input_8cpp}{User\+Input.\+cpp}}\end{DoxyCompactItemize}

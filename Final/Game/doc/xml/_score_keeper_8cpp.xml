@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="_score_keeper_8cpp" kind="file" language="C++">
+    <compoundname>ScoreKeeper.cpp</compoundname>
+    <includes refid="_score_keeper_8h" local="yes">ScoreKeeper.h</includes>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="365">
+        <label>GameState.h</label>
+        <link refid="_game_state_8h"/>
+      </node>
+      <node id="358">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="356">
+        <label>ScoreKeeper.cpp</label>
+        <link refid="_score_keeper_8cpp"/>
+        <childnode refid="357" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+      </node>
+      <node id="363">
+        <label>GameStateManager.h</label>
+        <link refid="_game_state_manager_8h"/>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="364" relation="include">
+        </childnode>
+        <childnode refid="365" relation="include">
+        </childnode>
+      </node>
+      <node id="359">
+        <label>GlobalVariables.h</label>
+        <link refid="_global_variables_8h"/>
+      </node>
+      <node id="368">
+        <label>UserInput.h</label>
+        <link refid="_user_input_8h"/>
+        <childnode refid="358" relation="include">
+        </childnode>
+      </node>
+      <node id="362">
+        <label>string</label>
+      </node>
+      <node id="367">
+        <label>map</label>
+      </node>
+      <node id="366">
+        <label>AssetManager.h</label>
+        <link refid="_asset_manager_8h"/>
+        <childnode refid="367" relation="include">
+        </childnode>
+        <childnode refid="358" relation="include">
+        </childnode>
+      </node>
+      <node id="364">
+        <label>stack</label>
+      </node>
+      <node id="360">
+        <label>Engine.h</label>
+        <link refid="_engine_8h"/>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="361" relation="include">
+        </childnode>
+        <childnode refid="362" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="363" relation="include">
+        </childnode>
+        <childnode refid="366" relation="include">
+        </childnode>
+        <childnode refid="368" relation="include">
+        </childnode>
+      </node>
+      <node id="357">
+        <label>ScoreKeeper.h</label>
+        <link refid="_score_keeper_8h"/>
+        <childnode refid="358" relation="include">
+        </childnode>
+        <childnode refid="359" relation="include">
+        </childnode>
+        <childnode refid="360" relation="include">
+        </childnode>
+      </node>
+      <node id="361">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//ScoreKeeper.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_score_keeper_8h" kindref="compound">ScoreKeeper.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_score_keeper_1ab3478ac9c94af3b750ae5ff1c45fd2da" refkind="member"><highlight class="normal"><ref refid="class_score_keeper_1ab3478ac9c94af3b750ae5ff1c45fd2da" kindref="member">ScoreKeeper::ScoreKeeper</ref>(<ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref><sp/>_gameData)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;gameData<sp/>=<sp/>std::move(_gameData);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>scoreText.setFont(this-&gt;gameData-&gt;assets.getFont(</highlight><highlight class="stringliteral">&quot;Score<sp/>Font&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>scoreText.setString(</highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>scoreText.setCharacterSize(128);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>scoreText.setFillColor(sf::Color::White);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>scoreText.setOrigin(sf::Vector2f(scoreText.getGlobalBounds().width<sp/>/<sp/>2,<sp/>scoreText.getGlobalBounds().height<sp/>/<sp/>2));</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>scoreText.setPosition(sf::Vector2f(gameData-&gt;window.getSize().x<sp/>/<sp/>2,<sp/>gameData-&gt;window.getSize().y<sp/>/<sp/>12));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_score_keeper_1aa51b77d01ac44caa656b9f2ad474765d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_score_keeper_1aa51b77d01ac44caa656b9f2ad474765d" kindref="member">ScoreKeeper::draw</ref>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>gameData-&gt;window.draw(scoreText);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_score_keeper_1a5860a6708f7c544ea9dbe222a397ad2c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_score_keeper_1a5860a6708f7c544ea9dbe222a397ad2c" kindref="member">ScoreKeeper::updateScore</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>score)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>scoreText.setString(std::to_string(score));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ScoreKeeper.cpp"/>
+  </compounddef>
+</doxygen>

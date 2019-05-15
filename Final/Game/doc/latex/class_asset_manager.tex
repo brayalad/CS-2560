@@ -1,0 +1,122 @@
+\hypertarget{class_asset_manager}{}\section{Asset\+Manager Class Reference}
+\label{class_asset_manager}\index{AssetManager@{AssetManager}}
+
+
+{\ttfamily \#include $<$Asset\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_asset_manager_a48938b146fa7ad19270a11be5363472a}{Asset\+Manager}} ()=default
+\item 
+\mbox{\hyperlink{class_asset_manager_a4b1639accc9354ac88e9239833b519b7}{$\sim$\+Asset\+Manager}} ()=default
+\item 
+void \mbox{\hyperlink{class_asset_manager_ae34adbfa6d97e61fb19fa309f07d82b7}{load\+Texture}} (const std\+::string \&texture\+Name, const std\+::string \&texture\+File\+Name)
+\item 
+void \mbox{\hyperlink{class_asset_manager_a3bfd4095c507124af8cdf16a39f96d6c}{load\+Font}} (const std\+::string \&font\+Name, const std\+::string \&font\+File\+Name)
+\item 
+const sf\+::\+Texture \& \mbox{\hyperlink{class_asset_manager_a53ef9625536e0d1dba884971036422b5}{get\+Texture}} (const std\+::string \&texture\+Name) const
+\item 
+const sf\+::\+Font \& \mbox{\hyperlink{class_asset_manager_a48c91cdece398df4831ffdb5b0ce9e46}{get\+Font}} (const std\+::string \&file\+Name) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_asset_manager}{Asset\+Manager}} class is in charge of managing the the assets that the game will need. It does this by storing the game\textquotesingle{}s assets in a map that can be accessed throughout the game. It is instantiated at the begining when when the game runs 
+
+Definition at line 14 of file Asset\+Manager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_asset_manager_a48938b146fa7ad19270a11be5363472a}\label{class_asset_manager_a48938b146fa7ad19270a11be5363472a}} 
+\index{AssetManager@{AssetManager}!AssetManager@{AssetManager}}
+\index{AssetManager@{AssetManager}!AssetManager@{AssetManager}}
+\subsubsection{\texorpdfstring{AssetManager()}{AssetManager()}}
+{\footnotesize\ttfamily Asset\+Manager\+::\+Asset\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default constructor \mbox{\Hypertarget{class_asset_manager_a4b1639accc9354ac88e9239833b519b7}\label{class_asset_manager_a4b1639accc9354ac88e9239833b519b7}} 
+\index{AssetManager@{AssetManager}!````~AssetManager@{$\sim$AssetManager}}
+\index{````~AssetManager@{$\sim$AssetManager}!AssetManager@{AssetManager}}
+\subsubsection{\texorpdfstring{$\sim$AssetManager()}{~AssetManager()}}
+{\footnotesize\ttfamily Asset\+Manager\+::$\sim$\+Asset\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default deconstructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_asset_manager_a48c91cdece398df4831ffdb5b0ce9e46}\label{class_asset_manager_a48c91cdece398df4831ffdb5b0ce9e46}} 
+\index{AssetManager@{AssetManager}!getFont@{getFont}}
+\index{getFont@{getFont}!AssetManager@{AssetManager}}
+\subsubsection{\texorpdfstring{getFont()}{getFont()}}
+{\footnotesize\ttfamily const sf\+::\+Font \& Asset\+Manager\+::get\+Font (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption}) const}
+
+Returns the font which the string passed in is mapped to 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The string acting as a key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The font mapped to file\+Name 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file Asset\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_asset_manager_a53ef9625536e0d1dba884971036422b5}\label{class_asset_manager_a53ef9625536e0d1dba884971036422b5}} 
+\index{AssetManager@{AssetManager}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!AssetManager@{AssetManager}}
+\subsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily const sf\+::\+Texture \& Asset\+Manager\+::get\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{texture\+Name }\end{DoxyParamCaption}) const}
+
+Returns the texture which the string passed in is mapped to 
+\begin{DoxyParams}{Parameters}
+{\em texture\+Name} & The string acting as a key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The texture mapped to texture\+Name 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file Asset\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_asset_manager_a3bfd4095c507124af8cdf16a39f96d6c}\label{class_asset_manager_a3bfd4095c507124af8cdf16a39f96d6c}} 
+\index{AssetManager@{AssetManager}!loadFont@{loadFont}}
+\index{loadFont@{loadFont}!AssetManager@{AssetManager}}
+\subsubsection{\texorpdfstring{loadFont()}{loadFont()}}
+{\footnotesize\ttfamily void Asset\+Manager\+::load\+Font (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{font\+Name,  }\item[{const std\+::string \&}]{font\+File\+Name }\end{DoxyParamCaption})}
+
+Loads a font into the font map contained in the \mbox{\hyperlink{class_asset_manager}{Asset\+Manager}} 
+\begin{DoxyParams}{Parameters}
+{\em font\+Name} & The string that will act as a key for the font \\
+\hline
+{\em font\+File\+Name} & The font itself \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file Asset\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_asset_manager_ae34adbfa6d97e61fb19fa309f07d82b7}\label{class_asset_manager_ae34adbfa6d97e61fb19fa309f07d82b7}} 
+\index{AssetManager@{AssetManager}!loadTexture@{loadTexture}}
+\index{loadTexture@{loadTexture}!AssetManager@{AssetManager}}
+\subsubsection{\texorpdfstring{loadTexture()}{loadTexture()}}
+{\footnotesize\ttfamily void Asset\+Manager\+::load\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{texture\+Name,  }\item[{const std\+::string \&}]{texture\+File\+Name }\end{DoxyParamCaption})}
+
+Loads a texture into the texture map contained in the \mbox{\hyperlink{class_asset_manager}{Asset\+Manager}} 
+\begin{DoxyParams}{Parameters}
+{\em texture\+Name} & The String that will act as a key for the texture \\
+\hline
+{\em texture\+File\+Name} & The texture itself \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file Asset\+Manager.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{_asset_manager_8h}{Asset\+Manager.\+h}}\item 
+\mbox{\hyperlink{_asset_manager_8cpp}{Asset\+Manager.\+cpp}}\end{DoxyCompactItemize}

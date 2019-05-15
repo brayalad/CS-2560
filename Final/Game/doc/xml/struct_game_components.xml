@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="struct_game_components" kind="struct" language="C++" prot="public">
+    <compoundname>GameComponents</compoundname>
+    <includes refid="_engine_8h" local="no">Engine.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_game_components_1a9ff8e64fce57ab014b3b7909d22261b1" prot="public" static="no" mutable="no">
+        <type><ref refid="class_game_state_manager" kindref="compound">GameStateManager</ref></type>
+        <definition>GameStateManager GameComponents::gameManager</definition>
+        <argsstring></argsstring>
+        <name>gameManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="class_game_state_manager" kindref="compound">GameStateManager</ref> is in charge of handling and displaying each of the 3 different states in the game. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Engine.h" line="24" column="1" bodyfile="headers/Engine.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_game_components_1a0a416384259309e866d443f495855d07" prot="public" static="no" mutable="no">
+        <type>sf::RenderWindow</type>
+        <definition>sf::RenderWindow GameComponents::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The RenderWindow is the window in which the game will be run and displayed in. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Engine.h" line="29" column="1" bodyfile="headers/Engine.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_game_components_1ad2071710bf91aed4401f9b83377d4b36" prot="public" static="no" mutable="no">
+        <type><ref refid="class_asset_manager" kindref="compound">AssetManager</ref></type>
+        <definition>AssetManager GameComponents::assets</definition>
+        <argsstring></argsstring>
+        <name>assets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="class_asset_manager" kindref="compound">AssetManager</ref> holds all the different assets that are needed by the game. Stores these assets in a map contained by the class itself </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Engine.h" line="34" column="1" bodyfile="headers/Engine.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Structure holding the different components of the game Holds instances of each one of the different classes used throught the game and groups them together so that they can be easilly passed along to different classes of the game </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12">
+        <label>AssetManager</label>
+        <link refid="class_asset_manager"/>
+      </node>
+      <node id="11">
+        <label>GameComponents</label>
+        <link refid="struct_game_components"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>assets</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>gameManager</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>GameStateManager</label>
+        <link refid="class_game_state_manager"/>
+      </node>
+    </collaborationgraph>
+    <location file="headers/Engine.h" line="19" column="1" bodyfile="headers/Engine.h" bodystart="18" bodyend="35"/>
+    <listofallmembers>
+      <member refid="struct_game_components_1ad2071710bf91aed4401f9b83377d4b36" prot="public" virt="non-virtual"><scope>GameComponents</scope><name>assets</name></member>
+      <member refid="struct_game_components_1a9ff8e64fce57ab014b3b7909d22261b1" prot="public" virt="non-virtual"><scope>GameComponents</scope><name>gameManager</name></member>
+      <member refid="struct_game_components_1a0a416384259309e866d443f495855d07" prot="public" virt="non-virtual"><scope>GameComponents</scope><name>window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,99 @@
+\hypertarget{class_game_state}{}\section{Game\+State Class Reference}
+\label{class_game_state}\index{GameState@{GameState}}
+
+
+{\ttfamily \#include $<$Game\+State.\+h$>$}
+
+Inheritance diagram for Game\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_state}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_game_state_a22d3404f53895a23359557a713194736}{initialize}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_state_a734dd3521eb3056ee7d3f3e7c982b5a9}{handle\+Input}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_state_a52648f2b2e90f0e1e41a1763ebb061ba}{update}} (float frame\+Rate)
+\item 
+virtual void \mbox{\hyperlink{class_game_state_adf753ecc90e0b309c849b117036e619e}{draw}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_game_state}{Game\+State}} class is meant to act more as a template or interface. There are three states that the program can be at any time. The user can be in the main menu, playing a game turn, or be in a game over state. This class acts as a blueprint to what states of the game are able to do. 
+
+Definition at line 10 of file Game\+State.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_state_adf753ecc90e0b309c849b117036e619e}\label{class_game_state_adf753ecc90e0b309c849b117036e619e}} 
+\index{GameState@{GameState}!draw@{draw}}
+\index{draw@{draw}!GameState@{GameState}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Game\+State\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Display its components to the window 
+
+Reimplemented in \mbox{\hyperlink{class_game_a9dbbb6429980a91196ed07d299404304}{Game}}, \mbox{\hyperlink{class_game_over_a29ee6ef26eca92bac58c9917e933bce4}{Game\+Over}}, and \mbox{\hyperlink{class_main_menu_a54ec1eed16b49cac99d640feab93e119}{Main\+Menu}}.
+
+
+
+Definition at line 32 of file Game\+State.\+h.
+
+\mbox{\Hypertarget{class_game_state_a734dd3521eb3056ee7d3f3e7c982b5a9}\label{class_game_state_a734dd3521eb3056ee7d3f3e7c982b5a9}} 
+\index{GameState@{GameState}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!GameState@{GameState}}
+\subsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily virtual void Game\+State\+::handle\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Handle any user input as appropriate based on the state 
+
+Reimplemented in \mbox{\hyperlink{class_game_a59b929e54a2879beab72fc6ce724c313}{Game}}, \mbox{\hyperlink{class_game_over_ad503a45f38d4472d3a91c096390c4aea}{Game\+Over}}, and \mbox{\hyperlink{class_main_menu_aa73613e97c322cba65028f3693b8c665}{Main\+Menu}}.
+
+
+
+Definition at line 22 of file Game\+State.\+h.
+
+\mbox{\Hypertarget{class_game_state_a22d3404f53895a23359557a713194736}\label{class_game_state_a22d3404f53895a23359557a713194736}} 
+\index{GameState@{GameState}!initialize@{initialize}}
+\index{initialize@{initialize}!GameState@{GameState}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void Game\+State\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Initializes what is needed and sets up the enviorment for the state This includes things like loading and setting assets such as textures and fonts 
+
+Reimplemented in \mbox{\hyperlink{class_game_ae2cce13c2c6358709513a06932df939a}{Game}}, \mbox{\hyperlink{class_game_over_a973dbbd0bfc74c540b933853202b46a4}{Game\+Over}}, and \mbox{\hyperlink{class_main_menu_a039698cefc631351e79f097c41e39d1c}{Main\+Menu}}.
+
+
+
+Definition at line 18 of file Game\+State.\+h.
+
+\mbox{\Hypertarget{class_game_state_a52648f2b2e90f0e1e41a1763ebb061ba}\label{class_game_state_a52648f2b2e90f0e1e41a1763ebb061ba}} 
+\index{GameState@{GameState}!update@{update}}
+\index{update@{update}!GameState@{GameState}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Game\+State\+::update (\begin{DoxyParamCaption}\item[{float}]{frame\+Rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Update the components of the current states however needed based on the types of events. 
+\begin{DoxyParams}{Parameters}
+{\em frame\+Rate} & The rate at which the components are updated \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_game_a5470c86c0d379e7cb50175b5079fd559}{Game}}.
+
+
+
+Definition at line 28 of file Game\+State.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{_game_state_8h}{Game\+State.\+h}}\end{DoxyCompactItemize}

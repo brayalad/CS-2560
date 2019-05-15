@@ -1,0 +1,66 @@
+.TH "Collision" 3 "Tue May 14 2019" "Space Race" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Collision
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Collision\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCollision\fP ()=default"
+.br
+.ti -1c
+.RI "\fB~Collision\fP ()=default"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBcheckSpriteCollision\fP (sf::Sprite sprite1, float scale1, sf::Sprite sprite2, float scale2)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBCollision\fP class is in charge of checking for a collision between two sprites\&. More specifically checking if the spaceship sprite has intersected with another item in the game, either a coin or an asteroid\&. Contains only one static method, meaning it does not have to me instantiated and can be used throughout the game\&. 
+.PP
+Definition at line 13 of file Collision\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Collision::Collision ()\fC [default]\fP"
+Default constructor 
+.SS "Collision::~Collision ()\fC [default]\fP"
+Default deconstructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Collision::checkSpriteCollision (sf::Sprite sprite1, float scale1, sf::Sprite sprite2, float scale2)\fC [static]\fP"
+Static method that checks if two sprites have intersected 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsprite1\fP The first sprite being checked, in the game it is the Spaceship sprite 
+.br
+\fIscale1\fP The value at which to scale the first sprite 
+.br
+\fIsprite2\fP The second sprite being checked, in the game it is either a coin or asteroid sprite 
+.br
+\fIscale2\fP The value at which to scale the second sprite 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+If the two sprites intersected based on their global bounds\&. 
+.RE
+.PP
+
+.PP
+Definition at line 4 of file Collision\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Space Race from the source code\&.

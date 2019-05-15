@@ -1,0 +1,107 @@
+.TH "AssetManager" 3 "Tue May 14 2019" "Space Race" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AssetManager
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <AssetManager\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAssetManager\fP ()=default"
+.br
+.ti -1c
+.RI "\fB~AssetManager\fP ()=default"
+.br
+.ti -1c
+.RI "void \fBloadTexture\fP (const std::string &textureName, const std::string &textureFileName)"
+.br
+.ti -1c
+.RI "void \fBloadFont\fP (const std::string &fontName, const std::string &fontFileName)"
+.br
+.ti -1c
+.RI "const sf::Texture & \fBgetTexture\fP (const std::string &textureName) const"
+.br
+.ti -1c
+.RI "const sf::Font & \fBgetFont\fP (const std::string &fileName) const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBAssetManager\fP class is in charge of managing the the assets that the game will need\&. It does this by storing the game's assets in a map that can be accessed throughout the game\&. It is instantiated at the begining when when the game runs 
+.PP
+Definition at line 14 of file AssetManager\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "AssetManager::AssetManager ()\fC [default]\fP"
+Default constructor 
+.SS "AssetManager::~AssetManager ()\fC [default]\fP"
+Default deconstructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "const sf::Font & AssetManager::getFont (const std::string & fileName) const"
+Returns the font which the string passed in is mapped to 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfileName\fP The string acting as a key 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The font mapped to fileName 
+.RE
+.PP
+
+.PP
+Definition at line 39 of file AssetManager\&.cpp\&.
+.SS "const sf::Texture & AssetManager::getTexture (const std::string & textureName) const"
+Returns the texture which the string passed in is mapped to 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItextureName\fP The string acting as a key 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The texture mapped to textureName 
+.RE
+.PP
+
+.PP
+Definition at line 34 of file AssetManager\&.cpp\&.
+.SS "void AssetManager::loadFont (const std::string & fontName, const std::string & fontFileName)"
+Loads a font into the font map contained in the \fBAssetManager\fP 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfontName\fP The string that will act as a key for the font 
+.br
+\fIfontFileName\fP The font itself 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file AssetManager\&.cpp\&.
+.SS "void AssetManager::loadTexture (const std::string & textureName, const std::string & textureFileName)"
+Loads a texture into the texture map contained in the \fBAssetManager\fP 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItextureName\fP The String that will act as a key for the texture 
+.br
+\fItextureFileName\fP The texture itself 
+.RE
+.PP
+
+.PP
+Definition at line 6 of file AssetManager\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Space Race from the source code\&.

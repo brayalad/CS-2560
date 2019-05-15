@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_game_over" kind="class" language="C++" prot="public">
+    <compoundname>GameOver</compoundname>
+    <basecompoundref refid="class_game_state" prot="public" virt="non-virtual">GameState</basecompoundref>
+    <includes refid="_game_over_8h" local="no">GameOver.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_game_over_1abf202f78ab349c43be7a400aa517e46f" prot="private" static="no" mutable="no">
+        <type><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref></type>
+        <definition>GameData GameOver::gameData</definition>
+        <argsstring></argsstring>
+        <name>gameData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shared pointer to the games managing classes </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameOver.h" line="20" column="1" bodyfile="headers/GameOver.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_over_1a3e354e7e42dda34c91c9a5808d3849c6" prot="private" static="no" mutable="no">
+        <type>sf::Sprite</type>
+        <definition>sf::Sprite GameOver::background</definition>
+        <argsstring></argsstring>
+        <name>background</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sprite representing the background </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameOver.h" line="25" column="1" bodyfile="headers/GameOver.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_over_1a18a1dc5a13589bb50b35f89bc4ab842e" prot="private" static="no" mutable="no">
+        <type>sf::Sprite</type>
+        <definition>sf::Sprite GameOver::retryButton</definition>
+        <argsstring></argsstring>
+        <name>retryButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sprite representing the replay button </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameOver.h" line="29" column="1" bodyfile="headers/GameOver.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_over_1a81dfb7a92a16605f84d9ccd5c39bfdf2" prot="private" static="no" mutable="no">
+        <type>sf::Text</type>
+        <definition>sf::Text GameOver::gameOverTitle</definition>
+        <argsstring></argsstring>
+        <name>gameOverTitle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Text representing the title for the state </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameOver.h" line="34" column="1" bodyfile="headers/GameOver.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_over_1a1f1e5e72f08646e79dddb030e348afe9" prot="private" static="no" mutable="no">
+        <type>sf::Text</type>
+        <definition>sf::Text GameOver::scoreText</definition>
+        <argsstring></argsstring>
+        <name>scoreText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Text representing the score of the previous turn </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameOver.h" line="38" column="1" bodyfile="headers/GameOver.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_over_1a3dce65492a875fa5d6cf2bead6c6cc19" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GameOver::score</definition>
+        <argsstring></argsstring>
+        <name>score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The score of the previous game turn </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameOver.h" line="43" column="1" bodyfile="headers/GameOver.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_over_1ae8969c43377583bf4d81c048718f8d94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>GameOver::GameOver</definition>
+        <argsstring>(GameData _gameData, int _score)</argsstring>
+        <name>GameOver</name>
+        <param>
+          <type><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref></type>
+          <declname>_gameData</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_score</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor takes in shared pointer to other game classes as well as the score of the previous game turn. Sets the classes score to the score passed to it. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_gameData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to other classes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to display </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameOver.h" line="53" column="1" bodyfile="GameOver.cpp" bodystart="7" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_over_1a973dbbd0bfc74c540b933853202b46a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GameOver::initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>initialize</name>
+        <reimplements refid="class_game_state_1a22d3404f53895a23359557a713194736">initialize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets up the window to display the game score and button. Loads all needed textures and fonts from the asset manager withing the gameData shared pointer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameOver.h" line="60" column="1" bodyfile="GameOver.cpp" bodystart="13" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_over_1ad503a45f38d4472d3a91c096390c4aea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GameOver::handleInput</definition>
+        <argsstring>() override</argsstring>
+        <name>handleInput</name>
+        <reimplements refid="class_game_state_1a734dd3521eb3056ee7d3f3e7c982b5a9">handleInput</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles user input while in this state. Checks to see if the user clicks on the retry button. If so, a new <ref refid="class_game" kindref="compound">Game</ref> is created. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameOver.h" line="67" column="1" bodyfile="GameOver.cpp" bodystart="38" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_over_1a29ee6ef26eca92bac58c9917e933bce4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GameOver::draw</definition>
+        <argsstring>() override</argsstring>
+        <name>draw</name>
+        <reimplements refid="class_game_state_1adf753ecc90e0b309c849b117036e619e">draw</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Draws the different parts of the game over state and screen to the window. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameOver.h" line="71" column="1" bodyfile="GameOver.cpp" bodystart="56" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="class_game_over" kindref="compound">GameOver</ref> class is responsible for the state if the game once the current game turn has ended. It is dervived from the <ref refid="class_game_state" kindref="compound">GameState</ref> class making it one if the possible states that the program can be aat any time. It is repsonsible for displaying the score out to the user and allowing them to play another game. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="14">
+        <label>GameOver</label>
+        <link refid="class_game_over"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>GameState</label>
+        <link refid="class_game_state"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="16">
+        <label>GameOver</label>
+        <link refid="class_game_over"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>GameState</label>
+        <link refid="class_game_state"/>
+      </node>
+    </collaborationgraph>
+    <location file="headers/GameOver.h" line="15" column="1" bodyfile="headers/GameOver.h" bodystart="14" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_game_over_1a3e354e7e42dda34c91c9a5808d3849c6" prot="private" virt="non-virtual"><scope>GameOver</scope><name>background</name></member>
+      <member refid="class_game_over_1a29ee6ef26eca92bac58c9917e933bce4" prot="public" virt="virtual"><scope>GameOver</scope><name>draw</name></member>
+      <member refid="class_game_over_1abf202f78ab349c43be7a400aa517e46f" prot="private" virt="non-virtual"><scope>GameOver</scope><name>gameData</name></member>
+      <member refid="class_game_over_1ae8969c43377583bf4d81c048718f8d94" prot="public" virt="non-virtual"><scope>GameOver</scope><name>GameOver</name></member>
+      <member refid="class_game_over_1a81dfb7a92a16605f84d9ccd5c39bfdf2" prot="private" virt="non-virtual"><scope>GameOver</scope><name>gameOverTitle</name></member>
+      <member refid="class_game_over_1ad503a45f38d4472d3a91c096390c4aea" prot="public" virt="virtual"><scope>GameOver</scope><name>handleInput</name></member>
+      <member refid="class_game_over_1a973dbbd0bfc74c540b933853202b46a4" prot="public" virt="virtual"><scope>GameOver</scope><name>initialize</name></member>
+      <member refid="class_game_over_1a18a1dc5a13589bb50b35f89bc4ab842e" prot="private" virt="non-virtual"><scope>GameOver</scope><name>retryButton</name></member>
+      <member refid="class_game_over_1a3dce65492a875fa5d6cf2bead6c6cc19" prot="private" virt="non-virtual"><scope>GameOver</scope><name>score</name></member>
+      <member refid="class_game_over_1a1f1e5e72f08646e79dddb030e348afe9" prot="private" virt="non-virtual"><scope>GameOver</scope><name>scoreText</name></member>
+      <member refid="class_game_state_1a52648f2b2e90f0e1e41a1763ebb061ba" prot="public" virt="virtual"><scope>GameOver</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,76 @@
+.TH "GameStateManager" 3 "Tue May 14 2019" "Space Race" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GameStateManager
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GameStateManager\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGameStateManager\fP ()"
+.br
+.ti -1c
+.RI "\fB~GameStateManager\fP ()=default"
+.br
+.ti -1c
+.RI "void \fBaddState\fP (\fBState\fP _newState, bool _isReplacing=true)"
+.br
+.ti -1c
+.RI "void \fBprocessStateChanges\fP ()"
+.br
+.ti -1c
+.RI "const \fBState\fP & \fBgetActiveState\fP () const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBGameStateManager\fP is responsible for managing the different states of the game\&. It does this by adding and removing the different states on a stack\&. Once a state is finished, it is removed\&. In this game, the game begins with the \fBMainMenu\fP state\&. Once the user decides to play a game, a new \fBGame\fP state is added to the stack\&. Once that game is over, a game over state is added to the stack\&. Once the user decides to begin a new game, the game over state ends and is removed from that stack, then a new game state is presented 
+.PP
+Definition at line 26 of file GameStateManager\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GameStateManager::GameStateManager ()"
+Default Constructor 
+.PP
+Definition at line 4 of file GameStateManager\&.cpp\&.
+.SS "GameStateManager::~GameStateManager ()\fC [default]\fP"
+Default Deconstructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "void GameStateManager::addState (\fBState\fP _newState, bool _isReplacing = \fCtrue\fP)"
+Method adds a new state to the stack, the top of the stack is what will be displayed onto the window 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI_newState\fP New state to be added 
+.br
+\fI_isReplacing\fP boolean flag to check if state is being replaced 
+.RE
+.PP
+
+.PP
+Definition at line 12 of file GameStateManager\&.cpp\&.
+.SS "const \fBState\fP & GameStateManager::getActiveState () const"
+Get method for the current state of the whole program at the time of being called 
+.PP
+\fBReturns:\fP
+.RS 4
+The current state of the game 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file GameStateManager\&.cpp\&.
+.SS "void GameStateManager::processStateChanges ()"
+Process a change in the games overall state\&. Once there is a change to the stack, the top of the stack is displayed to the window 
+.PP
+Definition at line 20 of file GameStateManager\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Space Race from the source code\&.

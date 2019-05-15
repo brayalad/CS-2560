@@ -1,0 +1,28 @@
+\hypertarget{_game_state_manager_8h}{}\section{headers/\+Game\+State\+Manager.h File Reference}
+\label{_game_state_manager_8h}\index{headers/GameStateManager.h@{headers/GameStateManager.h}}
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$stack$>$}\newline
+{\ttfamily \#include \char`\"{}Game\+State.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_game_state_manager}{Game\+State\+Manager}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_game_state}{Game\+State}} $>$ \mbox{\hyperlink{_game_state_manager_8h_aff87e674f0407654608d089427df6ab3}{State}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_game_state_manager_8h_aff87e674f0407654608d089427df6ab3}\label{_game_state_manager_8h_aff87e674f0407654608d089427df6ab3}} 
+\index{GameStateManager.h@{GameStateManager.h}!State@{State}}
+\index{State@{State}!GameStateManager.h@{GameStateManager.h}}
+\subsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily typedef std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_game_state}{Game\+State}}$>$ \mbox{\hyperlink{_game_state_manager_8h_aff87e674f0407654608d089427df6ab3}{State}}}
+
+Defining a unique pointer to each game state. Each state is different and has its own different data. Each instance of the same type of state will not be the same either, therefore we must treat every instance of a \mbox{\hyperlink{class_game_state}{Game\+State}} as its own. 
+
+Definition at line 15 of file Game\+State\+Manager.\+h.
+

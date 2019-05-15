@@ -1,0 +1,99 @@
+\hypertarget{class_main_menu}{}\section{Main\+Menu Class Reference}
+\label{class_main_menu}\index{MainMenu@{MainMenu}}
+
+
+{\ttfamily \#include $<$Main\+Menu.\+h$>$}
+
+Inheritance diagram for Main\+Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_menu}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_menu_a8d497d8355d40b03a6347190b13b2984}{Main\+Menu}} (\mbox{\hyperlink{_engine_8h_a5bbe002e9f7f45a67e8fda9dbe980a3f}{Game\+Data}} \+\_\+game\+Data)
+\item 
+void \mbox{\hyperlink{class_main_menu_a039698cefc631351e79f097c41e39d1c}{initialize}} () override
+\item 
+void \mbox{\hyperlink{class_main_menu_aa73613e97c322cba65028f3693b8c665}{handle\+Input}} () override
+\item 
+void \mbox{\hyperlink{class_main_menu_a54ec1eed16b49cac99d640feab93e119}{draw}} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_main_menu}{Main\+Menu}} class represents the main menu state of the game. Whenever the program is started, the user is presented with the Main menu. While in this state, the user can choose to begin a new game turn. If so, a new game state will be created and added to the stack 
+
+Definition at line 14 of file Main\+Menu.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_main_menu_a8d497d8355d40b03a6347190b13b2984}\label{class_main_menu_a8d497d8355d40b03a6347190b13b2984}} 
+\index{MainMenu@{MainMenu}!MainMenu@{MainMenu}}
+\index{MainMenu@{MainMenu}!MainMenu@{MainMenu}}
+\subsubsection{\texorpdfstring{MainMenu()}{MainMenu()}}
+{\footnotesize\ttfamily Main\+Menu\+::\+Main\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_engine_8h_a5bbe002e9f7f45a67e8fda9dbe980a3f}{Game\+Data}}}]{\+\_\+game\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor that sets up the window for the main menu. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+game\+Data} & shared pointer to the outside game classes \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file Main\+Menu.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_menu_a54ec1eed16b49cac99d640feab93e119}\label{class_main_menu_a54ec1eed16b49cac99d640feab93e119}} 
+\index{MainMenu@{MainMenu}!draw@{draw}}
+\index{draw@{draw}!MainMenu@{MainMenu}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Main\+Menu\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draws the different parts of the class to the screen 
+
+Reimplemented from \mbox{\hyperlink{class_game_state_adf753ecc90e0b309c849b117036e619e}{Game\+State}}.
+
+
+
+Definition at line 45 of file Main\+Menu.\+cpp.
+
+\mbox{\Hypertarget{class_main_menu_aa73613e97c322cba65028f3693b8c665}\label{class_main_menu_aa73613e97c322cba65028f3693b8c665}} 
+\index{MainMenu@{MainMenu}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!MainMenu@{MainMenu}}
+\subsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void Main\+Menu\+::handle\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle user input while in this state. For this state, it checks if the user has clicked on the play button 
+
+Reimplemented from \mbox{\hyperlink{class_game_state_a734dd3521eb3056ee7d3f3e7c982b5a9}{Game\+State}}.
+
+
+
+Definition at line 27 of file Main\+Menu.\+cpp.
+
+\mbox{\Hypertarget{class_main_menu_a039698cefc631351e79f097c41e39d1c}\label{class_main_menu_a039698cefc631351e79f097c41e39d1c}} 
+\index{MainMenu@{MainMenu}!initialize@{initialize}}
+\index{initialize@{initialize}!MainMenu@{MainMenu}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Main\+Menu\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Prepare the class to be displayed 
+
+Reimplemented from \mbox{\hyperlink{class_game_state_a22d3404f53895a23359557a713194736}{Game\+State}}.
+
+
+
+Definition at line 11 of file Main\+Menu.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{_main_menu_8h}{Main\+Menu.\+h}}\item 
+\mbox{\hyperlink{_main_menu_8cpp}{Main\+Menu.\+cpp}}\end{DoxyCompactItemize}

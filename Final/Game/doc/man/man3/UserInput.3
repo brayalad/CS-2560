@@ -1,0 +1,83 @@
+.TH "UserInput" 3 "Tue May 14 2019" "Space Race" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UserInput
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <UserInput\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBUserInput\fP ()=default"
+.br
+.ti -1c
+.RI "\fB~UserInput\fP ()=default"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static bool \fBisSpriteClicked\fP (const sf::Sprite &object, sf::Mouse::Button button, sf::RenderWindow &window)"
+.br
+.ti -1c
+.RI "static bool \fBisKeyboardClicked\fP (sf::Keyboard::Key key)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBUserInput\fP is repsponsible for checking for user input Checks for either mouse clicks or keyboard clicks\&. Is used to check if their has been user input and if so respond to that certain kind of event 
+.PP
+Definition at line 12 of file UserInput\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "UserInput::UserInput ()\fC [default]\fP"
+Default constructor 
+.SS "UserInput::~UserInput ()\fC [default]\fP"
+Default deconstructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "bool UserInput::isKeyboardClicked (sf::Keyboard::Key key)\fC [static]\fP"
+Static method that checks if a certain key has been pressed 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIkey\fP Key being checked 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+If the key passed in was pressed\&. 
+.RE
+.PP
+
+.PP
+Definition at line 19 of file UserInput\&.cpp\&.
+.SS "bool UserInput::isSpriteClicked (const sf::Sprite & object, sf::Mouse::Button button, sf::RenderWindow & window)\fC [static]\fP"
+Static method that checks if a sprite has been clicked on 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIobject\fP The sprite being checked if has been clicked 
+.br
+\fIbutton\fP The botton pressed on the mouse 
+.br
+\fIwindow\fP The games window 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+If the object sprite passed in has been clicked by the mouse button passed in, in the window passed in 
+.RE
+.PP
+
+.PP
+Definition at line 4 of file UserInput\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Space Race from the source code\&.

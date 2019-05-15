@@ -1,0 +1,72 @@
+.TH "GameOver" 3 "Tue May 14 2019" "Space Race" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GameOver
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GameOver\&.h>\fP
+.PP
+Inherits \fBGameState\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGameOver\fP (\fBGameData\fP _gameData, int _score)"
+.br
+.ti -1c
+.RI "void \fBinitialize\fP () override"
+.br
+.ti -1c
+.RI "void \fBhandleInput\fP () override"
+.br
+.ti -1c
+.RI "void \fBdraw\fP () override"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBGameOver\fP class is responsible for the state if the game once the current game turn has ended\&. It is dervived from the \fBGameState\fP class making it one if the possible states that the program can be aat any time\&. It is repsonsible for displaying the score out to the user and allowing them to play another game\&. 
+.PP
+Definition at line 14 of file GameOver\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GameOver::GameOver (\fBGameData\fP _gameData, int _score)"
+Constructor takes in shared pointer to other game classes as well as the score of the previous game turn\&. Sets the classes score to the score passed to it\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI_gameData\fP shared pointer to other classes 
+.br
+\fI_score\fP The value to display 
+.RE
+.PP
+
+.PP
+Definition at line 7 of file GameOver\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void GameOver::draw ()\fC [override]\fP, \fC [virtual]\fP"
+Draws the different parts of the game over state and screen to the window\&. 
+.PP
+Reimplemented from \fBGameState\fP\&.
+.PP
+Definition at line 56 of file GameOver\&.cpp\&.
+.SS "void GameOver::handleInput ()\fC [override]\fP, \fC [virtual]\fP"
+Handles user input while in this state\&. Checks to see if the user clicks on the retry button\&. If so, a new \fBGame\fP is created\&. 
+.PP
+Reimplemented from \fBGameState\fP\&.
+.PP
+Definition at line 38 of file GameOver\&.cpp\&.
+.SS "void GameOver::initialize ()\fC [override]\fP, \fC [virtual]\fP"
+Sets up the window to display the game score and button\&. Loads all needed textures and fonts from the asset manager withing the gameData shared pointer 
+.PP
+Reimplemented from \fBGameState\fP\&.
+.PP
+Definition at line 13 of file GameOver\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Space Race from the source code\&.

@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_asset_manager" kind="class" language="C++" prot="public">
+    <compoundname>AssetManager</compoundname>
+    <includes refid="_asset_manager_8h" local="no">AssetManager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_asset_manager_1a8e8a51ce7187677b3bb0975047e6f8b4" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, sf::Texture &gt;</type>
+        <definition>std::map&lt;std::string, sf::Texture&gt; AssetManager::textures</definition>
+        <argsstring></argsstring>
+        <name>textures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Map that holds the game&apos;s textures Maps a string to a certain texture </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/AssetManager.h" line="21" column="1" bodyfile="headers/AssetManager.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_asset_manager_1a696746c893546c847333e8e1185cc579" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, sf::Font &gt;</type>
+        <definition>std::map&lt;std::string, sf::Font&gt; AssetManager::fonts</definition>
+        <argsstring></argsstring>
+        <name>fonts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Map that holds the game&apos;s fonts Maps a string to a certain font </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/AssetManager.h" line="26" column="1" bodyfile="headers/AssetManager.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_asset_manager_1a48938b146fa7ad19270a11be5363472a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AssetManager::AssetManager</definition>
+        <argsstring>()=default</argsstring>
+        <name>AssetManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/AssetManager.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_asset_manager_1a4b1639accc9354ac88e9239833b519b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AssetManager::~AssetManager</definition>
+        <argsstring>()=default</argsstring>
+        <name>~AssetManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default deconstructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/AssetManager.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_asset_manager_1ae34adbfa6d97e61fb19fa309f07d82b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssetManager::loadTexture</definition>
+        <argsstring>(const std::string &amp;textureName, const std::string &amp;textureFileName)</argsstring>
+        <name>loadTexture</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>textureName</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>textureFileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads a texture into the texture map contained in the <ref refid="class_asset_manager" kindref="compound">AssetManager</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>textureName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The String that will act as a key for the texture </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>textureFileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The texture itself </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/AssetManager.h" line="43" column="1" bodyfile="AssetManager.cpp" bodystart="6" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_asset_manager_1a3bfd4095c507124af8cdf16a39f96d6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AssetManager::loadFont</definition>
+        <argsstring>(const std::string &amp;fontName, const std::string &amp;fontFileName)</argsstring>
+        <name>loadFont</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fontName</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fontFileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads a font into the font map contained in the <ref refid="class_asset_manager" kindref="compound">AssetManager</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fontName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string that will act as a key for the font </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fontFileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The font itself </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/AssetManager.h" line="49" column="1" bodyfile="AssetManager.cpp" bodystart="20" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_asset_manager_1a53ef9625536e0d1dba884971036422b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const sf::Texture &amp;</type>
+        <definition>const sf::Texture &amp; AssetManager::getTexture</definition>
+        <argsstring>(const std::string &amp;textureName) const</argsstring>
+        <name>getTexture</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>textureName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the texture which the string passed in is mapped to <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>textureName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string acting as a key </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The texture mapped to textureName </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/AssetManager.h" line="56" column="1" bodyfile="AssetManager.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_asset_manager_1a48c91cdece398df4831ffdb5b0ce9e46" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const sf::Font &amp;</type>
+        <definition>const sf::Font &amp; AssetManager::getFont</definition>
+        <argsstring>(const std::string &amp;fileName) const</argsstring>
+        <name>getFont</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the font which the string passed in is mapped to <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string acting as a key </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The font mapped to fileName </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/AssetManager.h" line="62" column="1" bodyfile="AssetManager.cpp" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="class_asset_manager" kindref="compound">AssetManager</ref> class is in charge of managing the the assets that the game will need. It does this by storing the game&apos;s assets in a map that can be accessed throughout the game. It is instantiated at the begining when when the game runs </para>
+    </detaileddescription>
+    <location file="headers/AssetManager.h" line="15" column="1" bodyfile="headers/AssetManager.h" bodystart="14" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_asset_manager_1a48938b146fa7ad19270a11be5363472a" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>AssetManager</name></member>
+      <member refid="class_asset_manager_1a696746c893546c847333e8e1185cc579" prot="private" virt="non-virtual"><scope>AssetManager</scope><name>fonts</name></member>
+      <member refid="class_asset_manager_1a48c91cdece398df4831ffdb5b0ce9e46" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>getFont</name></member>
+      <member refid="class_asset_manager_1a53ef9625536e0d1dba884971036422b5" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>getTexture</name></member>
+      <member refid="class_asset_manager_1a3bfd4095c507124af8cdf16a39f96d6c" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>loadFont</name></member>
+      <member refid="class_asset_manager_1ae34adbfa6d97e61fb19fa309f07d82b7" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>loadTexture</name></member>
+      <member refid="class_asset_manager_1a8e8a51ce7187677b3bb0975047e6f8b4" prot="private" virt="non-virtual"><scope>AssetManager</scope><name>textures</name></member>
+      <member refid="class_asset_manager_1a4b1639accc9354ac88e9239833b519b7" prot="public" virt="non-virtual"><scope>AssetManager</scope><name>~AssetManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

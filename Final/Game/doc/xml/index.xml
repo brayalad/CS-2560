@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.15">
+  <compound refid="class_asset_manager" kind="class"><name>AssetManager</name>
+    <member refid="class_asset_manager_1a8e8a51ce7187677b3bb0975047e6f8b4" kind="variable"><name>textures</name></member>
+    <member refid="class_asset_manager_1a696746c893546c847333e8e1185cc579" kind="variable"><name>fonts</name></member>
+    <member refid="class_asset_manager_1a48938b146fa7ad19270a11be5363472a" kind="function"><name>AssetManager</name></member>
+    <member refid="class_asset_manager_1a4b1639accc9354ac88e9239833b519b7" kind="function"><name>~AssetManager</name></member>
+    <member refid="class_asset_manager_1ae34adbfa6d97e61fb19fa309f07d82b7" kind="function"><name>loadTexture</name></member>
+    <member refid="class_asset_manager_1a3bfd4095c507124af8cdf16a39f96d6c" kind="function"><name>loadFont</name></member>
+    <member refid="class_asset_manager_1a53ef9625536e0d1dba884971036422b5" kind="function"><name>getTexture</name></member>
+    <member refid="class_asset_manager_1a48c91cdece398df4831ffdb5b0ce9e46" kind="function"><name>getFont</name></member>
+  </compound>
+  <compound refid="class_collision" kind="class"><name>Collision</name>
+    <member refid="class_collision_1a1c247612eae832108bf79b78127f35f3" kind="function"><name>Collision</name></member>
+    <member refid="class_collision_1aeb427d5296152744ac2c082d29afa930" kind="function"><name>~Collision</name></member>
+    <member refid="class_collision_1aae61d9a3d12eaafb20bb9f08906bb062" kind="function"><name>checkSpriteCollision</name></member>
+  </compound>
+  <compound refid="class_engine" kind="class"><name>Engine</name>
+    <member refid="class_engine_1adf54912d626139638292a1e1c086d8c5" kind="variable"><name>frameRate</name></member>
+    <member refid="class_engine_1ad15b607cfc5e57f53e3a2d2378e2b297" kind="variable"><name>clock</name></member>
+    <member refid="class_engine_1a5882926138197196a108c10d92b44a5e" kind="variable"><name>data</name></member>
+    <member refid="class_engine_1a47e331ce6aa8fe844516373a695a4f8d" kind="function"><name>Engine</name></member>
+    <member refid="class_engine_1a1a210cf30d6bd330b3649439ecd6d6cc" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="class_game" kind="class"><name>Game</name>
+    <member refid="class_game_1abd03c2e680627cef2ddda2c5f804049a" kind="variable"><name>gameData</name></member>
+    <member refid="class_game_1a57ba11192994ff8f9e4c4031cb363f6f" kind="variable"><name>background</name></member>
+    <member refid="class_game_1a181538237d8d144e1ca8dd849e208c39" kind="variable"><name>item</name></member>
+    <member refid="class_game_1a5576d4454b4a807c22f0552b3674223d" kind="variable"><name>spaceShip</name></member>
+    <member refid="class_game_1a5a97264c4478f180664a346336355a49" kind="variable"><name>scoreDisplay</name></member>
+    <member refid="class_game_1ac93a1599d25a3b67e429e62ec16380d0" kind="variable"><name>gameClock</name></member>
+    <member refid="class_game_1aa60fc788f0481a9912a710c35d6c33bb" kind="variable"><name>asteroidClock</name></member>
+    <member refid="class_game_1ad54613d3073745f1877079ed8f99884e" kind="variable"><name>coinClock</name></member>
+    <member refid="class_game_1ab1e526822c657b69e18f37c7ecf9ee6c" kind="variable"><name>gameState</name></member>
+    <member refid="class_game_1ae65d3e9968b76a5724b08800c9fd9810" kind="variable"><name>asteroidFrequency</name></member>
+    <member refid="class_game_1abb885c1547f28973614bca43cdde21de" kind="variable"><name>coinFrequency</name></member>
+    <member refid="class_game_1afaf9404196df9968103d5b0d0ad08139" kind="variable"><name>score</name></member>
+    <member refid="class_game_1a57536075cd1bb2ffd645ff05bd1ff9b8" kind="function"><name>Game</name></member>
+    <member refid="class_game_1ae2cce13c2c6358709513a06932df939a" kind="function"><name>initialize</name></member>
+    <member refid="class_game_1a59b929e54a2879beab72fc6ce724c313" kind="function"><name>handleInput</name></member>
+    <member refid="class_game_1a5470c86c0d379e7cb50175b5079fd559" kind="function"><name>update</name></member>
+    <member refid="class_game_1a9dbbb6429980a91196ed07d299404304" kind="function"><name>draw</name></member>
+  </compound>
+  <compound refid="struct_game_components" kind="struct"><name>GameComponents</name>
+    <member refid="struct_game_components_1a9ff8e64fce57ab014b3b7909d22261b1" kind="variable"><name>gameManager</name></member>
+    <member refid="struct_game_components_1a0a416384259309e866d443f495855d07" kind="variable"><name>window</name></member>
+    <member refid="struct_game_components_1ad2071710bf91aed4401f9b83377d4b36" kind="variable"><name>assets</name></member>
+  </compound>
+  <compound refid="class_game_over" kind="class"><name>GameOver</name>
+    <member refid="class_game_over_1abf202f78ab349c43be7a400aa517e46f" kind="variable"><name>gameData</name></member>
+    <member refid="class_game_over_1a3e354e7e42dda34c91c9a5808d3849c6" kind="variable"><name>background</name></member>
+    <member refid="class_game_over_1a18a1dc5a13589bb50b35f89bc4ab842e" kind="variable"><name>retryButton</name></member>
+    <member refid="class_game_over_1a81dfb7a92a16605f84d9ccd5c39bfdf2" kind="variable"><name>gameOverTitle</name></member>
+    <member refid="class_game_over_1a1f1e5e72f08646e79dddb030e348afe9" kind="variable"><name>scoreText</name></member>
+    <member refid="class_game_over_1a3dce65492a875fa5d6cf2bead6c6cc19" kind="variable"><name>score</name></member>
+    <member refid="class_game_over_1ae8969c43377583bf4d81c048718f8d94" kind="function"><name>GameOver</name></member>
+    <member refid="class_game_over_1a973dbbd0bfc74c540b933853202b46a4" kind="function"><name>initialize</name></member>
+    <member refid="class_game_over_1ad503a45f38d4472d3a91c096390c4aea" kind="function"><name>handleInput</name></member>
+    <member refid="class_game_over_1a29ee6ef26eca92bac58c9917e933bce4" kind="function"><name>draw</name></member>
+  </compound>
+  <compound refid="class_game_state" kind="class"><name>GameState</name>
+    <member refid="class_game_state_1a22d3404f53895a23359557a713194736" kind="function"><name>initialize</name></member>
+    <member refid="class_game_state_1a734dd3521eb3056ee7d3f3e7c982b5a9" kind="function"><name>handleInput</name></member>
+    <member refid="class_game_state_1a52648f2b2e90f0e1e41a1763ebb061ba" kind="function"><name>update</name></member>
+    <member refid="class_game_state_1adf753ecc90e0b309c849b117036e619e" kind="function"><name>draw</name></member>
+  </compound>
+  <compound refid="class_game_state_manager" kind="class"><name>GameStateManager</name>
+    <member refid="class_game_state_manager_1a1f08e380e78d3394fb1b507b4d2f3c71" kind="variable"><name>gameStates</name></member>
+    <member refid="class_game_state_manager_1a967053486faf88c46943a523eff62469" kind="variable"><name>newState</name></member>
+    <member refid="class_game_state_manager_1a45d1c9fc132bfdbd411297a87361f093" kind="variable"><name>isRemoving</name></member>
+    <member refid="class_game_state_manager_1a6451326faba5e6a059d7002973c45d41" kind="variable"><name>isAdding</name></member>
+    <member refid="class_game_state_manager_1a3c293c4cb87cde4bb9dd2436e5f35343" kind="variable"><name>isReplacing</name></member>
+    <member refid="class_game_state_manager_1aa9769dca27ad070cf5491a7f54c7d85e" kind="function"><name>GameStateManager</name></member>
+    <member refid="class_game_state_manager_1ac4bbd99de7c51df4377bf25d367cc527" kind="function"><name>~GameStateManager</name></member>
+    <member refid="class_game_state_manager_1af891544d0671ad46cb561f350ed3d175" kind="function"><name>addState</name></member>
+    <member refid="class_game_state_manager_1aa392462be47af93a17c12d2b9f90afb0" kind="function"><name>processStateChanges</name></member>
+    <member refid="class_game_state_manager_1a5b42b1e97123439df8e476c89d3b8a68" kind="function"><name>getActiveState</name></member>
+  </compound>
+  <compound refid="class_item" kind="class"><name>Item</name>
+    <member refid="class_item_1a973928e2be55a5919a575e0965f1c355" kind="variable"><name>gameData</name></member>
+    <member refid="class_item_1a9aace105f8e96bc5372e9a140604908e" kind="variable"><name>asteroids</name></member>
+    <member refid="class_item_1a1357ed1e280ee7b207d893bc860eddba" kind="variable"><name>coins</name></member>
+    <member refid="class_item_1aaded2a7e8d7d74ceb9838fc0d9da2ea3" kind="function"><name>Item</name></member>
+    <member refid="class_item_1acbef638becdf16de85c9602a93d47518" kind="function"><name>spawnAsteroid</name></member>
+    <member refid="class_item_1ad79f9b2e0ad9cb922cd7678fc8dc628e" kind="function"><name>spawnCoin</name></member>
+    <member refid="class_item_1ac28d0cbacc49ab30bdd0c593600a75be" kind="function"><name>moveItems</name></member>
+    <member refid="class_item_1a468f79141232febc578c8cefe32b2791" kind="function"><name>drawItems</name></member>
+    <member refid="class_item_1a040b4ff526f1ab5340b3a7ea630037ba" kind="function"><name>getAsteroids</name></member>
+    <member refid="class_item_1a272b51e3dad8000fe006b0aa5b4ec259" kind="function"><name>getCoins</name></member>
+  </compound>
+  <compound refid="class_main_menu" kind="class"><name>MainMenu</name>
+    <member refid="class_main_menu_1a8ed7e8d0c1ec699465a0f26ea709b1dc" kind="variable"><name>gameData</name></member>
+    <member refid="class_main_menu_1ad2184bf04360e344c82207878fc5677e" kind="variable"><name>background</name></member>
+    <member refid="class_main_menu_1a043a6dd14b28ea2f255284369ddac694" kind="variable"><name>playButton</name></member>
+    <member refid="class_main_menu_1a5dd0bbd3492b7d5cc55e78597cbff4c3" kind="variable"><name>title</name></member>
+    <member refid="class_main_menu_1a8d497d8355d40b03a6347190b13b2984" kind="function"><name>MainMenu</name></member>
+    <member refid="class_main_menu_1a039698cefc631351e79f097c41e39d1c" kind="function"><name>initialize</name></member>
+    <member refid="class_main_menu_1aa73613e97c322cba65028f3693b8c665" kind="function"><name>handleInput</name></member>
+    <member refid="class_main_menu_1a54ec1eed16b49cac99d640feab93e119" kind="function"><name>draw</name></member>
+  </compound>
+  <compound refid="class_score_keeper" kind="class"><name>ScoreKeeper</name>
+    <member refid="class_score_keeper_1a6212aa9064fdb0ae696d8f4398a87e53" kind="variable"><name>gameData</name></member>
+    <member refid="class_score_keeper_1af0002d9d7a32fc533d3f428809911ce1" kind="variable"><name>scoreText</name></member>
+    <member refid="class_score_keeper_1ab3478ac9c94af3b750ae5ff1c45fd2da" kind="function"><name>ScoreKeeper</name></member>
+    <member refid="class_score_keeper_1a9c7e1807d09a538f5f806724e52d72e0" kind="function"><name>~ScoreKeeper</name></member>
+    <member refid="class_score_keeper_1aa51b77d01ac44caa656b9f2ad474765d" kind="function"><name>draw</name></member>
+    <member refid="class_score_keeper_1a5860a6708f7c544ea9dbe222a397ad2c" kind="function"><name>updateScore</name></member>
+  </compound>
+  <compound refid="class_space_ship" kind="class"><name>SpaceShip</name>
+    <member refid="class_space_ship_1a11adcb184a65350439ef4c0a41bded39" kind="variable"><name>gameData</name></member>
+    <member refid="class_space_ship_1a34e82402315745367541ad21cd8d4ba1" kind="variable"><name>spaceShip</name></member>
+    <member refid="class_space_ship_1af71cc6a7c00c1281aaba07498fe3e697" kind="variable"><name>spaceShipState</name></member>
+    <member refid="class_space_ship_1a61fb4e816c67cfbabc4b465b32c9fe0b" kind="variable"><name>rotation</name></member>
+    <member refid="class_space_ship_1a64344084d86854f5d08c6a4601e58cf6" kind="function"><name>SpaceShip</name></member>
+    <member refid="class_space_ship_1a2bf6798a10a1a26ecd0bfbef6bea076d" kind="function"><name>~SpaceShip</name></member>
+    <member refid="class_space_ship_1aa101a4a70560fe739f6b5d15d5ca9294" kind="function"><name>draw</name></member>
+    <member refid="class_space_ship_1a9de49446d7a2029f7d05537d2f5d6768" kind="function"><name>update</name></member>
+    <member refid="class_space_ship_1a38ae22af5e0f792b9e26ec257b4bd47a" kind="function"><name>move</name></member>
+    <member refid="class_space_ship_1a7529626398ca826b83b19bd06ec0ba2e" kind="function"><name>getSpaceShip</name></member>
+  </compound>
+  <compound refid="class_user_input" kind="class"><name>UserInput</name>
+    <member refid="class_user_input_1ace219b17c2e355536141cda8a241e6f9" kind="function"><name>UserInput</name></member>
+    <member refid="class_user_input_1aa4db2151dcad8d3a522682aaa784991b" kind="function"><name>~UserInput</name></member>
+    <member refid="class_user_input_1a38692411e807e12f638d9f29f46d944d" kind="function"><name>isSpriteClicked</name></member>
+    <member refid="class_user_input_1aa26c28cfd6d9a7d573edbc08fa123ace" kind="function"><name>isKeyboardClicked</name></member>
+  </compound>
+  <compound refid="_asset_manager_8cpp" kind="file"><name>AssetManager.cpp</name>
+  </compound>
+  <compound refid="_collision_8cpp" kind="file"><name>Collision.cpp</name>
+  </compound>
+  <compound refid="_engine_8cpp" kind="file"><name>Engine.cpp</name>
+  </compound>
+  <compound refid="_game_8cpp" kind="file"><name>Game.cpp</name>
+  </compound>
+  <compound refid="_game_over_8cpp" kind="file"><name>GameOver.cpp</name>
+  </compound>
+  <compound refid="_game_state_manager_8cpp" kind="file"><name>GameStateManager.cpp</name>
+  </compound>
+  <compound refid="_asset_manager_8h" kind="file"><name>AssetManager.h</name>
+  </compound>
+  <compound refid="_collision_8h" kind="file"><name>Collision.h</name>
+  </compound>
+  <compound refid="_engine_8h" kind="file"><name>Engine.h</name>
+    <member refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kind="typedef"><name>GameData</name></member>
+  </compound>
+  <compound refid="_game_8h" kind="file"><name>Game.h</name>
+  </compound>
+  <compound refid="_game_over_8h" kind="file"><name>GameOver.h</name>
+  </compound>
+  <compound refid="_game_state_8h" kind="file"><name>GameState.h</name>
+  </compound>
+  <compound refid="_game_state_manager_8h" kind="file"><name>GameStateManager.h</name>
+    <member refid="_game_state_manager_8h_1aff87e674f0407654608d089427df6ab3" kind="typedef"><name>State</name></member>
+  </compound>
+  <compound refid="_global_variables_8h" kind="file"><name>GlobalVariables.h</name>
+    <member refid="_global_variables_8h_1a2cd109632a6dcccaa80b43561b1ab700" kind="define"><name>SCREEN_WIDTH</name></member>
+    <member refid="_global_variables_8h_1a6974d08a74da681b3957b2fead2608b8" kind="define"><name>SCREEN_HEIGHT</name></member>
+    <member refid="_global_variables_8h_1a1811efff299e4d80a481decf69ded942" kind="define"><name>GAME_BACKGROUND_FILEPATH</name></member>
+    <member refid="_global_variables_8h_1ae522dd0ecdf21fe585e5b033e78b019f" kind="define"><name>PLAY_BUTTON_FILEPATH</name></member>
+    <member refid="_global_variables_8h_1ac4f68da16f7648a2a6649c8f631f9b81" kind="define"><name>ASTEROID_1_FILEPATH</name></member>
+    <member refid="_global_variables_8h_1a79800ccf0bd8d67a03e21734076b4c27" kind="define"><name>COIN_FILEPATH</name></member>
+    <member refid="_global_variables_8h_1a3bff277bc6fd62974da7ed6ede0bb29a" kind="define"><name>SPACESHIP_FILEPATH</name></member>
+    <member refid="_global_variables_8h_1a182ae8f386c570c7f8ac0d70365bdd43" kind="define"><name>SCORE_FONT_FILEPATH</name></member>
+    <member refid="_global_variables_8h_1a72bf1d158b7d66a6eddbf2e278bf9fa6" kind="define"><name>ITEM_MOVEMENT_SPEED</name></member>
+    <member refid="_global_variables_8h_1a4ba81f513aae90f770ae1ce489d3443e" kind="define"><name>ITEM_SPAWN_FREQUENCY</name></member>
+    <member refid="_global_variables_8h_1a6f6734e3567df4d03243fc3482cbdaa2" kind="define"><name>SPACESHIP_FLYING_SPEED</name></member>
+    <member refid="_global_variables_8h_1a482b88d9d263f54bb4ceb6d499701afd" kind="define"><name>SPACESHIP_ROTATION_SPEED</name></member>
+    <member refid="_global_variables_8h_1a0b73c5aa67be999a8922f4ddfce6e4a9" kind="define"><name>TIME_BEFORE_GAME_OVER_APPEARS</name></member>
+  </compound>
+  <compound refid="_item_8h" kind="file"><name>Item.h</name>
+  </compound>
+  <compound refid="_main_menu_8h" kind="file"><name>MainMenu.h</name>
+  </compound>
+  <compound refid="_score_keeper_8h" kind="file"><name>ScoreKeeper.h</name>
+  </compound>
+  <compound refid="_space_ship_8h" kind="file"><name>SpaceShip.h</name>
+  </compound>
+  <compound refid="_user_input_8h" kind="file"><name>UserInput.h</name>
+  </compound>
+  <compound refid="_item_8cpp" kind="file"><name>Item.cpp</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_main_menu_8cpp" kind="file"><name>MainMenu.cpp</name>
+  </compound>
+  <compound refid="_score_keeper_8cpp" kind="file"><name>ScoreKeeper.cpp</name>
+  </compound>
+  <compound refid="_space_ship_8cpp" kind="file"><name>SpaceShip.cpp</name>
+  </compound>
+  <compound refid="_user_input_8cpp" kind="file"><name>UserInput.cpp</name>
+  </compound>
+  <compound refid="dir_7f57b1e41c5acd0e859ae5f3a2b075a9" kind="dir"><name>headers</name>
+  </compound>
+</doxygenindex>

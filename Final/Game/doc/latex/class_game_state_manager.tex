@@ -1,0 +1,94 @@
+\hypertarget{class_game_state_manager}{}\section{Game\+State\+Manager Class Reference}
+\label{class_game_state_manager}\index{GameStateManager@{GameStateManager}}
+
+
+{\ttfamily \#include $<$Game\+State\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_state_manager_aa9769dca27ad070cf5491a7f54c7d85e}{Game\+State\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_game_state_manager_ac4bbd99de7c51df4377bf25d367cc527}{$\sim$\+Game\+State\+Manager}} ()=default
+\item 
+void \mbox{\hyperlink{class_game_state_manager_af891544d0671ad46cb561f350ed3d175}{add\+State}} (\mbox{\hyperlink{_game_state_manager_8h_aff87e674f0407654608d089427df6ab3}{State}} \+\_\+new\+State, bool \+\_\+is\+Replacing=true)
+\item 
+void \mbox{\hyperlink{class_game_state_manager_aa392462be47af93a17c12d2b9f90afb0}{process\+State\+Changes}} ()
+\item 
+const \mbox{\hyperlink{_game_state_manager_8h_aff87e674f0407654608d089427df6ab3}{State}} \& \mbox{\hyperlink{class_game_state_manager_a5b42b1e97123439df8e476c89d3b8a68}{get\+Active\+State}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_game_state_manager}{Game\+State\+Manager}} is responsible for managing the different states of the game. It does this by adding and removing the different states on a stack. Once a state is finished, it is removed. In this game, the game begins with the \mbox{\hyperlink{class_main_menu}{Main\+Menu}} state. Once the user decides to play a game, a new \mbox{\hyperlink{class_game}{Game}} state is added to the stack. Once that game is over, a game over state is added to the stack. Once the user decides to begin a new game, the game over state ends and is removed from that stack, then a new game state is presented 
+
+Definition at line 26 of file Game\+State\+Manager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_state_manager_aa9769dca27ad070cf5491a7f54c7d85e}\label{class_game_state_manager_aa9769dca27ad070cf5491a7f54c7d85e}} 
+\index{GameStateManager@{GameStateManager}!GameStateManager@{GameStateManager}}
+\index{GameStateManager@{GameStateManager}!GameStateManager@{GameStateManager}}
+\subsubsection{\texorpdfstring{GameStateManager()}{GameStateManager()}}
+{\footnotesize\ttfamily Game\+State\+Manager\+::\+Game\+State\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor 
+
+Definition at line 4 of file Game\+State\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_game_state_manager_ac4bbd99de7c51df4377bf25d367cc527}\label{class_game_state_manager_ac4bbd99de7c51df4377bf25d367cc527}} 
+\index{GameStateManager@{GameStateManager}!````~GameStateManager@{$\sim$GameStateManager}}
+\index{````~GameStateManager@{$\sim$GameStateManager}!GameStateManager@{GameStateManager}}
+\subsubsection{\texorpdfstring{$\sim$GameStateManager()}{~GameStateManager()}}
+{\footnotesize\ttfamily Game\+State\+Manager\+::$\sim$\+Game\+State\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default Deconstructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_state_manager_af891544d0671ad46cb561f350ed3d175}\label{class_game_state_manager_af891544d0671ad46cb561f350ed3d175}} 
+\index{GameStateManager@{GameStateManager}!addState@{addState}}
+\index{addState@{addState}!GameStateManager@{GameStateManager}}
+\subsubsection{\texorpdfstring{addState()}{addState()}}
+{\footnotesize\ttfamily void Game\+State\+Manager\+::add\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_game_state_manager_8h_aff87e674f0407654608d089427df6ab3}{State}}}]{\+\_\+new\+State,  }\item[{bool}]{\+\_\+is\+Replacing = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Method adds a new state to the stack, the top of the stack is what will be displayed onto the window 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+new\+State} & New state to be added \\
+\hline
+{\em \+\_\+is\+Replacing} & boolean flag to check if state is being replaced \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file Game\+State\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_game_state_manager_a5b42b1e97123439df8e476c89d3b8a68}\label{class_game_state_manager_a5b42b1e97123439df8e476c89d3b8a68}} 
+\index{GameStateManager@{GameStateManager}!getActiveState@{getActiveState}}
+\index{getActiveState@{getActiveState}!GameStateManager@{GameStateManager}}
+\subsubsection{\texorpdfstring{getActiveState()}{getActiveState()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_game_state_manager_8h_aff87e674f0407654608d089427df6ab3}{State}} \& Game\+State\+Manager\+::get\+Active\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get method for the current state of the whole program at the time of being called \begin{DoxyReturn}{Returns}
+The current state of the game 
+\end{DoxyReturn}
+
+
+Definition at line 45 of file Game\+State\+Manager.\+cpp.
+
+\mbox{\Hypertarget{class_game_state_manager_aa392462be47af93a17c12d2b9f90afb0}\label{class_game_state_manager_aa392462be47af93a17c12d2b9f90afb0}} 
+\index{GameStateManager@{GameStateManager}!processStateChanges@{processStateChanges}}
+\index{processStateChanges@{processStateChanges}!GameStateManager@{GameStateManager}}
+\subsubsection{\texorpdfstring{processStateChanges()}{processStateChanges()}}
+{\footnotesize\ttfamily void Game\+State\+Manager\+::process\+State\+Changes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Process a change in the games overall state. Once there is a change to the stack, the top of the stack is displayed to the window 
+
+Definition at line 20 of file Game\+State\+Manager.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{_game_state_manager_8h}{Game\+State\+Manager.\+h}}\item 
+\mbox{\hyperlink{_game_state_manager_8cpp}{Game\+State\+Manager.\+cpp}}\end{DoxyCompactItemize}

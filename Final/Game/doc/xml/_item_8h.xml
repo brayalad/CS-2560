@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="_item_8h" kind="file" language="C++">
+    <compoundname>Item.h</compoundname>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includes refid="_engine_8h" local="yes">Engine.h</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_game_8h" local="yes">headers/Game.h</includedby>
+    <includedby refid="_item_8cpp" local="yes">Item.cpp</includedby>
+    <incdepgraph>
+      <node id="227">
+        <label>GameState.h</label>
+        <link refid="_game_state_8h"/>
+      </node>
+      <node id="220">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="225">
+        <label>GameStateManager.h</label>
+        <link refid="_game_state_manager_8h"/>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+      </node>
+      <node id="224">
+        <label>GlobalVariables.h</label>
+        <link refid="_global_variables_8h"/>
+      </node>
+      <node id="219">
+        <label>headers/Item.h</label>
+        <link refid="_item_8h"/>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="231" relation="include">
+        </childnode>
+      </node>
+      <node id="230">
+        <label>UserInput.h</label>
+        <link refid="_user_input_8h"/>
+        <childnode refid="220" relation="include">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>string</label>
+      </node>
+      <node id="229">
+        <label>map</label>
+      </node>
+      <node id="228">
+        <label>AssetManager.h</label>
+        <link refid="_asset_manager_8h"/>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+      </node>
+      <node id="231">
+        <label>vector</label>
+      </node>
+      <node id="226">
+        <label>stack</label>
+      </node>
+      <node id="221">
+        <label>Engine.h</label>
+        <link refid="_engine_8h"/>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="230" relation="include">
+        </childnode>
+      </node>
+      <node id="222">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="234">
+        <label>Game.cpp</label>
+        <link refid="_game_8cpp"/>
+      </node>
+      <node id="232">
+        <label>headers/Item.h</label>
+        <link refid="_item_8h"/>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+      </node>
+      <node id="236">
+        <label>MainMenu.cpp</label>
+        <link refid="_main_menu_8cpp"/>
+      </node>
+      <node id="237">
+        <label>Item.cpp</label>
+        <link refid="_item_8cpp"/>
+      </node>
+      <node id="235">
+        <label>GameOver.cpp</label>
+        <link refid="_game_over_8cpp"/>
+      </node>
+      <node id="233">
+        <label>headers/Game.h</label>
+        <link refid="_game_8h"/>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_item" prot="public">Item</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//Items.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_engine_8h" kindref="compound">Engine.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_item" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_item" kindref="compound">Item</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref><sp/>gameData;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;sf::Sprite&gt;<sp/>asteroids;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;sf::Sprite&gt;<sp/>coins;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_item_1aaded2a7e8d7d74ceb9838fc0d9da2ea3" kindref="member">Item</ref>(<ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref><sp/>_gameData);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_item_1acbef638becdf16de85c9602a93d47518" kindref="member">spawnAsteroid</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_item_1ad79f9b2e0ad9cb922cd7678fc8dc628e" kindref="member">spawnCoin</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_item_1ac28d0cbacc49ab30bdd0c593600a75be" kindref="member">moveItems</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frameRate);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_item_1a468f79141232febc578c8cefe32b2791" kindref="member">drawItems</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;sf::Sprite&gt;&amp;<sp/><ref refid="class_item_1a040b4ff526f1ab5340b3a7ea630037ba" kindref="member">getAsteroids</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;sf::Sprite&gt;&amp;<sp/><ref refid="class_item_1a272b51e3dad8000fe006b0aa5b4ec259" kindref="member">getCoins</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="headers/Item.h"/>
+  </compounddef>
+</doxygen>

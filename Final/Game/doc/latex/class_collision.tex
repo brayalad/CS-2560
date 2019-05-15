@@ -1,0 +1,73 @@
+\hypertarget{class_collision}{}\section{Collision Class Reference}
+\label{class_collision}\index{Collision@{Collision}}
+
+
+{\ttfamily \#include $<$Collision.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_collision_a1c247612eae832108bf79b78127f35f3}{Collision}} ()=default
+\item 
+\mbox{\hyperlink{class_collision_aeb427d5296152744ac2c082d29afa930}{$\sim$\+Collision}} ()=default
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_collision_aae61d9a3d12eaafb20bb9f08906bb062}{check\+Sprite\+Collision}} (sf\+::\+Sprite sprite1, float scale1, sf\+::\+Sprite sprite2, float scale2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_collision}{Collision}} class is in charge of checking for a collision between two sprites. More specifically checking if the spaceship sprite has intersected with another item in the game, either a coin or an asteroid. Contains only one static method, meaning it does not have to me instantiated and can be used throughout the game. 
+
+Definition at line 13 of file Collision.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_collision_a1c247612eae832108bf79b78127f35f3}\label{class_collision_a1c247612eae832108bf79b78127f35f3}} 
+\index{Collision@{Collision}!Collision@{Collision}}
+\index{Collision@{Collision}!Collision@{Collision}}
+\subsubsection{\texorpdfstring{Collision()}{Collision()}}
+{\footnotesize\ttfamily Collision\+::\+Collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default constructor \mbox{\Hypertarget{class_collision_aeb427d5296152744ac2c082d29afa930}\label{class_collision_aeb427d5296152744ac2c082d29afa930}} 
+\index{Collision@{Collision}!````~Collision@{$\sim$Collision}}
+\index{````~Collision@{$\sim$Collision}!Collision@{Collision}}
+\subsubsection{\texorpdfstring{$\sim$Collision()}{~Collision()}}
+{\footnotesize\ttfamily Collision\+::$\sim$\+Collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default deconstructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_collision_aae61d9a3d12eaafb20bb9f08906bb062}\label{class_collision_aae61d9a3d12eaafb20bb9f08906bb062}} 
+\index{Collision@{Collision}!checkSpriteCollision@{checkSpriteCollision}}
+\index{checkSpriteCollision@{checkSpriteCollision}!Collision@{Collision}}
+\subsubsection{\texorpdfstring{checkSpriteCollision()}{checkSpriteCollision()}}
+{\footnotesize\ttfamily bool Collision\+::check\+Sprite\+Collision (\begin{DoxyParamCaption}\item[{sf\+::\+Sprite}]{sprite1,  }\item[{float}]{scale1,  }\item[{sf\+::\+Sprite}]{sprite2,  }\item[{float}]{scale2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Static method that checks if two sprites have intersected 
+\begin{DoxyParams}{Parameters}
+{\em sprite1} & The first sprite being checked, in the game it is the Spaceship sprite \\
+\hline
+{\em scale1} & The value at which to scale the first sprite \\
+\hline
+{\em sprite2} & The second sprite being checked, in the game it is either a coin or asteroid sprite \\
+\hline
+{\em scale2} & The value at which to scale the second sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+If the two sprites intersected based on their global bounds. 
+\end{DoxyReturn}
+
+
+Definition at line 4 of file Collision.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{_collision_8h}{Collision.\+h}}\item 
+\mbox{\hyperlink{_collision_8cpp}{Collision.\+cpp}}\end{DoxyCompactItemize}

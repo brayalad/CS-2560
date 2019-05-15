@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_score_keeper" kind="class" language="C++" prot="public">
+    <compoundname>ScoreKeeper</compoundname>
+    <includes refid="_score_keeper_8h" local="no">ScoreKeeper.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_score_keeper_1a6212aa9064fdb0ae696d8f4398a87e53" prot="private" static="no" mutable="no">
+        <type><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref></type>
+        <definition>GameData ScoreKeeper::gameData</definition>
+        <argsstring></argsstring>
+        <name>gameData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Shared pointer to other classes in program </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/ScoreKeeper.h" line="17" column="1" bodyfile="headers/ScoreKeeper.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_score_keeper_1af0002d9d7a32fc533d3f428809911ce1" prot="private" static="no" mutable="no">
+        <type>sf::Text</type>
+        <definition>sf::Text ScoreKeeper::scoreText</definition>
+        <argsstring></argsstring>
+        <name>scoreText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Text representing the score of the current game turn </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/ScoreKeeper.h" line="22" column="1" bodyfile="headers/ScoreKeeper.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_score_keeper_1ab3478ac9c94af3b750ae5ff1c45fd2da" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreKeeper::ScoreKeeper</definition>
+        <argsstring>(GameData _gameData)</argsstring>
+        <name>ScoreKeeper</name>
+        <param>
+          <type><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref></type>
+          <declname>_gameData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_gameData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to other classes in program </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/ScoreKeeper.h" line="29" column="1" bodyfile="ScoreKeeper.cpp" bodystart="6" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_score_keeper_1a9c7e1807d09a538f5f806724e52d72e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ScoreKeeper::~ScoreKeeper</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ScoreKeeper</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default deconstructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/ScoreKeeper.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_score_keeper_1aa51b77d01ac44caa656b9f2ad474765d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScoreKeeper::draw</definition>
+        <argsstring>()</argsstring>
+        <name>draw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Draws the score onto the screen. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/ScoreKeeper.h" line="38" column="1" bodyfile="ScoreKeeper.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_score_keeper_1a5860a6708f7c544ea9dbe222a397ad2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ScoreKeeper::updateScore</definition>
+        <argsstring>(int score)</argsstring>
+        <name>updateScore</name>
+        <param>
+          <type>int</type>
+          <declname>score</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the current score when called <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new score of the game </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/ScoreKeeper.h" line="43" column="1" bodyfile="ScoreKeeper.cpp" bodystart="29" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class responsible for keeping score of the current game turn </para>
+    </detaileddescription>
+    <location file="headers/ScoreKeeper.h" line="12" column="1" bodyfile="headers/ScoreKeeper.h" bodystart="11" bodyend="44"/>
+    <listofallmembers>
+      <member refid="class_score_keeper_1aa51b77d01ac44caa656b9f2ad474765d" prot="public" virt="non-virtual"><scope>ScoreKeeper</scope><name>draw</name></member>
+      <member refid="class_score_keeper_1a6212aa9064fdb0ae696d8f4398a87e53" prot="private" virt="non-virtual"><scope>ScoreKeeper</scope><name>gameData</name></member>
+      <member refid="class_score_keeper_1ab3478ac9c94af3b750ae5ff1c45fd2da" prot="public" virt="non-virtual"><scope>ScoreKeeper</scope><name>ScoreKeeper</name></member>
+      <member refid="class_score_keeper_1af0002d9d7a32fc533d3f428809911ce1" prot="private" virt="non-virtual"><scope>ScoreKeeper</scope><name>scoreText</name></member>
+      <member refid="class_score_keeper_1a5860a6708f7c544ea9dbe222a397ad2c" prot="public" virt="non-virtual"><scope>ScoreKeeper</scope><name>updateScore</name></member>
+      <member refid="class_score_keeper_1a9c7e1807d09a538f5f806724e52d72e0" prot="public" virt="non-virtual"><scope>ScoreKeeper</scope><name>~ScoreKeeper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

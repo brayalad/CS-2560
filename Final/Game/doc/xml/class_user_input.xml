@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_user_input" kind="class" language="C++" prot="public">
+    <compoundname>UserInput</compoundname>
+    <includes refid="_user_input_8h" local="no">UserInput.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_user_input_1ace219b17c2e355536141cda8a241e6f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>UserInput::UserInput</definition>
+        <argsstring>()=default</argsstring>
+        <name>UserInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/UserInput.h" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_input_1aa4db2151dcad8d3a522682aaa784991b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>UserInput::~UserInput</definition>
+        <argsstring>()=default</argsstring>
+        <name>~UserInput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default deconstructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/UserInput.h" line="22" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_user_input_1a38692411e807e12f638d9f29f46d944d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserInput::isSpriteClicked</definition>
+        <argsstring>(const sf::Sprite &amp;object, sf::Mouse::Button button, sf::RenderWindow &amp;window)</argsstring>
+        <name>isSpriteClicked</name>
+        <param>
+          <type>const sf::Sprite &amp;</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type>sf::Mouse::Button</type>
+          <declname>button</declname>
+        </param>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Static method that checks if a sprite has been clicked on <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sprite being checked if has been clicked </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The botton pressed on the mouse </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The games window </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If the object sprite passed in has been clicked by the mouse button passed in, in the window passed in </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/UserInput.h" line="31" column="1" bodyfile="UserInput.cpp" bodystart="4" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_user_input_1aa26c28cfd6d9a7d573edbc08fa123ace" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserInput::isKeyboardClicked</definition>
+        <argsstring>(sf::Keyboard::Key key)</argsstring>
+        <name>isKeyboardClicked</name>
+        <param>
+          <type>sf::Keyboard::Key</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Static method that checks if a certain key has been pressed <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Key being checked </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If the key passed in was pressed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/UserInput.h" line="37" column="1" bodyfile="UserInput.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_user_input" kindref="compound">UserInput</ref> is repsponsible for checking for user input Checks for either mouse clicks or keyboard clicks. Is used to check if their has been user input and if so respond to that certain kind of event </para>
+    </detaileddescription>
+    <location file="headers/UserInput.h" line="13" column="1" bodyfile="headers/UserInput.h" bodystart="12" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_user_input_1aa26c28cfd6d9a7d573edbc08fa123ace" prot="public" virt="non-virtual"><scope>UserInput</scope><name>isKeyboardClicked</name></member>
+      <member refid="class_user_input_1a38692411e807e12f638d9f29f46d944d" prot="public" virt="non-virtual"><scope>UserInput</scope><name>isSpriteClicked</name></member>
+      <member refid="class_user_input_1ace219b17c2e355536141cda8a241e6f9" prot="public" virt="non-virtual"><scope>UserInput</scope><name>UserInput</name></member>
+      <member refid="class_user_input_1aa4db2151dcad8d3a522682aaa784991b" prot="public" virt="non-virtual"><scope>UserInput</scope><name>~UserInput</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

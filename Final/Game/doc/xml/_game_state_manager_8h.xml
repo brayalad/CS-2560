@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="_game_state_manager_8h" kind="file" language="C++">
+    <compoundname>GameStateManager.h</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">stack</includes>
+    <includes refid="_game_state_8h" local="yes">GameState.h</includes>
+    <includedby refid="_game_state_manager_8cpp" local="yes">GameStateManager.cpp</includedby>
+    <includedby refid="_engine_8h" local="yes">headers/Engine.h</includedby>
+    <incdepgraph>
+      <node id="184">
+        <label>GameState.h</label>
+        <link refid="_game_state_8h"/>
+      </node>
+      <node id="181">
+        <label>headers/GameStateManager.h</label>
+        <link refid="_game_state_manager_8h"/>
+        <childnode refid="182" relation="include">
+        </childnode>
+        <childnode refid="183" relation="include">
+        </childnode>
+        <childnode refid="184" relation="include">
+        </childnode>
+      </node>
+      <node id="183">
+        <label>stack</label>
+      </node>
+      <node id="182">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="190">
+        <label>Game.cpp</label>
+        <link refid="_game_8cpp"/>
+      </node>
+      <node id="198">
+        <label>ScoreKeeper.cpp</label>
+        <link refid="_score_keeper_8cpp"/>
+      </node>
+      <node id="185">
+        <label>headers/GameStateManager.h</label>
+        <link refid="_game_state_manager_8h"/>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+      </node>
+      <node id="193">
+        <label>headers/Item.h</label>
+        <link refid="_item_8h"/>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+      </node>
+      <node id="192">
+        <label>MainMenu.cpp</label>
+        <link refid="_main_menu_8cpp"/>
+      </node>
+      <node id="188">
+        <label>Engine.cpp</label>
+        <link refid="_engine_8cpp"/>
+      </node>
+      <node id="200">
+        <label>headers/MainMenu.h</label>
+        <link refid="_main_menu_8h"/>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+      </node>
+      <node id="196">
+        <label>SpaceShip.cpp</label>
+        <link refid="_space_ship_8cpp"/>
+      </node>
+      <node id="187">
+        <label>headers/Engine.h</label>
+        <link refid="_engine_8h"/>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+      </node>
+      <node id="194">
+        <label>Item.cpp</label>
+        <link refid="_item_8cpp"/>
+      </node>
+      <node id="199">
+        <label>headers/GameOver.h</label>
+        <link refid="_game_over_8h"/>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+      </node>
+      <node id="191">
+        <label>GameOver.cpp</label>
+        <link refid="_game_over_8cpp"/>
+      </node>
+      <node id="201">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="195">
+        <label>headers/SpaceShip.h</label>
+        <link refid="_space_ship_8h"/>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+      </node>
+      <node id="186">
+        <label>GameStateManager.cpp</label>
+        <link refid="_game_state_manager_8cpp"/>
+      </node>
+      <node id="197">
+        <label>headers/ScoreKeeper.h</label>
+        <link refid="_score_keeper_8h"/>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>headers/Game.h</label>
+        <link refid="_game_8h"/>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_game_state_manager" prot="public">GameStateManager</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_game_state_manager_8h_1aff87e674f0407654608d089427df6ab3" prot="public" static="no">
+        <type>std::unique_ptr&lt; <ref refid="class_game_state" kindref="compound">GameState</ref> &gt;</type>
+        <definition>typedef std::unique_ptr&lt;GameState&gt; State</definition>
+        <argsstring></argsstring>
+        <name>State</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defining a unique pointer to each game state. Each state is different and has its own different data. Each instance of the same type of state will not be the same either, therefore we must treat every instance of a <ref refid="class_game_state" kindref="compound">GameState</ref> as its own. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameStateManager.h" line="15" column="1" bodyfile="headers/GameStateManager.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//GameStateManager.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stack&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_game_state_8h" kindref="compound">GameState.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="_game_state_manager_8h_1aff87e674f0407654608d089427df6ab3" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::unique_ptr&lt;GameState&gt;<sp/><ref refid="_game_state_manager_8h_1aff87e674f0407654608d089427df6ab3" kindref="member">State</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_game_state_manager" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_game_state_manager" kindref="compound">GameStateManager</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>std::stack&lt;State&gt;<sp/>gameStates;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_game_state_manager_8h_1aff87e674f0407654608d089427df6ab3" kindref="member">State</ref><sp/>newState;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isRemoving;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isAdding;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isReplacing;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_game_state_manager_1aa9769dca27ad070cf5491a7f54c7d85e" kindref="member">GameStateManager</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_game_state_manager_1ac4bbd99de7c51df4377bf25d367cc527" kindref="member">~GameStateManager</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_state_manager_1af891544d0671ad46cb561f350ed3d175" kindref="member">addState</ref>(<ref refid="_game_state_manager_8h_1aff87e674f0407654608d089427df6ab3" kindref="member">State</ref><sp/>_newState,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_isReplacing<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_state_manager_1aa392462be47af93a17c12d2b9f90afb0" kindref="member">processStateChanges</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="_game_state_manager_8h_1aff87e674f0407654608d089427df6ab3" kindref="member">State</ref>&amp;<sp/><ref refid="class_game_state_manager_1a5b42b1e97123439df8e476c89d3b8a68" kindref="member">getActiveState</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="headers/GameStateManager.h"/>
+  </compounddef>
+</doxygen>

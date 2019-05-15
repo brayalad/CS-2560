@@ -1,0 +1,95 @@
+.TH "SpaceShip" 3 "Tue May 14 2019" "Space Race" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SpaceShip
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SpaceShip\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSpaceShip\fP (\fBGameData\fP _gameData)"
+.br
+.ti -1c
+.RI "\fB~SpaceShip\fP ()=default"
+.br
+.ti -1c
+.RI "void \fBdraw\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdate\fP (float frameRate)"
+.br
+.ti -1c
+.RI "void \fBmove\fP (char direction)"
+.br
+.ti -1c
+.RI "const sf::Sprite & \fBgetSpaceShip\fP () const"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBSpaceShip\fP class is the class the user controls\&. The user can move it up or down as well as rotate the sprite\&. 
+.PP
+Definition at line 13 of file SpaceShip\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SpaceShip::SpaceShip (\fBGameData\fP _gameData)\fC [explicit]\fP"
+Spaceship constructor 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI_gameData\fP shared pointer to other classes 
+.RE
+.PP
+
+.PP
+Definition at line 5 of file SpaceShip\&.cpp\&.
+.SS "SpaceShip::~SpaceShip ()\fC [default]\fP"
+Default constructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "void SpaceShip::draw ()"
+Draws the spacehip in its current state 
+.PP
+Definition at line 24 of file SpaceShip\&.cpp\&.
+.SS "const sf::Sprite & SpaceShip::getSpaceShip () const"
+Get method for the spaceship 
+.PP
+\fBReturns:\fP
+.RS 4
+the spaceship sprite 
+.RE
+.PP
+
+.PP
+Definition at line 93 of file SpaceShip\&.cpp\&.
+.SS "void SpaceShip::move (char direction)"
+Moves the spaceship vertically 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdirection\fP The direction in which to move 
+.RE
+.PP
+
+.PP
+Definition at line 76 of file SpaceShip\&.cpp\&.
+.SS "void SpaceShip::update (float frameRate)"
+Updates the state of the spaceship based on user input 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIframeRate\fP 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file SpaceShip\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Space Race from the source code\&.

@@ -1,0 +1,46 @@
+.TH "GameComponents" 3 "Tue May 14 2019" "Space Race" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GameComponents
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Engine\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGameStateManager\fP \fBgameManager\fP"
+.br
+.ti -1c
+.RI "sf::RenderWindow \fBwindow\fP"
+.br
+.ti -1c
+.RI "\fBAssetManager\fP \fBassets\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Structure holding the different components of the game Holds instances of each one of the different classes used throught the game and groups them together so that they can be easilly passed along to different classes of the game 
+.PP
+Definition at line 18 of file Engine\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBAssetManager\fP GameComponents::assets"
+The \fBAssetManager\fP holds all the different assets that are needed by the game\&. Stores these assets in a map contained by the class itself 
+.PP
+Definition at line 34 of file Engine\&.h\&.
+.SS "\fBGameStateManager\fP GameComponents::gameManager"
+The \fBGameStateManager\fP is in charge of handling and displaying each of the 3 different states in the game\&. 
+.PP
+Definition at line 24 of file Engine\&.h\&.
+.SS "sf::RenderWindow GameComponents::window"
+The RenderWindow is the window in which the game will be run and displayed in\&. 
+.PP
+Definition at line 29 of file Engine\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Space Race from the source code\&.

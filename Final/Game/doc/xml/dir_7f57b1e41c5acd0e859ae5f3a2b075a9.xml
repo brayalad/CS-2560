@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_7f57b1e41c5acd0e859ae5f3a2b075a9" kind="dir">
+    <compoundname>headers</compoundname>
+    <innerfile refid="_asset_manager_8h">AssetManager.h</innerfile>
+    <innerfile refid="_collision_8h">Collision.h</innerfile>
+    <innerfile refid="_engine_8h">Engine.h</innerfile>
+    <innerfile refid="_game_8h">Game.h</innerfile>
+    <innerfile refid="_game_over_8h">GameOver.h</innerfile>
+    <innerfile refid="_game_state_8h">GameState.h</innerfile>
+    <innerfile refid="_game_state_manager_8h">GameStateManager.h</innerfile>
+    <innerfile refid="_global_variables_8h">GlobalVariables.h</innerfile>
+    <innerfile refid="_item_8h">Item.h</innerfile>
+    <innerfile refid="_main_menu_8h">MainMenu.h</innerfile>
+    <innerfile refid="_score_keeper_8h">ScoreKeeper.h</innerfile>
+    <innerfile refid="_space_ship_8h">SpaceShip.h</innerfile>
+    <innerfile refid="_user_input_8h">UserInput.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="headers/"/>
+  </compounddef>
+</doxygen>

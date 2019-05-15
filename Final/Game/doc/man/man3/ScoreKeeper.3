@@ -1,0 +1,67 @@
+.TH "ScoreKeeper" 3 "Tue May 14 2019" "Space Race" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ScoreKeeper
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ScoreKeeper\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBScoreKeeper\fP (\fBGameData\fP _gameData)"
+.br
+.ti -1c
+.RI "\fB~ScoreKeeper\fP ()=default"
+.br
+.ti -1c
+.RI "void \fBdraw\fP ()"
+.br
+.ti -1c
+.RI "void \fBupdateScore\fP (int score)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class responsible for keeping score of the current game turn 
+.PP
+Definition at line 11 of file ScoreKeeper\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ScoreKeeper::ScoreKeeper (\fBGameData\fP _gameData)\fC [explicit]\fP"
+Default constructor 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI_gameData\fP shared pointer to other classes in program 
+.RE
+.PP
+
+.PP
+Definition at line 6 of file ScoreKeeper\&.cpp\&.
+.SS "ScoreKeeper::~ScoreKeeper ()\fC [default]\fP"
+Default deconstructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "void ScoreKeeper::draw ()"
+Draws the score onto the screen\&. 
+.PP
+Definition at line 24 of file ScoreKeeper\&.cpp\&.
+.SS "void ScoreKeeper::updateScore (int score)"
+Updates the current score when called 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIscore\fP The new score of the game 
+.RE
+.PP
+
+.PP
+Definition at line 29 of file ScoreKeeper\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Space Race from the source code\&.

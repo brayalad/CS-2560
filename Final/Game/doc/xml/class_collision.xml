@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_collision" kind="class" language="C++" prot="public">
+    <compoundname>Collision</compoundname>
+    <includes refid="_collision_8h" local="no">Collision.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_collision_1a1c247612eae832108bf79b78127f35f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Collision::Collision</definition>
+        <argsstring>()=default</argsstring>
+        <name>Collision</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Collision.h" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_collision_1aeb427d5296152744ac2c082d29afa930" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Collision::~Collision</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Collision</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default deconstructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Collision.h" line="23" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_collision_1aae61d9a3d12eaafb20bb9f08906bb062" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Collision::checkSpriteCollision</definition>
+        <argsstring>(sf::Sprite sprite1, float scale1, sf::Sprite sprite2, float scale2)</argsstring>
+        <name>checkSpriteCollision</name>
+        <param>
+          <type>sf::Sprite</type>
+          <declname>sprite1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale1</declname>
+        </param>
+        <param>
+          <type>sf::Sprite</type>
+          <declname>sprite2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>scale2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Static method that checks if two sprites have intersected <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sprite1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The first sprite being checked, in the game it is the Spaceship sprite </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scale1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value at which to scale the first sprite </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sprite2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The second sprite being checked, in the game it is either a coin or asteroid sprite </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scale2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value at which to scale the second sprite </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>If the two sprites intersected based on their global bounds. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Collision.h" line="33" column="1" bodyfile="Collision.cpp" bodystart="4" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="class_collision" kindref="compound">Collision</ref> class is in charge of checking for a collision between two sprites. More specifically checking if the spaceship sprite has intersected with another item in the game, either a coin or an asteroid. Contains only one static method, meaning it does not have to me instantiated and can be used throughout the game. </para>
+    </detaileddescription>
+    <location file="headers/Collision.h" line="14" column="1" bodyfile="headers/Collision.h" bodystart="13" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_collision_1aae61d9a3d12eaafb20bb9f08906bb062" prot="public" virt="non-virtual"><scope>Collision</scope><name>checkSpriteCollision</name></member>
+      <member refid="class_collision_1a1c247612eae832108bf79b78127f35f3" prot="public" virt="non-virtual"><scope>Collision</scope><name>Collision</name></member>
+      <member refid="class_collision_1aeb427d5296152744ac2c082d29afa930" prot="public" virt="non-virtual"><scope>Collision</scope><name>~Collision</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

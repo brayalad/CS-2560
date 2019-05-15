@@ -1,0 +1,38 @@
+.TH "headers/GameStateManager.h" 3 "Tue May 14 2019" "Space Race" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+headers/GameStateManager.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <memory>\fP
+.br
+\fC#include <stack>\fP
+.br
+\fC#include 'GameState\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBGameStateManager\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::unique_ptr< \fBGameState\fP > \fBState\fP"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef std::unique_ptr<\fBGameState\fP> \fBState\fP"
+Defining a unique pointer to each game state\&. Each state is different and has its own different data\&. Each instance of the same type of state will not be the same either, therefore we must treat every instance of a \fBGameState\fP as its own\&. 
+.PP
+Definition at line 15 of file GameStateManager\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Space Race from the source code\&.

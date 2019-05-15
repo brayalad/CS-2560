@@ -1,4 +1,7 @@
 //GlobalVariables.h
+/**
+ * Defining varialbes that are used throught the whole program
+ */
 #pragma once
 
 #define SCREEN_WIDTH 1280

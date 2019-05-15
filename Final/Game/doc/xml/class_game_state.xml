@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_game_state" kind="class" language="C++" prot="public">
+    <compoundname>GameState</compoundname>
+    <derivedcompoundref refid="class_game" prot="public" virt="non-virtual">Game</derivedcompoundref>
+    <derivedcompoundref refid="class_game_over" prot="public" virt="non-virtual">GameOver</derivedcompoundref>
+    <derivedcompoundref refid="class_main_menu" prot="public" virt="non-virtual">MainMenu</derivedcompoundref>
+    <includes refid="_game_state_8h" local="no">GameState.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_state_1a22d3404f53895a23359557a713194736" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void GameState::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <reimplementedby refid="class_main_menu_1a039698cefc631351e79f097c41e39d1c">initialize</reimplementedby>
+        <reimplementedby refid="class_game_over_1a973dbbd0bfc74c540b933853202b46a4">initialize</reimplementedby>
+        <reimplementedby refid="class_game_1ae2cce13c2c6358709513a06932df939a">initialize</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes what is needed and sets up the enviorment for the state This includes things like loading and setting assets such as textures and fonts </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameState.h" line="18" column="1" bodyfile="headers/GameState.h" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_state_1a734dd3521eb3056ee7d3f3e7c982b5a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void GameState::handleInput</definition>
+        <argsstring>()</argsstring>
+        <name>handleInput</name>
+        <reimplementedby refid="class_main_menu_1aa73613e97c322cba65028f3693b8c665">handleInput</reimplementedby>
+        <reimplementedby refid="class_game_over_1ad503a45f38d4472d3a91c096390c4aea">handleInput</reimplementedby>
+        <reimplementedby refid="class_game_1a59b929e54a2879beab72fc6ce724c313">handleInput</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handle any user input as appropriate based on the state </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameState.h" line="22" column="1" bodyfile="headers/GameState.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_state_1a52648f2b2e90f0e1e41a1763ebb061ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void GameState::update</definition>
+        <argsstring>(float frameRate)</argsstring>
+        <name>update</name>
+        <reimplementedby refid="class_game_1a5470c86c0d379e7cb50175b5079fd559">update</reimplementedby>
+        <param>
+          <type>float</type>
+          <declname>frameRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update the components of the current states however needed based on the types of events. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frameRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rate at which the components are updated </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameState.h" line="28" column="1" bodyfile="headers/GameState.h" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_state_1adf753ecc90e0b309c849b117036e619e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void GameState::draw</definition>
+        <argsstring>()</argsstring>
+        <name>draw</name>
+        <reimplementedby refid="class_main_menu_1a54ec1eed16b49cac99d640feab93e119">draw</reimplementedby>
+        <reimplementedby refid="class_game_over_1a29ee6ef26eca92bac58c9917e933bce4">draw</reimplementedby>
+        <reimplementedby refid="class_game_1a9dbbb6429980a91196ed07d299404304">draw</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Display its components to the window </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/GameState.h" line="32" column="1" bodyfile="headers/GameState.h" bodystart="32" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_game_state" kindref="compound">GameState</ref> class is meant to act more as a template or interface. There are three states that the program can be at any time. The user can be in the main menu, playing a game turn, or be in a game over state. This class acts as a blueprint to what states of the game are able to do. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="20">
+        <label>GameOver</label>
+        <link refid="class_game_over"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>MainMenu</label>
+        <link refid="class_main_menu"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>GameState</label>
+        <link refid="class_game_state"/>
+      </node>
+      <node id="19">
+        <label>Game</label>
+        <link refid="class_game"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="headers/GameState.h" line="11" column="1" bodyfile="headers/GameState.h" bodystart="10" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_game_state_1adf753ecc90e0b309c849b117036e619e" prot="public" virt="virtual"><scope>GameState</scope><name>draw</name></member>
+      <member refid="class_game_state_1a734dd3521eb3056ee7d3f3e7c982b5a9" prot="public" virt="virtual"><scope>GameState</scope><name>handleInput</name></member>
+      <member refid="class_game_state_1a22d3404f53895a23359557a713194736" prot="public" virt="virtual"><scope>GameState</scope><name>initialize</name></member>
+      <member refid="class_game_state_1a52648f2b2e90f0e1e41a1763ebb061ba" prot="public" virt="virtual"><scope>GameState</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

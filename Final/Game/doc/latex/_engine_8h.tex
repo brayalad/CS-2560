@@ -1,0 +1,34 @@
+\hypertarget{_engine_8h}{}\section{headers/\+Engine.h File Reference}
+\label{_engine_8h}\index{headers/Engine.h@{headers/Engine.h}}
+{\ttfamily \#include $<$S\+F\+M\+L/\+Graphics.\+hpp$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}Global\+Variables.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Game\+State\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Asset\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}User\+Input.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_game_components}{Game\+Components}}
+\item 
+class \mbox{\hyperlink{class_engine}{Engine}}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_game_components}{Game\+Components}} $>$ \mbox{\hyperlink{_engine_8h_a5bbe002e9f7f45a67e8fda9dbe980a3f}{Game\+Data}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_engine_8h_a5bbe002e9f7f45a67e8fda9dbe980a3f}\label{_engine_8h_a5bbe002e9f7f45a67e8fda9dbe980a3f}} 
+\index{Engine.h@{Engine.h}!GameData@{GameData}}
+\index{GameData@{GameData}!Engine.h@{Engine.h}}
+\subsubsection{\texorpdfstring{GameData}{GameData}}
+{\footnotesize\ttfamily typedef std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{struct_game_components}{Game\+Components}}$>$ \mbox{\hyperlink{_engine_8h_a5bbe002e9f7f45a67e8fda9dbe980a3f}{Game\+Data}}}
+
+Defining a shared\+\_\+ptr of the \mbox{\hyperlink{struct_game_components}{Game\+Components}} struct as its own type. This allows the different game components to me encapsulated into one defined type 
+
+Definition at line 42 of file Engine.\+h.
+

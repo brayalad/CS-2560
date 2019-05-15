@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="_game_state_8h" kind="file" language="C++">
+    <compoundname>GameState.h</compoundname>
+    <includedby refid="_game_state_manager_8h" local="yes">headers/GameStateManager.h</includedby>
+    <includedby refid="_game_8h" local="yes">headers/Game.h</includedby>
+    <includedby refid="_game_over_8h" local="yes">headers/GameOver.h</includedby>
+    <includedby refid="_main_menu_8h" local="yes">headers/MainMenu.h</includedby>
+    <invincdepgraph>
+      <node id="163">
+        <label>headers/GameState.h</label>
+        <link refid="_game_state_8h"/>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+      </node>
+      <node id="169">
+        <label>Game.cpp</label>
+        <link refid="_game_8cpp"/>
+      </node>
+      <node id="177">
+        <label>ScoreKeeper.cpp</label>
+        <link refid="_score_keeper_8cpp"/>
+      </node>
+      <node id="164">
+        <label>headers/GameStateManager.h</label>
+        <link refid="_game_state_manager_8h"/>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+      </node>
+      <node id="172">
+        <label>headers/Item.h</label>
+        <link refid="_item_8h"/>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+      </node>
+      <node id="171">
+        <label>MainMenu.cpp</label>
+        <link refid="_main_menu_8cpp"/>
+      </node>
+      <node id="167">
+        <label>Engine.cpp</label>
+        <link refid="_engine_8cpp"/>
+      </node>
+      <node id="179">
+        <label>headers/MainMenu.h</label>
+        <link refid="_main_menu_8h"/>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="175">
+        <label>SpaceShip.cpp</label>
+        <link refid="_space_ship_8cpp"/>
+      </node>
+      <node id="166">
+        <label>headers/Engine.h</label>
+        <link refid="_engine_8h"/>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="174" relation="include">
+        </childnode>
+        <childnode refid="176" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+      </node>
+      <node id="173">
+        <label>Item.cpp</label>
+        <link refid="_item_8cpp"/>
+      </node>
+      <node id="178">
+        <label>headers/GameOver.h</label>
+        <link refid="_game_over_8h"/>
+        <childnode refid="169" relation="include">
+        </childnode>
+        <childnode refid="170" relation="include">
+        </childnode>
+      </node>
+      <node id="170">
+        <label>GameOver.cpp</label>
+        <link refid="_game_over_8cpp"/>
+      </node>
+      <node id="180">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="174">
+        <label>headers/SpaceShip.h</label>
+        <link refid="_space_ship_8h"/>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+      </node>
+      <node id="165">
+        <label>GameStateManager.cpp</label>
+        <link refid="_game_state_manager_8cpp"/>
+      </node>
+      <node id="176">
+        <label>headers/ScoreKeeper.h</label>
+        <link refid="_score_keeper_8h"/>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+      </node>
+      <node id="168">
+        <label>headers/Game.h</label>
+        <link refid="_game_8h"/>
+        <childnode refid="169" relation="include">
+        </childnode>
+        <childnode refid="170" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_game_state" prot="public">GameState</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//GameState.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_game_state" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_game_state" kindref="compound">GameState</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18" refid="class_game_state_1a22d3404f53895a23359557a713194736" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_state_1a22d3404f53895a23359557a713194736" kindref="member">initialize</ref>(){};</highlight></codeline>
+<codeline lineno="22" refid="class_game_state_1a734dd3521eb3056ee7d3f3e7c982b5a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_state_1a734dd3521eb3056ee7d3f3e7c982b5a9" kindref="member">handleInput</ref>(){};</highlight></codeline>
+<codeline lineno="28" refid="class_game_state_1a52648f2b2e90f0e1e41a1763ebb061ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_state_1a52648f2b2e90f0e1e41a1763ebb061ba" kindref="member">update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frameRate){};</highlight></codeline>
+<codeline lineno="32" refid="class_game_state_1adf753ecc90e0b309c849b117036e619e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_game_state_1adf753ecc90e0b309c849b117036e619e" kindref="member">draw</ref>(){};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="headers/GameState.h"/>
+  </compounddef>
+</doxygen>

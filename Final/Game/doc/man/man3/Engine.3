@@ -1,0 +1,52 @@
+.TH "Engine" 3 "Tue May 14 2019" "Space Race" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Engine\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEngine\fP (int width, int height, const std::string &title)"
+.br
+.ti -1c
+.RI "void \fBrun\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBEngine\fP class is in charge of running the game\&. It contains the continous loop that runs the game and also checks for events and either deals with those events or calls on another class in the game to handle if neeeded; 
+.PP
+Definition at line 50 of file Engine\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Engine::Engine (int width, int height, const std::string & title)"
+The \fBEngine\fP class constructor is in charge of setting the enviorment up for the game\&. It creates the game window and loads the needed assets to the \fBAssetManager\fP instance contained within the GameData typedef\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwidth\fP The width value of the window\&. 
+.br
+\fIheight\fP The height value of the window\&. 
+.br
+\fItitle\fP The title that will be displayed on the window\&. 
+.RE
+.PP
+
+.PP
+Definition at line 8 of file Engine\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Engine::run ()"
+The run method is the game loop\&. It begings the game by beggining a loop that will listen for events throught the game\&. Whenever an event is triggered, it will deal with the event by passing it on to the class responsible to handle it 
+.PP
+Definition at line 23 of file Engine\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Space Race from the source code\&.

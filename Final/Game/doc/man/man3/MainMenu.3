@@ -1,0 +1,70 @@
+.TH "MainMenu" 3 "Tue May 14 2019" "Space Race" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MainMenu
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MainMenu\&.h>\fP
+.PP
+Inherits \fBGameState\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMainMenu\fP (\fBGameData\fP _gameData)"
+.br
+.ti -1c
+.RI "void \fBinitialize\fP () override"
+.br
+.ti -1c
+.RI "void \fBhandleInput\fP () override"
+.br
+.ti -1c
+.RI "void \fBdraw\fP () override"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBMainMenu\fP class represents the main menu state of the game\&. Whenever the program is started, the user is presented with the Main menu\&. While in this state, the user can choose to begin a new game turn\&. If so, a new game state will be created and added to the stack 
+.PP
+Definition at line 14 of file MainMenu\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MainMenu::MainMenu (\fBGameData\fP _gameData)\fC [explicit]\fP"
+Constructor that sets up the window for the main menu\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI_gameData\fP shared pointer to the outside game classes 
+.RE
+.PP
+
+.PP
+Definition at line 6 of file MainMenu\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void MainMenu::draw ()\fC [override]\fP, \fC [virtual]\fP"
+Draws the different parts of the class to the screen 
+.PP
+Reimplemented from \fBGameState\fP\&.
+.PP
+Definition at line 45 of file MainMenu\&.cpp\&.
+.SS "void MainMenu::handleInput ()\fC [override]\fP, \fC [virtual]\fP"
+Handle user input while in this state\&. For this state, it checks if the user has clicked on the play button 
+.PP
+Reimplemented from \fBGameState\fP\&.
+.PP
+Definition at line 27 of file MainMenu\&.cpp\&.
+.SS "void MainMenu::initialize ()\fC [override]\fP, \fC [virtual]\fP"
+Prepare the class to be displayed 
+.PP
+Reimplemented from \fBGameState\fP\&.
+.PP
+Definition at line 11 of file MainMenu\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Space Race from the source code\&.

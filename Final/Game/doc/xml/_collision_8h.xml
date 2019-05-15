@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="_collision_8h" kind="file" language="C++">
+    <compoundname>Collision.h</compoundname>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includedby refid="_collision_8cpp" local="yes">Collision.cpp</includedby>
+    <includedby refid="_game_8h" local="yes">headers/Game.h</includedby>
+    <incdepgraph>
+      <node id="93">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="92">
+        <label>headers/Collision.h</label>
+        <link refid="_collision_8h"/>
+        <childnode refid="93" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="97">
+        <label>Game.cpp</label>
+        <link refid="_game_8cpp"/>
+      </node>
+      <node id="99">
+        <label>MainMenu.cpp</label>
+        <link refid="_main_menu_8cpp"/>
+      </node>
+      <node id="95">
+        <label>Collision.cpp</label>
+        <link refid="_collision_8cpp"/>
+      </node>
+      <node id="94">
+        <label>headers/Collision.h</label>
+        <link refid="_collision_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>GameOver.cpp</label>
+        <link refid="_game_over_8cpp"/>
+      </node>
+      <node id="96">
+        <label>headers/Game.h</label>
+        <link refid="_game_8h"/>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_collision" prot="public">Collision</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//Collison.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_collision" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_collision" kindref="compound">Collision</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_collision_1a1c247612eae832108bf79b78127f35f3" kindref="member">Collision</ref>()=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_collision_1aeb427d5296152744ac2c082d29afa930" kindref="member">~Collision</ref>()=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_collision_1aae61d9a3d12eaafb20bb9f08906bb062" kindref="member">checkSpriteCollision</ref>(sf::Sprite<sp/>sprite1,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale1,<sp/>sf::Sprite<sp/>sprite2,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale2);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="headers/Collision.h"/>
+  </compounddef>
+</doxygen>

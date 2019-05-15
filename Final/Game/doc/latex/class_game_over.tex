@@ -1,0 +1,101 @@
+\hypertarget{class_game_over}{}\section{Game\+Over Class Reference}
+\label{class_game_over}\index{GameOver@{GameOver}}
+
+
+{\ttfamily \#include $<$Game\+Over.\+h$>$}
+
+Inheritance diagram for Game\+Over\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_over}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_over_ae8969c43377583bf4d81c048718f8d94}{Game\+Over}} (\mbox{\hyperlink{_engine_8h_a5bbe002e9f7f45a67e8fda9dbe980a3f}{Game\+Data}} \+\_\+game\+Data, int \+\_\+score)
+\item 
+void \mbox{\hyperlink{class_game_over_a973dbbd0bfc74c540b933853202b46a4}{initialize}} () override
+\item 
+void \mbox{\hyperlink{class_game_over_ad503a45f38d4472d3a91c096390c4aea}{handle\+Input}} () override
+\item 
+void \mbox{\hyperlink{class_game_over_a29ee6ef26eca92bac58c9917e933bce4}{draw}} () override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_game_over}{Game\+Over}} class is responsible for the state if the game once the current game turn has ended. It is dervived from the \mbox{\hyperlink{class_game_state}{Game\+State}} class making it one if the possible states that the program can be aat any time. It is repsonsible for displaying the score out to the user and allowing them to play another game. 
+
+Definition at line 14 of file Game\+Over.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_over_ae8969c43377583bf4d81c048718f8d94}\label{class_game_over_ae8969c43377583bf4d81c048718f8d94}} 
+\index{GameOver@{GameOver}!GameOver@{GameOver}}
+\index{GameOver@{GameOver}!GameOver@{GameOver}}
+\subsubsection{\texorpdfstring{GameOver()}{GameOver()}}
+{\footnotesize\ttfamily Game\+Over\+::\+Game\+Over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_engine_8h_a5bbe002e9f7f45a67e8fda9dbe980a3f}{Game\+Data}}}]{\+\_\+game\+Data,  }\item[{int}]{\+\_\+score }\end{DoxyParamCaption})}
+
+Constructor takes in shared pointer to other game classes as well as the score of the previous game turn. Sets the classes score to the score passed to it. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+game\+Data} & shared pointer to other classes \\
+\hline
+{\em \+\_\+score} & The value to display \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file Game\+Over.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_over_a29ee6ef26eca92bac58c9917e933bce4}\label{class_game_over_a29ee6ef26eca92bac58c9917e933bce4}} 
+\index{GameOver@{GameOver}!draw@{draw}}
+\index{draw@{draw}!GameOver@{GameOver}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Game\+Over\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Draws the different parts of the game over state and screen to the window. 
+
+Reimplemented from \mbox{\hyperlink{class_game_state_adf753ecc90e0b309c849b117036e619e}{Game\+State}}.
+
+
+
+Definition at line 56 of file Game\+Over.\+cpp.
+
+\mbox{\Hypertarget{class_game_over_ad503a45f38d4472d3a91c096390c4aea}\label{class_game_over_ad503a45f38d4472d3a91c096390c4aea}} 
+\index{GameOver@{GameOver}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!GameOver@{GameOver}}
+\subsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void Game\+Over\+::handle\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handles user input while in this state. Checks to see if the user clicks on the retry button. If so, a new \mbox{\hyperlink{class_game}{Game}} is created. 
+
+Reimplemented from \mbox{\hyperlink{class_game_state_a734dd3521eb3056ee7d3f3e7c982b5a9}{Game\+State}}.
+
+
+
+Definition at line 38 of file Game\+Over.\+cpp.
+
+\mbox{\Hypertarget{class_game_over_a973dbbd0bfc74c540b933853202b46a4}\label{class_game_over_a973dbbd0bfc74c540b933853202b46a4}} 
+\index{GameOver@{GameOver}!initialize@{initialize}}
+\index{initialize@{initialize}!GameOver@{GameOver}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Game\+Over\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Sets up the window to display the game score and button. Loads all needed textures and fonts from the asset manager withing the game\+Data shared pointer 
+
+Reimplemented from \mbox{\hyperlink{class_game_state_a22d3404f53895a23359557a713194736}{Game\+State}}.
+
+
+
+Definition at line 13 of file Game\+Over.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{_game_over_8h}{Game\+Over.\+h}}\item 
+\mbox{\hyperlink{_game_over_8cpp}{Game\+Over.\+cpp}}\end{DoxyCompactItemize}

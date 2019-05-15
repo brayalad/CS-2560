@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_game" kind="class" language="C++" prot="public">
+    <compoundname>Game</compoundname>
+    <basecompoundref refid="class_game_state" prot="public" virt="non-virtual">GameState</basecompoundref>
+    <includes refid="_game_8h" local="no">Game.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_game_1abd03c2e680627cef2ddda2c5f804049a" prot="private" static="no" mutable="no">
+        <type><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref></type>
+        <definition>GameData Game::gameData</definition>
+        <argsstring></argsstring>
+        <name>gameData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The shared GameData pointer that allows the <ref refid="class_game" kindref="compound">Game</ref> class accesses components that are responsible for managing the game. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="29" column="1" bodyfile="headers/Game.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a57ba11192994ff8f9e4c4031cb363f6f" prot="private" static="no" mutable="no">
+        <type>sf::Sprite</type>
+        <definition>sf::Sprite Game::background</definition>
+        <argsstring></argsstring>
+        <name>background</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sprite that represents that game&apos;s background </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="34" column="1" bodyfile="headers/Game.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a181538237d8d144e1ca8dd849e208c39" prot="private" static="no" mutable="no">
+        <type><ref refid="class_item" kindref="compound">Item</ref> *</type>
+        <definition>Item* Game::item</definition>
+        <argsstring></argsstring>
+        <name>item</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to an item in the game. In this game, it can either be a coin or an asteroid </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="40" column="1" bodyfile="headers/Game.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a5576d4454b4a807c22f0552b3674223d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_space_ship" kindref="compound">SpaceShip</ref> *</type>
+        <definition>SpaceShip* Game::spaceShip</definition>
+        <argsstring></argsstring>
+        <name>spaceShip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to the spaceship that the user controls for the current game turn. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="45" column="1" bodyfile="headers/Game.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a5a97264c4478f180664a346336355a49" prot="private" static="no" mutable="no">
+        <type><ref refid="class_score_keeper" kindref="compound">ScoreKeeper</ref> *</type>
+        <definition>ScoreKeeper* Game::scoreDisplay</definition>
+        <argsstring></argsstring>
+        <name>scoreDisplay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to the Score being kepped for the current game turn. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="50" column="1" bodyfile="headers/Game.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1ac93a1599d25a3b67e429e62ec16380d0" prot="private" static="no" mutable="no">
+        <type>sf::Clock</type>
+        <definition>sf::Clock Game::gameClock</definition>
+        <argsstring></argsstring>
+        <name>gameClock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clock keeping track of the game time </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="55" column="1" bodyfile="headers/Game.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1aa60fc788f0481a9912a710c35d6c33bb" prot="private" static="no" mutable="no">
+        <type>sf::Clock</type>
+        <definition>sf::Clock Game::asteroidClock</definition>
+        <argsstring></argsstring>
+        <name>asteroidClock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clock keeping track of the time between asteroid spawns </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="59" column="1" bodyfile="headers/Game.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1ad54613d3073745f1877079ed8f99884e" prot="private" static="no" mutable="no">
+        <type>sf::Clock</type>
+        <definition>sf::Clock Game::coinClock</definition>
+        <argsstring></argsstring>
+        <name>coinClock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clock keeping track of the time between coinSpawns </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="63" column="1" bodyfile="headers/Game.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1ab1e526822c657b69e18f37c7ecf9ee6c" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Game::gameState</definition>
+        <argsstring></argsstring>
+        <name>gameState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The state of the current game instance. NOT the whole programs state </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="68" column="1" bodyfile="headers/Game.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1ae65d3e9968b76a5724b08800c9fd9810" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Game::asteroidFrequency</definition>
+        <argsstring></argsstring>
+        <name>asteroidFrequency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Frequency at which asteroids will spawn. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="72" column="1" bodyfile="headers/Game.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1abb885c1547f28973614bca43cdde21de" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Game::coinFrequency</definition>
+        <argsstring></argsstring>
+        <name>coinFrequency</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Frequency at which coins spawn. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="76" column="1" bodyfile="headers/Game.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1afaf9404196df9968103d5b0d0ad08139" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Game::score</definition>
+        <argsstring></argsstring>
+        <name>score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The score of the current game turn </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="80" column="1" bodyfile="headers/Game.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_1a57536075cd1bb2ffd645ff05bd1ff9b8" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Game::Game</definition>
+        <argsstring>(GameData _gameData)</argsstring>
+        <name>Game</name>
+        <param>
+          <type><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref></type>
+          <declname>_gameData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="class_game" kindref="compound">Game</ref> constructor responsible for setting up the window enviorment for the game turn. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_gameData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The shared pointer to Manager classes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="88" column="1" bodyfile="Game.cpp" bodystart="6" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1ae2cce13c2c6358709513a06932df939a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Game::initialize</definition>
+        <argsstring>() override</argsstring>
+        <name>initialize</name>
+        <reimplements refid="class_game_state_1a22d3404f53895a23359557a713194736">initialize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets up the window for the current game turn to begin </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="93" column="1" bodyfile="Game.cpp" bodystart="19" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a59b929e54a2879beab72fc6ce724c313" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Game::handleInput</definition>
+        <argsstring>() override</argsstring>
+        <name>handleInput</name>
+        <reimplements refid="class_game_state_1a734dd3521eb3056ee7d3f3e7c982b5a9">handleInput</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles any user input recieved by the <ref refid="class_user_input" kindref="compound">UserInput</ref> class </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="97" column="1" bodyfile="Game.cpp" bodystart="33" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a5470c86c0d379e7cb50175b5079fd559" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Game::update</definition>
+        <argsstring>(float frameRate) override</argsstring>
+        <name>update</name>
+        <reimplements refid="class_game_state_1a52648f2b2e90f0e1e41a1763ebb061ba">update</reimplements>
+        <param>
+          <type>float</type>
+          <declname>frameRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the different parts of the window whenever there are changes. This means updating positions of the spaceship and space items <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>frameRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rate at which to update changes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="103" column="1" bodyfile="Game.cpp" bodystart="75" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a9dbbb6429980a91196ed07d299404304" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Game::draw</definition>
+        <argsstring>() override</argsstring>
+        <name>draw</name>
+        <reimplements refid="class_game_state_1adf753ecc90e0b309c849b117036e619e">draw</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Draws changes made to the window and displays them, and any other class needed to the screen. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Game.h" line="108" column="1" bodyfile="Game.cpp" bodystart="139" bodyend="151"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <ref refid="class_game" kindref="compound">Game</ref> class is responsible for the current game turn being played. It is dervived from the <ref refid="class_game_state" kindref="compound">GameState</ref> class, meaning that it is one of the possible states that the video game can be in at any given time. The state that this class represents is that state of the game while the user is playing a turn. It is responsible for drawing and updated the window during the game turn and handling any events that it recieves. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>GameState</label>
+        <link refid="class_game_state"/>
+      </node>
+      <node id="6">
+        <label>Game</label>
+        <link refid="class_game"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9">
+        <label>GameState</label>
+        <link refid="class_game_state"/>
+      </node>
+      <node id="8">
+        <label>Game</label>
+        <link refid="class_game"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="headers/Game.h" line="22" column="1" bodyfile="headers/Game.h" bodystart="21" bodyend="109"/>
+    <listofallmembers>
+      <member refid="class_game_1aa60fc788f0481a9912a710c35d6c33bb" prot="private" virt="non-virtual"><scope>Game</scope><name>asteroidClock</name></member>
+      <member refid="class_game_1ae65d3e9968b76a5724b08800c9fd9810" prot="private" virt="non-virtual"><scope>Game</scope><name>asteroidFrequency</name></member>
+      <member refid="class_game_1a57ba11192994ff8f9e4c4031cb363f6f" prot="private" virt="non-virtual"><scope>Game</scope><name>background</name></member>
+      <member refid="class_game_1ad54613d3073745f1877079ed8f99884e" prot="private" virt="non-virtual"><scope>Game</scope><name>coinClock</name></member>
+      <member refid="class_game_1abb885c1547f28973614bca43cdde21de" prot="private" virt="non-virtual"><scope>Game</scope><name>coinFrequency</name></member>
+      <member refid="class_game_1a9dbbb6429980a91196ed07d299404304" prot="public" virt="virtual"><scope>Game</scope><name>draw</name></member>
+      <member refid="class_game_1a57536075cd1bb2ffd645ff05bd1ff9b8" prot="public" virt="non-virtual"><scope>Game</scope><name>Game</name></member>
+      <member refid="class_game_1ac93a1599d25a3b67e429e62ec16380d0" prot="private" virt="non-virtual"><scope>Game</scope><name>gameClock</name></member>
+      <member refid="class_game_1abd03c2e680627cef2ddda2c5f804049a" prot="private" virt="non-virtual"><scope>Game</scope><name>gameData</name></member>
+      <member refid="class_game_1ab1e526822c657b69e18f37c7ecf9ee6c" prot="private" virt="non-virtual"><scope>Game</scope><name>gameState</name></member>
+      <member refid="class_game_1a59b929e54a2879beab72fc6ce724c313" prot="public" virt="virtual"><scope>Game</scope><name>handleInput</name></member>
+      <member refid="class_game_1ae2cce13c2c6358709513a06932df939a" prot="public" virt="virtual"><scope>Game</scope><name>initialize</name></member>
+      <member refid="class_game_1a181538237d8d144e1ca8dd849e208c39" prot="private" virt="non-virtual"><scope>Game</scope><name>item</name></member>
+      <member refid="class_game_1afaf9404196df9968103d5b0d0ad08139" prot="private" virt="non-virtual"><scope>Game</scope><name>score</name></member>
+      <member refid="class_game_1a5a97264c4478f180664a346336355a49" prot="private" virt="non-virtual"><scope>Game</scope><name>scoreDisplay</name></member>
+      <member refid="class_game_1a5576d4454b4a807c22f0552b3674223d" prot="private" virt="non-virtual"><scope>Game</scope><name>spaceShip</name></member>
+      <member refid="class_game_1a5470c86c0d379e7cb50175b5079fd559" prot="public" virt="virtual"><scope>Game</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

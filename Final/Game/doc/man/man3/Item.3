@@ -1,0 +1,104 @@
+.TH "Item" 3 "Tue May 14 2019" "Space Race" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Item
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Item\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBItem\fP (\fBGameData\fP _gameData)"
+.br
+.ti -1c
+.RI "void \fBspawnAsteroid\fP ()"
+.br
+.ti -1c
+.RI "void \fBspawnCoin\fP ()"
+.br
+.ti -1c
+.RI "void \fBmoveItems\fP (float frameRate)"
+.br
+.ti -1c
+.RI "void \fBdrawItems\fP ()"
+.br
+.ti -1c
+.RI "const std::vector< sf::Sprite > & \fBgetAsteroids\fP () const"
+.br
+.ti -1c
+.RI "std::vector< sf::Sprite > & \fBgetCoins\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+The item class represents an item in the game\&. In this game it is either a an asteroid or a coin\&. This class is responsible for the items in the game\&. This means moving them from the right side of the screen to the left and updating the screen accordingling 
+.PP
+Definition at line 14 of file Item\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Item::Item (\fBGameData\fP _gameData)\fC [explicit]\fP"
+Constuctor for the Items class\&. Sets up the different spirtes with assets from the asset manager class 
+.PP
+\fBParameters:\fP
+.RS 4
+\fI_gameData\fP the shared pointer to ouside game classes 
+.RE
+.PP
+
+.PP
+Definition at line 5 of file Item\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void Item::drawItems ()"
+Displays the contents and changes to the game window 
+.PP
+Definition at line 68 of file Item\&.cpp\&.
+.SS "const std::vector< sf::Sprite > & Item::getAsteroids () const"
+Get method for the asteroids on the screen 
+.PP
+\fBReturns:\fP
+.RS 4
+vector of asteroid sprites on the screen 
+.RE
+.PP
+
+.PP
+Definition at line 80 of file Item\&.cpp\&.
+.SS "std::vector< sf::Sprite > & Item::getCoins ()"
+Get method for the coins on the screen 
+.PP
+\fBReturns:\fP
+.RS 4
+vector of coin sprites on the screen 
+.RE
+.PP
+
+.PP
+Definition at line 85 of file Item\&.cpp\&.
+.SS "void Item::moveItems (float frameRate)"
+Moves the items in both vectors from right to left 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIframeRate\fP rate at which to move the items 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file Item\&.cpp\&.
+.SS "void Item::spawnAsteroid ()"
+Method creates new asteroid sprites and adds them to the asteroid vector 
+.PP
+Definition at line 10 of file Item\&.cpp\&.
+.SS "void Item::spawnCoin ()"
+Creates new coin sprites and adds them to the coin vector 
+.PP
+Definition at line 23 of file Item\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Space Race from the source code\&.

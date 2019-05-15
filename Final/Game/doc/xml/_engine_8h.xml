@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="_engine_8h" kind="file" language="C++">
+    <compoundname>Engine.h</compoundname>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes refid="_global_variables_8h" local="yes">GlobalVariables.h</includes>
+    <includes refid="_game_state_manager_8h" local="yes">GameStateManager.h</includes>
+    <includes refid="_asset_manager_8h" local="yes">AssetManager.h</includes>
+    <includes refid="_user_input_8h" local="yes">UserInput.h</includes>
+    <includedby refid="_engine_8cpp" local="yes">Engine.cpp</includedby>
+    <includedby refid="_game_8h" local="yes">headers/Game.h</includedby>
+    <includedby refid="_item_8h" local="yes">headers/Item.h</includedby>
+    <includedby refid="_space_ship_8h" local="yes">headers/SpaceShip.h</includedby>
+    <includedby refid="_score_keeper_8h" local="yes">headers/ScoreKeeper.h</includedby>
+    <includedby refid="_game_over_8h" local="yes">headers/GameOver.h</includedby>
+    <includedby refid="_main_menu_8h" local="yes">headers/MainMenu.h</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <incdepgraph>
+      <node id="107">
+        <label>GameState.h</label>
+        <link refid="_game_state_8h"/>
+      </node>
+      <node id="101">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="105">
+        <label>GameStateManager.h</label>
+        <link refid="_game_state_manager_8h"/>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>GlobalVariables.h</label>
+        <link refid="_global_variables_8h"/>
+      </node>
+      <node id="110">
+        <label>UserInput.h</label>
+        <link refid="_user_input_8h"/>
+        <childnode refid="101" relation="include">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>string</label>
+      </node>
+      <node id="109">
+        <label>map</label>
+      </node>
+      <node id="108">
+        <label>AssetManager.h</label>
+        <link refid="_asset_manager_8h"/>
+        <childnode refid="109" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>stack</label>
+      </node>
+      <node id="100">
+        <label>headers/Engine.h</label>
+        <link refid="_engine_8h"/>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+        <childnode refid="110" relation="include">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="114">
+        <label>Game.cpp</label>
+        <link refid="_game_8cpp"/>
+      </node>
+      <node id="122">
+        <label>ScoreKeeper.cpp</label>
+        <link refid="_score_keeper_8cpp"/>
+      </node>
+      <node id="117">
+        <label>headers/Item.h</label>
+        <link refid="_item_8h"/>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>MainMenu.cpp</label>
+        <link refid="_main_menu_8cpp"/>
+      </node>
+      <node id="112">
+        <label>Engine.cpp</label>
+        <link refid="_engine_8cpp"/>
+      </node>
+      <node id="124">
+        <label>headers/MainMenu.h</label>
+        <link refid="_main_menu_8h"/>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+      </node>
+      <node id="120">
+        <label>SpaceShip.cpp</label>
+        <link refid="_space_ship_8cpp"/>
+      </node>
+      <node id="111">
+        <label>headers/Engine.h</label>
+        <link refid="_engine_8h"/>
+        <childnode refid="112" relation="include">
+        </childnode>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
+        </childnode>
+      </node>
+      <node id="118">
+        <label>Item.cpp</label>
+        <link refid="_item_8cpp"/>
+      </node>
+      <node id="123">
+        <label>headers/GameOver.h</label>
+        <link refid="_game_over_8h"/>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+      </node>
+      <node id="115">
+        <label>GameOver.cpp</label>
+        <link refid="_game_over_8cpp"/>
+      </node>
+      <node id="125">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="119">
+        <label>headers/SpaceShip.h</label>
+        <link refid="_space_ship_8h"/>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="120" relation="include">
+        </childnode>
+      </node>
+      <node id="121">
+        <label>headers/ScoreKeeper.h</label>
+        <link refid="_score_keeper_8h"/>
+        <childnode refid="113" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+      </node>
+      <node id="113">
+        <label>headers/Game.h</label>
+        <link refid="_game_8h"/>
+        <childnode refid="114" relation="include">
+        </childnode>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_game_components" prot="public">GameComponents</innerclass>
+    <innerclass refid="class_engine" prot="public">Engine</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" prot="public" static="no">
+        <type>std::shared_ptr&lt; <ref refid="struct_game_components" kindref="compound">GameComponents</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;GameComponents&gt; GameData</definition>
+        <argsstring></argsstring>
+        <name>GameData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Defining a shared_ptr of the <ref refid="struct_game_components" kindref="compound">GameComponents</ref> struct as its own type. This allows the different game components to me encapsulated into one defined type </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/Engine.h" line="42" column="1" bodyfile="headers/Engine.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//Engine.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_global_variables_8h" kindref="compound">GlobalVariables.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_game_state_manager_8h" kindref="compound">GameStateManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_asset_manager_8h" kindref="compound">AssetManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_user_input_8h" kindref="compound">UserInput.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="struct_game_components" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_game_components" kindref="compound">GameComponents</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24" refid="struct_game_components_1a9ff8e64fce57ab014b3b7909d22261b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_game_state_manager" kindref="compound">GameStateManager</ref><sp/><ref refid="struct_game_components_1a9ff8e64fce57ab014b3b7909d22261b1" kindref="member">gameManager</ref>;</highlight></codeline>
+<codeline lineno="29" refid="struct_game_components_1a0a416384259309e866d443f495855d07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::RenderWindow<sp/><ref refid="struct_game_components_1a0a416384259309e866d443f495855d07" kindref="member">window</ref>;</highlight></codeline>
+<codeline lineno="34" refid="struct_game_components_1ad2071710bf91aed4401f9b83377d4b36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_asset_manager" kindref="compound">AssetManager</ref><sp/><ref refid="struct_game_components_1ad2071710bf91aed4401f9b83377d4b36" kindref="member">assets</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::shared_ptr&lt;GameComponents&gt;<sp/><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_engine" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_engine" kindref="compound">Engine</ref></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>frameRate<sp/>=<sp/>1.0f<sp/>/<sp/>60.0f;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Clock<sp/>clock;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_engine_8h_1a5bbe002e9f7f45a67e8fda9dbe980a3f" kindref="member">GameData</ref><sp/>data<sp/>=<sp/>std::make_shared&lt;GameComponents&gt;();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_engine_1a47e331ce6aa8fe844516373a695a4f8d" kindref="member">Engine</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>title);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_engine_1a1a210cf30d6bd330b3649439ecd6d6cc" kindref="member">run</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="headers/Engine.h"/>
+  </compounddef>
+</doxygen>
