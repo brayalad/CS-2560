@@ -2,9 +2,10 @@
 #include <cmath>
 #include <climits>
 
-#include "include/BigNumber.h"
+#include "../headers/BigNumber.h"
 
-namespace BigNums {
+namespace BigNums 
+{
 
     BigNumber::BigNumber()
     {
@@ -101,6 +102,7 @@ namespace BigNums {
         BigNumber largerNum = _addend > *this ? _addend : *this;
         BigNumber smallerNum = _addend > *this ? *this : _addend;
 
+        //This block handles addition if any of the numbers are a negative value
         if (largerNum.IsNegative() || smallerNum.IsNegative())
         {
             if (largerNum.IsNegative() && smallerNum.IsNegative())
@@ -136,35 +138,35 @@ namespace BigNums {
         std::vector<char> sumValue;
         int carry = 0;
         long long int diff = largerNum.numberValue.size() - smallerNum.numberValue.size();
-        for (long long int i = 0; i < diff; ++i)
+        for (long long int i = 0; i < diff; ++i) //Add zeros to smaller number until it is same size as larger number
         {
             smallerNum.numberValue.insert(smallerNum.numberValue.begin(), '0');
         }
 
-
+        //traverse through both numbers by digit
         for (long long int i = largerNum.numberValue.size() - 1 ; i >= 0; --i)
         {
             int addend1 = largerNum.numberValue[i] - '0';
             int addend2 = smallerNum.numberValue[i] - '0';
 
-            int sum = addend1 + addend2 + carry;
-            std::string sumStr;
+            int sum = addend1 + addend2 + carry; //Add up the current digit of each number 
+            std::string sumStr; //String used to avoid char addition overflow
 
             carry = 0;
-            if (sum <= 9 || i == 0)
+            if (sum <= 9 || i == 0) //Adds the sum directly to the vector if less than 10 or if it is the first digit in the number
             {
                 sumStr = std::to_string(sum);
                 sumValue.insert(sumValue.begin(), sumStr.begin(), sumStr.end());
             }
-            else
+            else //Adds the remainder of the sum divided by 10 to the vector if sum is greater than 10 and not the first digit 
             {
                 sumStr = std::to_string(sum % 10);
                 sumValue.insert(sumValue.begin(), sumStr.begin(), sumStr.end());
-                carry = 1;
+                carry = 1; //The carry for the next digit sum calculation
             }
         }
 
-        return BigNumber(sumValue);
+        return BigNumber(sumValue); //Returns a new BigNumber intialized with a vector contating digits of the sum
     }
 
     BigNumber BigNumber::Subtract(const BigNumber &_subtrahend)
@@ -172,6 +174,7 @@ namespace BigNums {
         BigNumber minuend = *this;
         BigNumber subtrahend = _subtrahend;
 
+        //Handles subtraction if dealing with a negative value
         if (minuend.IsNegative() || subtrahend.IsNegative())
         {
             if (minuend.IsNegative() && subtrahend.IsNegative())
@@ -204,18 +207,20 @@ namespace BigNums {
         }
 
         std::vector<char> differenceValue;
-        int currentCalculatedDigit = 0;
-        int nextDigit = 0;
-        bool borrowedFromNextDigit = false;
-        bool increaseToTen = false;
+        int currentCalculatedDigit = 0; // The value of the current working digit which takes into account borrowing from the next digit
+        int nextDigit = 0; // The calculated value of the next digit
+        bool borrowedFromNextDigit = false; // Flag to remember if current calculation borrowed from the next digit
+        bool increaseToTen = false; // Flag to remember if current digits next digit borrowed from it's next digit
 
+        //Deals with subtraction when first number is smaller than the second. A negative difference.
         if (minuend < subtrahend)
         {
+            //Subtracts the second number from the first number, resulting in the absolute value of the difference
             BigNumber diff = subtrahend.Subtract(minuend);
-            diff.Negate();
-            for (unsigned long long int i = 1; i < diff.numberValue.size(); ++i)
+            diff.Negate(); //Negate the absolute value difference since value must be negative
+            for (unsigned long long int i = 1; i < diff.numberValue.size(); ++i) //Removes any leading zeros
             {
-                if (diff.numberValue[i] != '0')
+                if (diff.numberValue[i] != '0') 
                 {
                     break;
                 }
@@ -226,7 +231,7 @@ namespace BigNums {
             return diff;
         }
 
-
+        //Adds 0's to front of small untill vector is size of larger number
         long long int bigNumSizeDiff = minuend.numberValue.size() - subtrahend.numberValue.size();
         if (bigNumSizeDiff > 1)
         {
@@ -237,38 +242,40 @@ namespace BigNums {
         }
 
 
-        long long int minuIndex = minuend.numberValue.size() - 1;
-        long long int subtIndex = subtrahend.numberValue.size() - 1;
-        for (; subtIndex >= 0; --subtIndex)
+        long long int minuIndex = minuend.numberValue.size() - 1; //Keeps track of current digit in first number
+        long long int subtIndex = subtrahend.numberValue.size() - 1; //Keeps track of current digit in second number
+        for (; subtIndex >= 0; --subtIndex) //Iterates through second number from right to left
         {
-            if (((minuend.numberValue[minuIndex] - '0') < (subtrahend.numberValue[subtIndex] - '0')) && (minuIndex > 0))
+            // Checks if the current digit of second number is greater than the current first number digit and if current first number digit is not the front digit
+            if (((minuend.numberValue[minuIndex] - '0') < (subtrahend.numberValue[subtIndex] - '0')) && (minuIndex > 0)) 
             {
-                currentCalculatedDigit = (minuend.numberValue[minuIndex] - '0') + 10;
-                borrowedFromNextDigit = true;
+                currentCalculatedDigit = (minuend.numberValue[minuIndex] - '0') + 10; //Increase the current digit value of the first number by 10 since we are borrowing from the next digit 
+                borrowedFromNextDigit = true; 
+                //Checks if current second number digit is not the front digit or if the next digit of the first number does not equal zero
                 if (subtIndex > 0 || minuend.numberValue[minuIndex - 1] != '0')
                 {
-                    nextDigit = (minuend.numberValue[minuIndex - 1] - '0') - 1;
+                    nextDigit = (minuend.numberValue[minuIndex - 1] - '0') - 1; //The next digit in the first number is subtracted by 1 since the current digit borowed from it
                     if (nextDigit == -1)
                     {
-                        nextDigit = 9;
+                        nextDigit = 9; //If the next digit was 0 when borrowed, it must borrow from the it's next digit to become 10
                         increaseToTen = true;
                     }
 
                     borrowedFromNextDigit = false;
                 }
 
-                if (increaseToTen)
+                if (increaseToTen) //Run if the current digits next digit borrowed from it's next digit
                 {
-                    long long int nextDigitIndex = minuIndex - 1;
-                    long long int minuNext = minuIndex - 1;
+                    long long int nextDigitIndex = minuIndex - 1; //Index the next digit
+                    long long int minuNext = minuIndex - 1; //Index of the current next digit next digit's
 
-                    while((minuend.numberValue[minuNext] - '0') == 0)
+                    while((minuend.numberValue[minuNext] - '0') == 0) //Adds the value of the next digit while all digits in front are 0
                     {
-                        minuend.numberValue[minuNext--] = (nextDigit + '0');
+                        minuend.numberValue[minuNext--] = (nextDigit + '0'); //It does this because if the values infront are 0 as well, then those digits are also borrowing from their next digits
                         --nextDigitIndex;
                     }
 
-                   long long int tempDigit = (minuend.numberValue[nextDigitIndex] - '0') - 1;
+                   long long int tempDigit = (minuend.numberValue[nextDigitIndex] - '0') - 1; //Once a non zero number is reached, subtract 1 from it since the current numbers next number is borrowing from this current digit
                     minuend.numberValue[nextDigitIndex] = (tempDigit + '0');
                 }
 
@@ -278,60 +285,61 @@ namespace BigNums {
 
             std::vector<char> iterationDiffValue;
 
-            int digitDiff = ((minuend.numberValue[minuIndex] - '0') - (subtrahend.numberValue[subtIndex] - '0'));
-            if (digitDiff == 0)
+            int digitDiff = ((minuend.numberValue[minuIndex] - '0') - (subtrahend.numberValue[subtIndex] - '0')); // The difference of both numbers current digits
+            if (digitDiff == 0) //If both digits are equal
             {
                 iterationDiffValue.push_back('0');
             }
             else
             {
-                if (currentCalculatedDigit <= 0)
+                if (currentCalculatedDigit <= 0) //If the current first number digit did not borrow to increase its value, calculate difference based in current digits
                 {
                     int dif = (minuend.numberValue[minuIndex] - '0') - (subtrahend.numberValue[subtIndex] - '0');
                     iterationDiffValue.push_back(dif + '0');
                 }
-                else
+                else //If the current first number digit borrowed from it's next digit, calculate difference based on incrased borrowed value
                 {
                     int dif = currentCalculatedDigit - (subtrahend.numberValue[subtIndex] - '0');
                     iterationDiffValue.push_back(dif + '0');
                 }
             }
 
-            differenceValue.insert(differenceValue.begin(), iterationDiffValue.begin(), iterationDiffValue.end());
-            --minuIndex;
+            differenceValue.insert(differenceValue.begin(), iterationDiffValue.begin(), iterationDiffValue.end()); //insert the calculated difference value of the current current number digits
+            --minuIndex; //Move index to of the first number to its next digit
             currentCalculatedDigit = 0;
         }
 
-        if (borrowedFromNextDigit)
+        if (borrowedFromNextDigit) //Runs if the current first number borrowed a digit from it's next number
         {
             std::vector<char> newNumber;
+            //Runs for the amount of digit difference between the first number and scond number
             for (long long int remainingDigitsIndex = minuend.numberValue.size() - subtrahend.numberValue.size() - 1; remainingDigitsIndex >= 0; --remainingDigitsIndex)
             {
                 if (minuend.numberValue[remainingDigitsIndex] == '0')
                 {
                     newNumber.push_back('0');
                 }
-                else
+                else //if first number digit does is not 0
                 {
-                    newNumber.insert(newNumber.begin(), minuend.numberValue[remainingDigitsIndex]);
+                    newNumber.insert(newNumber.begin(), minuend.numberValue[remainingDigitsIndex]); //inserts that digit into the new number vector that represents the nubmer before it was borrowed from
 
-                    long long int tempNum = std::stoll(&newNumber[0]);
-                    --tempNum;
+                    long long int tempNum = std::stoll(&newNumber[0]);//Subtract that new calculated number by 1 since it was borrowed be previous to increase by 10
+                    --tempNum; 
 
                     std::string tempNumValue = std::to_string(tempNum);
-                    std::copy(tempNumValue.begin(), tempNumValue.end(), numberValue.begin());
+                    std::copy(tempNumValue.begin(), tempNumValue.end(), numberValue.begin()); //Copy the new borrowed value into the difference value, overiding the right digit places while doing so
 
                     break;
                 }
             }
         }
 
-        while (minuIndex >= 0)
+        while (minuIndex >= 0) //Compies the remaining first number digits not affected into the difference value 
         {
             std::vector<char> remainingDigits;
-            if (minuIndex == 0)
+            if (minuIndex == 0) //Copies the digit that unless the first numbers front digit if it is 0. Done to avoid placing digits in wrong place
             {
-                if (minuend.numberValue[minuIndex] - '0' != 0)
+                if (minuend.numberValue[minuIndex] - '0' != 0) //
                 {
                     remainingDigits.push_back(minuend.numberValue[minuIndex]);
 
@@ -348,21 +356,21 @@ namespace BigNums {
             --minuIndex;
         }
 
-
+        //Checks if all digits are 0. If so, change difference value to a vector of one 0
         bool isAllZeros = std::all_of(differenceValue.begin(), differenceValue.end(), [](char digit) { return digit == '0'; });
         if (isAllZeros)
         {
             differenceValue.clear();
             differenceValue.push_back('0');
         }
-        else if (differenceValue[0] == '0')
+        else if (differenceValue[0] == '0') //Removes any leading 0's
         {
             auto firstNonZero = std::find_if(differenceValue.begin(), differenceValue.end(), [](char digit) { return digit != 0; });
 
             differenceValue.erase(differenceValue.begin(), firstNonZero + 1);
         }
 
-        return BigNumber(differenceValue);
+        return BigNumber(differenceValue); //Returns a new BigNumber with the difference value 
     }
 
     BigNumber BigNumber::Multiply(const BigNumber &_multiplier)
@@ -370,7 +378,7 @@ namespace BigNums {
         BigNumber largerNum = _multiplier > *this ? _multiplier : *this;
         BigNumber smallerNum = _multiplier > *this ? *this : _multiplier;
 
-
+        //Deals with multiplication if any are negative numbers
         if (largerNum.IsNegative() || smallerNum.IsNegative())
         {
             if (largerNum.IsNegative() && smallerNum.IsNegative())
@@ -407,34 +415,47 @@ namespace BigNums {
             return BigNumber(0);
         }
 
-        int carry = 0;
+        if(largerNum == BigNumber(1) || smallerNum == BigNumber(1))
+        {
+            if(largerNum == BigNumber(1) && smallerNum == BigNumber(1))
+            {
+                return BigNumber(1);
+            }
+
+            return largerNum > smallerNum ? largerNum : smallerNum;
+        }
+
+        int carry = 0; 
         long long int zeroCounter = 0;
         BigNumber product;
 
-        for (unsigned long long int i = 0; i < (largerNum.numberValue.size() - smallerNum.numberValue.size()); ++i)
+        for (unsigned long long int i = 0; i < (largerNum.numberValue.size() - smallerNum.numberValue.size()); ++i) // Adds 0's to smaller number to match larger number length
         {
             smallerNum.numberValue.insert(smallerNum.numberValue.begin(), '0');
         }
 
+        //Multiplies every digit in the smaller number by everydigit in the larger nuber and adds the product of those calculations to the priduct
         for (long long int i = (smallerNum.numberValue.size() - 1); i >= 0; --i)
         {
             std::string productValue;
             for (long long int j = (largerNum.numberValue.size() - 1); j >= 0; --j)
             {
-                long long int val = ((smallerNum.numberValue[i] - '0') * (largerNum.numberValue[j] - '0')) + carry;
+                long long int val = ((smallerNum.numberValue[i] - '0') * (largerNum.numberValue[j] - '0')) + carry; //Product of current second digit with current first digit
                 carry = 0;
 
+                //If the product is greater than 10, add the last digit to the product and set the carry to the value of the remaining digits
                 if (val > 9 && j != 0)
                 {
                     carry = val / 10;
                     productValue.insert(0, std::to_string(val % 10));
                 }
-                else
+                else //Add value of digit product to product
                 {
                     productValue.insert(0, std::to_string(val));
                 }
             }
 
+            // zeros to keep track of place and have accurete value based on digit placement
             if (zeroCounter > 0)
             {
                 for (unsigned long long int sizeDiff = 0; sizeDiff < zeroCounter; ++sizeDiff)
@@ -444,9 +465,10 @@ namespace BigNums {
             }
 
             ++zeroCounter;
-            product += BigNumber(productValue);
+            product += BigNumber(productValue); //Add calculated product to the overall product
         }
 
+        //Remove any leading zeros
         bool isAllZeros = std::all_of(product.numberValue.begin(), product.numberValue.end(), [](char digit) { return digit == '0'; });
         if (isAllZeros)
         {
@@ -472,8 +494,9 @@ namespace BigNums {
 
         BigNumber dividend = *this;
         BigNumber divisor = _divisor;
-        bool quotientIsNegative = false;
+        bool quotientIsNegative = false; //Boolean flag to remember if the quotient needs to be negated
 
+        //Handles division if any of the numbers are negative
         if(dividend.IsNegative() || divisor.IsNegative())
         {
             if (dividend.IsNegative() && divisor.IsNegative())
@@ -493,6 +516,7 @@ namespace BigNums {
             }
         }
 
+        //Subtracts the first numbr from the second number until it is less than 0, each time teh quotient is incremented
         BigNumber quotient;
         while (dividend >= divisor)
         {
@@ -508,6 +532,7 @@ namespace BigNums {
         return quotient;
     }
 
+    //Same thing as division but returns the remainder instead
     BigNumber BigNumber::Mod(const BigNumber &_divisor)
     {
         if (_divisor == BigNumber(0)) {
@@ -572,6 +597,7 @@ namespace BigNums {
         BigNumber result = BigNumber(1);
         BigNumber base = *this;
 
+        //Multiplies the base by itself as many times as the exponent
         for (unsigned long long int i = 0; i <= _exponent; ++i)
         {
             result *= base;
@@ -619,6 +645,7 @@ namespace BigNums {
         std::vector<char> binaryValue;
         BigNumber ogNum = *this;
 
+        //Calculates the binary number by getting mod of 2
         while(ogNum > 0)
         {
             std::string remainder = (ogNum % 2).GetString();
@@ -782,6 +809,7 @@ namespace BigNums {
         BigNumber compBigNum1 = _bigNum1;
         BigNumber compBigNum2 = _bigNum2;
 
+        // Handles if a number is negative
         if (compBigNum1.IsNegative() || compBigNum2.IsNegative())
         {
             if (compBigNum1.IsNegative() && compBigNum2.IsNegative())
@@ -800,17 +828,17 @@ namespace BigNums {
         compBigNum1 = compBigNum1.RemoveLeadingZeros();
         compBigNum2 = compBigNum2.RemoveLeadingZeros();
 
-        if (compBigNum1.numberValue == compBigNum2.numberValue)
+        if (compBigNum1.numberValue == compBigNum2.numberValue) //Checks if the numbers' digit vectors are equal
         {
             return false;
         }
 
-        if (compBigNum1.numberValue.size() != compBigNum2.numberValue.size())
+        if (compBigNum1.numberValue.size() != compBigNum2.numberValue.size())//If the vectors are different size, return if size of number one is larger than that of two
         {
             return compBigNum1.numberValue.size() > compBigNum2.numberValue.size();
         }
         else
-        {
+        {   //If both vectors are same size, compare each digit from left to right
             for (unsigned long long int i = 0; i <  compBigNum1.numberValue.size(); ++i)
             {
                 if((compBigNum1.numberValue[i] - '0') != (compBigNum2.numberValue[i] - '0'))
@@ -933,7 +961,7 @@ namespace BigNums {
         BigNumber shiftedNum = _bigNum;
         for(int i = 0; i < numOfPlaces; ++i)
         {
-            shiftedNum *= 2;
+            shiftedNum *= 2; //Each left shift is equivilent to muliplying by 2
         }
 
         return shiftedNum;
@@ -944,7 +972,7 @@ namespace BigNums {
         BigNumber shiftedNum = _bigNum;
         for(int i = 0; i < numOfPlaces; ++i)
         {
-            shiftedNum /= 2;
+            shiftedNum /= 2; //Each right shift is equivilent to dividing by 2
         }
 
         return shiftedNum;
@@ -955,6 +983,7 @@ namespace BigNums {
         std::vector<char> xorBinary;
         BigNumber xorNum = _bigNum.GetBinaryValue();
 
+        //Inverts each bit
         for(char bit : xorNum.GetNumberValue())
         {
             if(bit == '0')

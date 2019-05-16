@@ -12,8 +12,8 @@ MainWindow::MainWindow(QWidget *parent) :
     operatorClicked = false;
     hasStoredNumber = false;
 
+    //Sets up groups for events to be listened for
     ui->numberGroup->connect(ui->numberGroup,SIGNAL(buttonClicked(QAbstractButton*)),this, SLOT(numberGroup_clicked(QAbstractButton*)));
-
     ui->actionGroup->connect(ui->actionGroup,SIGNAL(buttonClicked(QAbstractButton*)),this, SLOT(actionGroup_clicked(QAbstractButton*)));
 
 }
@@ -25,32 +25,33 @@ MainWindow::~MainWindow()
 
 void MainWindow::numberGroup_clicked(QAbstractButton* button)
 {
-    QString displayLabel = ui->displayPanel->text();
+    QString displayLabel = ui->displayPanel->text(); //Saves the numbers on the screen
 
-    if (operatorClicked)
+    if (operatorClicked) //Clears the screen when a operator is pressed
     {
         displayLabel.clear();
         operatorClicked = false;
     }
 
+    //Does not allow the number inputed to exceed the std::string size limit
     if (displayLabel.length() >= BIG_NUMBER_DIGIT_LIMIT) {
         return;
     }
 
-    displayLabel.append(button->text());
+    displayLabel.append(button->text()); //Adds the text of the number button pressed to the screen
 
-    ui->displayPanel->setText(displayLabel);
+    ui->displayPanel->setText(displayLabel); //displays the number to the screen
 }
 
 void MainWindow::actionGroup_clicked(QAbstractButton* button)
 {
-    if (operatorClicked)
+    if (operatorClicked) //If an operator is pressed, stores the operator character
     {
         storedOperator = button->text().at(0);
     }
     else
     {
-        if (hasStoredNumber)
+        if (hasStoredNumber) //Calculates result if a previous operator was pressed before and calulsates the result with the saved number and current number on screen
         {
             calculate_result();
         }
@@ -60,12 +61,12 @@ void MainWindow::actionGroup_clicked(QAbstractButton* button)
 
             QString displayLabel = ui->displayPanel->text();
 
-            storedNumber = BigNums::BigNumber(displayLabel.toStdString());
+            storedNumber = BigNums::BigNumber(displayLabel.toStdString()); //Creates a big number instance with the string of the number on the screen
         }
 
         operatorClicked = true;
 
-        storedOperator = button->text().at(0);
+        storedOperator = button->text().at(0); //Stores operator. Helps to keep ding calculations on same number
     }
 }
 
@@ -78,7 +79,7 @@ void MainWindow::on_actionDel_clicked()
         return;
     }
 
-    displayLabel.QString::chop(1);
+    displayLabel.QString::chop(1); //Deletes a number if the screen is not empty
 
     ui->displayPanel->setText(displayLabel);
 }
@@ -88,6 +89,7 @@ void MainWindow::on_actionCalc_clicked()
 
     QString displayLabel = ui->displayPanel->text();
 
+    //Calculates the math between the two numbers
     if (!hasStoredNumber || displayLabel.length() < 1 || operatorClicked)
     {
         return;
@@ -101,6 +103,7 @@ void MainWindow::on_actionCalc_clicked()
 
 void MainWindow::on_actionClear_clicked()
 {
+    //Clears the screen and removes any saved numbers or operators
     ui->displayPanel->clear();
     operatorClicked = false;
     hasStoredNumber = false;
@@ -123,7 +126,7 @@ void MainWindow::calculate_result()
 {
     QString displayLabel = ui->displayPanel->text();
 
-
+    //Calculations are done using the Big-Numbers-Library
      if (storedOperator == '+')
      {
          storedNumber += BigNums::BigNumber(displayLabel.toStdString());
@@ -153,6 +156,7 @@ void MainWindow::calculate_result()
 
 void MainWindow::keyPressEvent(QKeyEvent *event) {
 
+        //Matches key press events to its respective button event
         if(event->key() == Qt::Key_1)
         {
             numberGroup_clicked(ui->num1);
