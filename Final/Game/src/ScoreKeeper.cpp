@@ -1,10 +1,13 @@
-//ScoreKeeper.cpp
+/**
+ * ScoreKeeper.cpp
+ */
 #include "ScoreKeeper.h"
 
 #include <string>
 
 ScoreKeeper::ScoreKeeper(GameData _gameData)
 {
+    // Sets up the font, size, and position of the text that displays the score in the game
     this->gameData = std::move(_gameData);
 
     scoreText.setFont(this->gameData->assets.getFont("Score Font"));
@@ -23,10 +26,10 @@ ScoreKeeper::ScoreKeeper(GameData _gameData)
 
 void ScoreKeeper::draw()
 {
-    gameData->window.draw(scoreText);
+    gameData->window.draw(scoreText); //Draws the score to the screen
 }
 
 void ScoreKeeper::updateScore(int score)
 {
-    scoreText.setString(std::to_string(score));
+    scoreText.setString(std::to_string(score));//updates the score being kept
 }

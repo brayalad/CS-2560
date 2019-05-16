@@ -1,10 +1,12 @@
-//SpaceShip.cpp
+/**
+ * SpaceShip.cpp
+ */
 #include "SpaceShip.h"
 
 
 SpaceShip::SpaceShip(GameData _gameData)
 {
-
+    //Sets up the spaceship with its texture, initial position, and intial state and rotation
     this->gameData = std::move(_gameData);
 
     spaceShip.setTexture(this->gameData->assets.getTexture("Space Ship"));
@@ -23,11 +25,12 @@ SpaceShip::SpaceShip(GameData _gameData)
 
 void SpaceShip::draw()
 {
-    gameData->window.draw(spaceShip);
+    gameData->window.draw(spaceShip); //Draws spaceship to screen
 }
 
 void SpaceShip::update(float frameRate)
 {
+    //Rotates and moves spaceship down
     if (spaceShipState == "Flying_Down")
     {
         spaceShip.move(0, SPACESHIP_FLYING_SPEED * frameRate);
@@ -41,6 +44,7 @@ void SpaceShip::update(float frameRate)
 
         spaceShip.setRotation(rotation);
     }
+    //Rotates and moves space ship up
     else if (spaceShipState == "Flying_Up")
     {
         spaceShip.move(0, -SPACESHIP_FLYING_SPEED * frameRate);
@@ -54,6 +58,7 @@ void SpaceShip::update(float frameRate)
 
         spaceShip.setRotation(rotation);
     }
+    //Rotates spaceship straight and makes it still
     else if(spaceShipState == "Flying_Still")
     {
         spaceShip.move(0,0);
@@ -73,6 +78,7 @@ void SpaceShip::update(float frameRate)
 
 }
 
+//Move the space ship depending on the direction chosen
 void SpaceShip::move(char direction)
 {
     if(direction == 'U')
@@ -90,6 +96,7 @@ void SpaceShip::move(char direction)
 }
 
 
+//returns the spacehship sprite
 const sf::Sprite& SpaceShip::getSpaceShip() const
 {
     return spaceShip;
