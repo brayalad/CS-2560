@@ -10,7 +10,6 @@
  */
 #include "PersonData.h"
 
-using namespace std;
 
 /**
  * Default Constructor
@@ -27,13 +26,13 @@ PersonData::PersonData() = default;
 * @param zip zip code of where the person lives
 * @param phoneNumber phone number of where the person lives
 */
-PersonData::PersonData(string lastName, string firstName, string address, string city, string state, int zip, long long phoneNumber) {
+PersonData::PersonData(std::string lastName, std::string firstName, std::string address, std::string city, std::string state, int zip, long long phoneNumber) {
 
-    setLastName(move(lastName));
-    setFirstName(move(firstName));
-    setAddress(move(address));
-    setCity(move(city));
-    setState(move(state));
+    setLastName(std::move(lastName));
+    setFirstName(std::move(firstName));
+    setAddress(std::move(address));
+    setCity(std::move(city));
+    setState(std::move(state));
     setZip(zip);
     setPhone(phoneNumber);
 
@@ -43,40 +42,40 @@ PersonData::PersonData(string lastName, string firstName, string address, string
 * Setter function for lastName
 * @param lastName last name of the person
 */
-void PersonData::setLastName(string lastName) {
-    this->lastName = move(lastName);
+void PersonData::setLastName(std::string lastName) {
+    this->lastName = std::move(lastName);
 }
 
 /**
 * Setter function for firstName
 * @param firstName first name of the person
 */
-void PersonData::setFirstName(string firstName) {
-    this->firstName = move(firstName);
+void PersonData::setFirstName(std::string firstName) {
+    this->firstName = std::move(firstName);
 }
 
 /**
 * Setter function for address
 * @param address address of the person
 */
-void PersonData::setAddress(string address) {
-    this->address = move(address);
+void PersonData::setAddress(std::string address) {
+    this->address = std::move(address);
 }
 
 /**
 * Setter function for city
 * @param city city where the person lives
 */
-void PersonData::setCity(string city) {
-    this->city = move(city);
+void PersonData::setCity(std::string city) {
+    this->city = std::move(city);
 }
 
 /**
 * Setter function for state
 * @param state state where person lives
 */
-void PersonData::setState(string state) {
-    this->state = move(state);
+void PersonData::setState(std::string state) {
+    this->state = std::move(state);
 }
 
 /**
@@ -93,7 +92,7 @@ void PersonData::setZip(int zip) {
 */
 void PersonData::setPhone(long long phoneNumber) {
 
-    string numStr = to_string(phoneNumber);
+    std::string numStr = std::to_string(phoneNumber);
     phone="(";
     for(unsigned int i=0;i<numStr.length();++i){
         phone+=numStr.at(i);
@@ -108,7 +107,7 @@ void PersonData::setPhone(long long phoneNumber) {
 * Getter function for lastName
 * @return lastName
 */
-const string &PersonData::getLastName() const {
+const std::string &PersonData::getLastName() const {
     return lastName;
 }
 
@@ -116,7 +115,7 @@ const string &PersonData::getLastName() const {
 * Getter function for firstName
 * @return firstName
 */
-const string &PersonData::getFirstName() const {
+const std::string &PersonData::getFirstName() const {
     return firstName;
 }
 
@@ -124,7 +123,7 @@ const string &PersonData::getFirstName() const {
 * Getter function for address
 * @return address
 */
-const string &PersonData::getAddress() const {
+const std::string &PersonData::getAddress() const {
     return address;
 }
 
@@ -132,7 +131,7 @@ const string &PersonData::getAddress() const {
 * Getter function for city
 * @return city
 */
-const string &PersonData::getCity() const {
+const std::string &PersonData::getCity() const {
     return city;
 }
 
@@ -140,7 +139,7 @@ const string &PersonData::getCity() const {
 * Getter function for state
 * @return state
 */
-const string &PersonData::getState() const {
+const std::string &PersonData::getState() const {
     return state;
 }
 
@@ -156,7 +155,7 @@ int PersonData::getZip() const {
 * Getter function for phone
 * @return phone
 */
-const string &PersonData::getPhone() const {
+const std::string &PersonData::getPhone() const {
     return phone;
 }
 

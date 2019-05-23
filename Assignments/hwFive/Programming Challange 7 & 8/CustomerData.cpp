@@ -13,7 +13,7 @@
  */
 #include <random>
 
-using namespace std;
+//using namespace std;
 
 /**
 * Constructor for class. Can be used on its own or by one of its subclasses
@@ -26,14 +26,14 @@ using namespace std;
 * @param phoneNumber phone number of where the person lives
 * @param mailingList whether or not person is part of mailing list
 */
-CustomerData::CustomerData(string lastName, string firstName, string address, string city, string state, int zip, long long phoneNumber, bool mailingList)
+CustomerData::CustomerData(std::string lastName, std::string firstName, std::string address, std::string city, std::string state, int zip, long long phoneNumber, bool mailingList)
     : PersonData(move(lastName), move(firstName), move(address), move(city), move(state), zip, phoneNumber){
 
     setMailingList(mailingList);
 
-   random_device rand;
-   default_random_engine randomEngine{rand()};
-   uniform_int_distribution<int> generatedNumber{1,99999999};
+   std::random_device rand;
+   std::default_random_engine randomEngine{rand()};
+   std::uniform_int_distribution<int> generatedNumber{1,99999999};
 
    customerNumber = generatedNumber(randomEngine);
 

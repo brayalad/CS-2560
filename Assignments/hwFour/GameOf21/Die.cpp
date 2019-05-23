@@ -6,8 +6,6 @@
 #include <ctime>
 #include "Die.h"
 
-using namespace std;
-
 Die::Die(int numOfSides) {
 
     srand(time(0));

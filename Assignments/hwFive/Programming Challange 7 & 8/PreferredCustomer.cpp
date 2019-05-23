@@ -9,7 +9,6 @@
  */
 #include "PreferredCustomer.h"
 
-using namespace std;
 
 /**
 * Constructor for class. Can only be used on its own.
@@ -22,8 +21,8 @@ using namespace std;
 * @param phoneNumber phone number of where the person lives
 * @param mailingList whether or not person is part of mailing list
 */
-PreferredCustomer::PreferredCustomer(string lastName, string firstName, string address, string city, string state, int zip, long long phoneNumber, bool mailingList)
-: CustomerData(move(lastName), move(firstName), move(address), move(city), move(state), zip, phoneNumber, mailingList) {
+PreferredCustomer::PreferredCustomer(std::string lastName, std::string firstName, std::string address, std::string city, std::string state, int zip, long long phoneNumber, bool mailingList)
+: CustomerData(std::move(lastName), std::move(firstName), std::move(address), std::move(city), std::move(state), zip, phoneNumber, mailingList) {
     purchasesAmount = 0.0;
     discountLevel = 0.0;
 }

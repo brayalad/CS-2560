@@ -90,8 +90,6 @@
  */
 #include <vector>
 
-using namespace std;
-
 /**
  * Items that are purchased by user
  */
@@ -99,7 +97,7 @@ struct Item;
 /**
  * List that hods the pre-determined items
  */
-static vector<Item> items;
+static std::vector<Item> items;
 /**
  * CustomerData object pointer
  */
@@ -147,7 +145,7 @@ void changeAccountInfo(CustomerData *currentCustomer);
  * @param data object to generate data about
  * @return string outline of object
  */
-string getCustomerInfo(CustomerData *data);
+std::string getCustomerInfo(CustomerData *data);
 /**
  * Prints pre-determined Item list
  */
@@ -156,7 +154,7 @@ void printItems();
  * Gets user input
  * @return user input string
  */
-string getInput();
+std::string getInput();
 
 /**
  * Main function where the program is started. The user will be asked if they wish
@@ -167,21 +165,21 @@ string getInput();
  * @param argv array holding the values of the arguments
  * @return error code 0
  */
-int main(int argc, char **argv) {
+int main(int argc, char *argv[]) {
 
-    cout << "\nCustomer and Preferred Customer Program\n"
-            "-----------------------------------------" << endl;
+    std::cout << "\nCustomer and Preferred Customer Program\n"
+            "-----------------------------------------" << std::endl;
 
     initializeItemsAvailable();
 
-    string choice;
+    std::string choice;
     while(choice!="no"){
-        cout << "\nWould you like to make a new customer account? (yes/no)" << endl;
+        std::cout << "\nWould you like to make a new customer account? (yes/no)" << std::endl;
         choice = getInput();
         if(choice=="yes") {
-            string accountType;
+            std::string accountType;
             while (accountType!="yes" && accountType!="no") {
-                cout << "\nDo you want to become a preferred customer?(yes/no)\nEnter --help for more information."<< endl;
+                std::cout << "\nDo you want to become a preferred customer?(yes/no)\nEnter --help for more information."<< std::endl;
                 accountType = getInput();
                 if(accountType=="yes"){
                     preferredCustomerMenu();
@@ -192,23 +190,23 @@ int main(int argc, char **argv) {
                     break;
                 }
                 else if(accountType=="--help"){
-                    cout << "\nCustomers part of the preferred customer plan may earn discounts on all of their purchases.\n"
+                    std::cout << "\nCustomers part of the preferred customer plan may earn discounts on all of their purchases.\n"
                             "The amount of the discount is based on the cumulative purchases made at the store\n"
                             "   *Spend $500 to receive a 5% discount on all future purchases.\n"
                             "   *Spend $1,000 to receive a 6% discount on all future purchases.\n"
                             "   *Spend $1,500 to receive a 7% discount on all future purchases.\n"
-                            "   *Spend $2,000 or more to receive a 10% discount on all future purchases." << endl;
+                            "   *Spend $2,000 or more to receive a 10% discount on all future purchases." << std::endl;
                 }
                 else{
-                    cout << "Invalid Input.\nPlease Try Again." << endl;
+                    std::cout << "Invalid Input.\nPlease Try Again." << std::endl;
                 }
             }
         }
         else if(choice=="no"){
-            cout << "\nThank you for using this program!\n" << endl;
+            std::cout << "\nThank you for using this program!\n" << std::endl;
         }
         else{
-            cout << "\nInvalid Input.\nPlease Try Again." << endl;
+            std::cout << "\nInvalid Input.\nPlease Try Again." << std::endl;
         }
     }
 
@@ -221,10 +219,10 @@ int main(int argc, char **argv) {
  * also has a constructor to intialize both variables.
  */
 struct Item{
-    string type;
+    std::string type;
     double price;
-    Item(string t, double p){
-        type=move(t);
+    Item(std::string t, double p){
+        type=std::move(t);
         price=p;
     }
 };
@@ -249,69 +247,69 @@ void initializeItemsAvailable(){
  * @param pref whether object is PreferredCustomer or not
  */
 void createCustomer(bool pref){
-    cout << "\nPlease Input Customer Information: " << endl;
+    std::cout << "\nPlease Input Customer Information: " << std::endl;
 
-    cout << "   Enter Last Name: ";
-    string lastName = getInput();
+   std::cout << "   Enter Last Name: ";
+    std::string lastName = getInput();
 
-    cout << "   Enter First Name: ";
-    string firstName = getInput();
+    std::cout << "   Enter First Name: ";
+    std::string firstName = getInput();
 
-    cout << "   Enter Address: ";
-    string address = getInput();
+    std::cout << "   Enter Address: ";
+    std::string address = getInput();
 
-    cout << "   Enter City: ";
-    string city = getInput();
+    std::cout << "   Enter City: ";
+    std::string city = getInput();
 
-    cout << "   Enter State: ";
-    string state = getInput();
+    std::cout << "   Enter State: ";
+    std::string state = getInput();
 
     int zip = 0;
     while(zip>99999 || zip<10000) {
-        cout << "   Enter Zip Code: ";
+        std::cout << "   Enter Zip Code: ";
         try {
             zip = stoi(getInput());
         }
-        catch (exception& e){
+        catch (std::exception& e){
             zip = 0;
-            cout << "\n\nZip must be an integer." << endl;
+            std::cout << "\n\nZip must be an integer." << std::endl;
         }
         if(zip>99999 || zip<10000)
-            cout << "Zip code must have 5 digits and begin with a 1.\nPlease try again.\n" << endl;
+            std::cout << "Zip code must have 5 digits and begin with a 1.\nPlease try again.\n" << std::endl;
     }
 
     long long phoneNumber = 0;
     while(phoneNumber>9999999999 || phoneNumber<2000000000){
-        cout << "   Enter 10-Digit Phone Number: ";
+        std::cout << "   Enter 10-Digit Phone Number: ";
         try {
             phoneNumber = stoll(getInput());
         }
-        catch (exception& e){
+        catch (std::exception& e){
             phoneNumber = 0;
-            cout << "\n\nPhone number must be an integer." << endl;
+            std::cout << "\n\nPhone number must be an integer." << std::endl;
         }
         if(phoneNumber>9999999999 || phoneNumber<2000000000)
-            cout << "Phone number must have 10 digits and can not begin with a 0 or 1.\nPlease try again.\n" << endl;
+            std::cout << "Phone number must have 10 digits and can not begin with a 0 or 1.\nPlease try again.\n" << std::endl;
     }
 
     bool mailingList = true;
-    string mailChoice;
+    std::string mailChoice;
     while(mailChoice!="yes" && mailChoice!="no") {
-        cout << "\nWould you like to join our mailing list? (yes/no)" << endl;
+        std::cout << "\nWould you like to join our mailing list? (yes/no)" << std::endl;
         mailChoice = getInput();
         if(mailChoice=="yes" || mailChoice=="no")
             mailingList = (mailChoice=="yes");
         else
-            cout << "\nInvalid Input.\nPlease try again." << endl;
+            std::cout << "\nInvalid Input.\nPlease try again." << std::endl;
     }
 
     if(pref) {
         preferredCustomer = new PreferredCustomer(lastName, firstName, address, city, state, zip, phoneNumber, mailingList);
-        cout << getCustomerInfo(preferredCustomer);
+        std::cout << getCustomerInfo(preferredCustomer);
     }
     else{
         customer = new CustomerData(lastName, firstName, address, city, state, zip, phoneNumber, mailingList);
-        cout << getCustomerInfo(customer);
+        std::cout << getCustomerInfo(customer);
     }
 
 }
@@ -327,9 +325,9 @@ void preferredCustomerMenu(){
 
     createCustomer(true);
 
-    string choice;
-    while(true) {
-        cout << "\nChoose an option from the preferred customer menu:\n"
+    std::string choice;
+    while(choice != "5") {
+        std::cout << "\nChoose an option from the preferred customer menu:\n"
                 "   1. Make a purchase from the store\n"
                 "   2. Make a custom purchase\n"
                 "   3. Change account info\n"
@@ -340,29 +338,28 @@ void preferredCustomerMenu(){
         if (choice == "1") {
             Item *purchased = buyItemFromStore();
             double amountSpent = purchased->price - (purchased->price * preferredCustomer->getDiscountLevel());
-            cout << "\nPurchased " << purchased->type << " for $" << amountSpent << " with an applied discount of "
-                 << (preferredCustomer->getDiscountLevel())*100 << "%." << endl;
+            std::cout << "\nPurchased " << purchased->type << " for $" << amountSpent << " with an applied discount of "
+                 << (preferredCustomer->getDiscountLevel())*100 << "%." << std::endl;
             preferredCustomer->increasePurchasesAmount(amountSpent);
         } else if (choice == "2") {
             Item *customItem = buyCustomItem();
             double amountSpent = customItem->price - (customItem->price * preferredCustomer->getDiscountLevel());
-            cout << "\nPurchased " << customItem->type << " for $" << amountSpent << " with an applied discount of "
-                 << (preferredCustomer->getDiscountLevel())*100 << "%." << endl;
+            std::cout << "\nPurchased " << customItem->type << " for $" << amountSpent << " with an applied discount of "
+                 << (preferredCustomer->getDiscountLevel())*100 << "%." << std::endl;
             preferredCustomer->increasePurchasesAmount(amountSpent);
             delete (customItem);
         } else if (choice == "3") {
             changeAccountInfo(preferredCustomer);
         } else if (choice == "4") {
-            cout << getCustomerInfo(preferredCustomer)
+            std::cout << getCustomerInfo(preferredCustomer)
                  << "   Amount Spent: $" << preferredCustomer->getPurchasesAmount() << "\n"
                  << "   Account receives a " << (preferredCustomer->getDiscountLevel() * (double) 100)
-                 << "% discount on all future purchases" << endl;
+                 << "% discount on all future purchases" << std::endl;
         } else if (choice == "5") {
             delete(preferredCustomer);
-            break;
         }
         else{
-            cout << "\n\nInvalid Input.\nPlease Try Again." << endl;
+            std::cout << "\n\nInvalid Input.\nPlease Try Again." << std::endl;
         }
     }
 }
@@ -377,9 +374,9 @@ void customerMenu(){
 
     createCustomer(false);
 
-    string choice;
+    std::string choice;
     while(choice!="5") {
-        cout << "\nChoose an option from the customer menu:\n"
+        std::cout << "\nChoose an option from the customer menu:\n"
                 "   1. Make a purchase from the store\n"
                 "   2. Make a custom purchase\n"
                 "   3. Change account info\n"
@@ -389,21 +386,20 @@ void customerMenu(){
         choice = getInput();
         if (choice == "1") {
             Item *purchased = buyItemFromStore();
-            cout << "\nPurchased " << purchased->type << " for $" << purchased->price << endl;
+            std::cout << "\nPurchased " << purchased->type << " for $" << purchased->price << std::endl;
         } else if (choice == "2") {
             Item *customItem = buyCustomItem();
-            cout << "\nPurchased " << customItem->type << " for $" << customItem->price << endl;
+            std::cout << "\nPurchased " << customItem->type << " for $" << customItem->price << std::endl;
             delete (customItem);
         } else if (choice == "3") {
             changeAccountInfo(customer);
         } else if (choice == "4") {
-            cout << getCustomerInfo(customer) << endl;
+            std::cout << getCustomerInfo(customer) << std::endl;
         } else if (choice == "5") {
             delete(customer);
-            break;
         }
         else{
-            cout << "\n\nInvalid Input.\nPlease Try Again." << endl;
+            std::cout << "\n\nInvalid Input.\nPlease Try Again." << std::endl;
         }
     }
 }
@@ -418,16 +414,16 @@ Item* buyItemFromStore(){
     int choice = -1;
     while(choice<1 || choice>(int)items.size()) {
         printItems();
-        cout << "Enter which item to buy: ";
+        std::cout << "Enter which item to buy: ";
         try {
-            choice = stoi(getInput());
+            choice = std::stoi(getInput());
         }
-        catch(exception& e){
+        catch(std::exception& e){
             choice = -1;
-            cout << "\n\nInput must be an Integer" << endl;
+            std::cout << "\n\nInput must be an Integer" << std::endl;
         }
         if(choice == -1)
-            cout << "Invalid Input.\nPlease try again." << endl;
+            std::cout << "Invalid Input.\nPlease try again." << std::endl;
     }
 
     return &items[choice-1];
@@ -441,21 +437,21 @@ Item* buyItemFromStore(){
  * @return Custom Item created by user
  */
 Item* buyCustomItem(){
-    cout << "\nEnter type of item: ";
-    string type = getInput();
+    std::cout << "\nEnter type of item: ";
+    std::string type = getInput();
 
     double price = -1.1;
     while(price<0) {
-        cout << "Enter price of item: $";
+        std::cout << "Enter price of item: $";
         try {
-            price = stod(getInput());
+            price = std::stod(getInput());
         }
-        catch (exception& e){
+        catch (std::exception& e){
             price = -1.1;
-            cout << "\n\nPrice must be a number." << endl;
+            std::cout << "\n\nPrice must be a number." << std::endl;
         }
         if(price<0)
-            cout << "Price can not be negative.\nPlease try again." << endl;
+            std::cout << "Price can not be negative.\nPlease try again." << std::endl;
     }
 
     return new Item(type, price);
@@ -469,9 +465,9 @@ Item* buyCustomItem(){
  */
 void changeAccountInfo(CustomerData *currentCustomer){
 
-    string choice;
-    while(choice!="9") {
-        cout << "\nWhat would you like to change?\n"
+    std::string choice;
+    while(choice != "9") {
+        std::cout << "\nWhat would you like to change?\n"
                 "   1. Last Name\n"
                 "   2. First Name\n"
                 "   3. Address\n"
@@ -484,79 +480,79 @@ void changeAccountInfo(CustomerData *currentCustomer){
                 "Enter Choice: ";
         choice = getInput();
         if (choice == "1") {
-            cout << "Enter new last name: ";
+            std::cout << "Enter new last name: ";
             currentCustomer->setLastName(getInput());
-            cout << "\nLast name changed to: " << currentCustomer->getLastName() << endl;
+            std::cout << "\nLast name changed to: " << currentCustomer->getLastName() << std::endl;
         } else if (choice == "2") {
-            cout << "Enter new first name: ";
+            std::cout << "Enter new first name: ";
             currentCustomer->setFirstName(getInput());
-            cout << "\nFirst name changed to: " << currentCustomer->getFirstName() << endl;
+            std::cout << "\nFirst name changed to: " << currentCustomer->getFirstName() << std::endl;
         } else if (choice == "3") {
-            cout << "Enter new address: ";
+            std::cout << "Enter new address: ";
             currentCustomer->setAddress(getInput());
-            cout << "\nAddress changed to: " << currentCustomer->getAddress() << endl;
+            std::cout << "\nAddress changed to: " << currentCustomer->getAddress() << std::endl;
         } else if (choice == "4") {
-            cout << "Enter new city: ";
+            std::cout << "Enter new city: ";
             currentCustomer->setCity(getInput());
-            cout << "\nCity changed to: " << currentCustomer->getCity() << endl;
+            std::cout << "\nCity changed to: " << currentCustomer->getCity() << std::endl;
         } else if (choice == "5") {
-            cout << "Enter new state: ";
+            std::cout << "Enter new state: ";
             currentCustomer->setState(getInput());
-            cout << "\nState changed to: " << currentCustomer->getState() << endl;
+            std::cout << "\nState changed to: " << currentCustomer->getState() << std::endl;
         } else if (choice == "6") {
             int newZip = 0;
             while(newZip>99999 || newZip<10000) {
-                cout << "Enter new zip code: ";
+                std::cout << "Enter new zip code: ";
                 try {
-                    newZip = stoi(getInput());
+                    newZip = std::stoi(getInput());
                 }
-                catch (exception& e){
+                catch (std::exception& e){
                     newZip = 0;
-                    cout << "\n\nZip code must be an integer." << endl;
+                    std::cout << "\n\nZip code must be an integer." << std::endl;
                 }
                 if(newZip>99999 || newZip<10000)
-                    cout << "Zip code must have 5 digits and begin with a 1.\n" << endl;
+                    std::cout << "Zip code must have 5 digits and begin with a 1.\n" << std::endl;
             }
             currentCustomer->setZip(newZip);
-            cout << "\nZip code changed to: " << currentCustomer->getZip() << endl;
+            std::cout << "\nZip code changed to: " << currentCustomer->getZip() << std::endl;
         } else if (choice == "7") {
             long long newPhoneNumber = 0;
             while(newPhoneNumber>9999999999 || newPhoneNumber<2000000000){
-                cout << "Enter new phone number: ";
+                std::cout << "Enter new phone number: ";
                 try {
-                    newPhoneNumber = stoll(getInput());
+                    newPhoneNumber = std::stoll(getInput());
                 }
-                catch (exception& e){
+                catch (std::exception& e){
                     newPhoneNumber = 0;
-                    cout << "\n\nPhone number must be an Integer." << endl;
+                    std::cout << "\n\nPhone number must be an Integer." << std::endl;
                 }
                 if(newPhoneNumber>9999999999 || newPhoneNumber<2000000000)
-                    cout << "Phone number must have 10 digits and can not begin with a 0 or 1.\nPlease try again.\n" << endl;
+                    std::cout << "Phone number must have 10 digits and can not begin with a 0 or 1.\nPlease try again.\n" << std::endl;
             }
             currentCustomer->setPhone(newPhoneNumber);
-            cout << "\nPhone changed to: " << currentCustomer->getPhone() << endl;
+            std::cout << "\nPhone changed to: " << currentCustomer->getPhone() << std::endl;
         } else if (choice == "8") {
             if (currentCustomer->getMailingList()) {
-                string mailChoice;
-                cout << "You are currently on the mailing list. Would you like to be removed? (yes/no)" << endl;
+                std::string mailChoice;
+                std::cout << "You are currently on the mailing list. Would you like to be removed? (yes/no)" << std::endl;
                 mailChoice = getInput();
                 if (mailChoice == "yes") {
                     currentCustomer->setMailingList(false);
-                    cout << "\nYou have been removed from the mailing list" << endl;
+                    std::cout << "\nYou have been removed from the mailing list" << std::endl;
                 }
             } else {
-                string mailChoice;
-                cout << "You are currently not on the mailing list. Would you like to be added? (yes/no)" << endl;
+                std::string mailChoice;
+                std::cout << "You are currently not on the mailing list. Would you like to be added? (yes/no)" << std::endl;
                 mailChoice = getInput();
                 if (mailChoice == "yes") {
                     currentCustomer->setMailingList(true);
-                    cout << "\nYou have been added to the mailing list" << endl;
+                    std::cout << "\nYou have been added to the mailing list" << std::endl;
                 }
             }
         } else if (choice == "9") {
             break;
         } else {
-            cout << "\n\nInvalid Input.\nPlease Try Again." << endl;
+            std::cout << "\n\nInvalid Input.\nPlease Try Again." << std::endl;
         }
     }
 }
@@ -567,19 +563,19 @@ void changeAccountInfo(CustomerData *currentCustomer){
  * @param data Object currently being used
  * @return string outline of the information encapsulated in the object
  */
-string getCustomerInfo(CustomerData *data){
+std::string getCustomerInfo(CustomerData *data){
 
-    ostringstream customerInfo;
+    std::ostringstream customerInfo;
 
     customerInfo << "\nCustomer Info:\n-----------------------------------------------------------------------\n"
                  << "   Name: " << data->getFirstName() << " " << data->getLastName() << "\n"
                  << "   Address: " << data->getAddress() << " " << data->getCity() << ", " << data->getState() << " " << data->getZip() << "\n"
                  << "   Phone Number: " << data->getPhone() << "\n"
-                 << "   Customer ID:  " << data->getCustomerNumber() << endl;
+                 << "   Customer ID:  " << data->getCustomerNumber() << std::endl;
     if(data->getMailingList())
-        customerInfo << "   Part Of Our Mailing List" << endl;
+        customerInfo << "   Part Of Our Mailing List" << std::endl;
     else
-        customerInfo << "   Not Part Of Our Mailing List" << endl;
+        customerInfo << "   Not Part Of Our Mailing List" << std::endl;
 
     return customerInfo.str();
 }
@@ -588,17 +584,17 @@ string getCustomerInfo(CustomerData *data){
  * Function prints out the list that stores all pre-determined Items
  */
 void printItems(){
-    cout << "\nItems Available for purchase:" << endl;
+    std::cout << "\nItems Available for purchase:" << std::endl;
     for(unsigned int i=0; i<items.size(); ++i)
-        cout << "   " << (i+1) << ". " << items[i].type << ": $" << items[i].price << endl;
+        std::cout << "   " << (i+1) << ". " << items[i].type << ": $" << items[i].price << std::endl;
 }
 
 /**
  * Function returns the users input as a string.
  * @return user input
  */
-string getInput(){
-    string input;
-    getline(cin,input);
+std::string getInput(){
+    std::string input;
+    std::getline(std::cin,input);
     return input;
 }
