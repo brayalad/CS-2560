@@ -11,8 +11,6 @@
 #include "ParkingTicket.h"
 #include "PoliceOfficer.h"
 
-using namespace std;
-
 const static int parkingTimeLimit = 60;
 const static int amountOfMeters = 20;
 static bool initiailized = false;
@@ -20,7 +18,7 @@ static ParkingMeter meters[amountOfMeters];
 static PoliceOfficer officer;
 
 
-static string getInput();
+static std::string getInput();
 void seeAllMeters();
 void makePoliceOfficer();
 ParkedCar getParkedCar(int minParked);

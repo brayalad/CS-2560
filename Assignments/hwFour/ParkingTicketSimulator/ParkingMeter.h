@@ -18,7 +18,7 @@ public:
 
     void addTime(int addedTime);
 
-    int getParkedTime();
+    int getParkedTime() const;
 
 };
 

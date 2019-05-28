@@ -44,7 +44,7 @@ int *reverseArray(int originalArray[], int size){
 	Main function of the program. Program begins here and data needed
 	for the program is collected from the user here.
 */
-int main(){
+int main(int argc, char *argv[]){
 
 	int *nap;
 	int ARRAY_SIZE;

@@ -7,8 +7,6 @@
 #include "Die.h"
 #include "Player.h"
 
-using namespace std;
-
 
 static int userRollCount;
 static int computerRollCount;

@@ -4,10 +4,8 @@
 
 #include "ProductionWorker.h"
 
-using namespace std;
 
-
-ProductionWorker::ProductionWorker(string employeeName, int employeeNumber, string hireDate, int shift, double hourlyPay)
+ProductionWorker::ProductionWorker(std::string employeeName, int employeeNumber, std::string hireDate, int shift, double hourlyPay)
         : Employee(employeeName, employeeNumber, hireDate){
     setShift(shift);
     setHourlyPay(hourlyPay);

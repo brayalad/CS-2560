@@ -5,9 +5,7 @@
 #include <sstream>
 #include "ParkedCar.h"
 
-using namespace std;
-
-ParkedCar::ParkedCar(string make, string model, string color, string licenceNumber, int minParked) {
+ParkedCar::ParkedCar(std::string make, std::string model, std::string color, std::string licenceNumber, int minParked) {
     this->make = make;
     this->model = model;
     this->color = color;
@@ -15,19 +13,19 @@ ParkedCar::ParkedCar(string make, string model, string color, string licenceNumb
     this->minParked = minParked;
 }
 
-void ParkedCar::setMake(string make) {
+void ParkedCar::setMake(std::string make) {
     this->make = make;
 }
 
-void ParkedCar::setModel(string model) {
+void ParkedCar::setModel(std::string model) {
     this->model = model;
 }
 
-void ParkedCar::setColor(string color) {
+void ParkedCar::setColor(std::string color) {
     this->color = color;
 }
 
-void ParkedCar::setLicenceNumber(string licenceNumber) {
+void ParkedCar::setLicenceNumber(std::string licenceNumber) {
     this->licenceNumber = licenceNumber;
 }
 
@@ -35,32 +33,32 @@ void ParkedCar::setMinParked(int minParked) {
     this->minParked = minParked;
 }
 
-string ParkedCar::getMake() {
+const std::string& ParkedCar::getMake() const{
     return make;
 }
 
-string ParkedCar::getModel() {
+const std::string& ParkedCar::getModel() const{
     return model;
 }
 
-string ParkedCar::getColor() {
+const std::string& ParkedCar::getColor() const{
     return color;
 }
 
-string ParkedCar::getLicenceNumber() {
+const std::string& ParkedCar::getLicenceNumber() const{
     return licenceNumber;
 }
 
-int ParkedCar::getMinParked() {
+int ParkedCar::getMinParked() const{
     return minParked;
 }
 
-string ParkedCar::getParkedCar() {
-    ostringstream car;
+std::string ParkedCar::getParkedCar() {
+    std::ostringstream car;
     car << "Car Information:\n   "
            "Make: " << make + "\n   "
            "Model: " << model << "\n   "
            "Color: " << color << "\n   "
-           "Licence Number: " << licenceNumber << endl;
+           "Licence Number: " << licenceNumber << std::endl;
     return car.str();
 }

@@ -10,27 +10,25 @@
 #include "ParkedCar.h"
 
 
-using namespace std;
-
 class ParkingTicket;
 
 class PoliceOfficer {
 
 private:
-    string name;
-    string badgeNumber;
+    std::string name;
+    std::string badgeNumber;
 
 public:
-    PoliceOfficer(string = "", string = "");
+    PoliceOfficer(std::string = "", std::string = "");
 
     ParkingTicket makeParkingTicket(ParkedCar parkedCar);
 
-    void setName(string name);
-    void setBadgeNumber(string badgeNumber);
+    void setName(std::string name);
+    void setBadgeNumber(std::string badgeNumber);
 
-    string getName();
-    string getBadgeNumber();
-    string getPoliceOfficer();
+    std::string getName();
+    std::string getBadgeNumber();
+    std::string getPoliceOfficer();
 
 };
 

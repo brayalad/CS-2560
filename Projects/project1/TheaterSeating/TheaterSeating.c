@@ -67,7 +67,7 @@ typedef struct seat{
 	int row, column;
 }SEAT;
 
-void readSeatPrices(){
+void readSeatPrices(void){
 
 	int index;
 	int rowNumber;
@@ -94,7 +94,7 @@ void readSeatPrices(){
 
 }
 
-void printGrid(){
+void printGrid(void){
 	printf("                                    Seats\n");
 	printf("         0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3\n");
 	printf("         1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0\n\n");
@@ -109,13 +109,13 @@ void printGrid(){
 	}
 }
 
-void initailizeGrid(){
+void initailizeGrid(void){
 	for(int rowIndex=0; rowIndex<amountOfRows; ++rowIndex)
 		for(int columnIndex=0; columnIndex<amountOfColumns; ++columnIndex)
 			theaterSeats[rowIndex][columnIndex] = '*';
 }
 
-void calculateTicketsSold(){
+void calculateTicketsSold(void){
 
 
 	SEAT *ssp = NULL;
@@ -147,7 +147,7 @@ void calculateTicketsSold(){
 	}
 }
 
-void calcualteAvailableRows(){
+void calcualteAvailableRows(void){
 
 	int availableSeats = 0;
 	printf("\nAvailable Seats by row\n");
@@ -163,7 +163,7 @@ void calcualteAvailableRows(){
 
 }
 
-void calculateAvailableSeats(){
+void calculateAvailableSeats(void){
 
 	if(seatsSold == 0){
 
@@ -205,7 +205,7 @@ void calculateAvailableSeats(){
 
 }
 
-void chooseSeat(){
+void chooseSeat(void){
 
 	int row;
 	int column;
@@ -239,7 +239,7 @@ void chooseSeat(){
 	}
 }
 
-void runProgram(){
+void runProgram(void){
 
 	int userInput;
 
@@ -286,7 +286,7 @@ void runProgram(){
 
 }
 
-int main(){
+int main(int argc, char *argv[]){
 
 	readSeatPrices();
 	initailizeGrid();

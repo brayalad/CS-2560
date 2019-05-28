@@ -8,7 +8,7 @@
 
 Die::Die(int numOfSides) {
 
-    srand(time(0));
+    srand(time(nullptr));
     sides = numOfSides;
     roll();
 

@@ -5,9 +5,7 @@
 #include <sstream>
 #include "PoliceOfficer.h"
 
-using namespace std;
-
-PoliceOfficer::PoliceOfficer(string name, string badgeNumber) {
+PoliceOfficer::PoliceOfficer(std::string name, std::string badgeNumber) {
     this->name = name;
     this->badgeNumber = badgeNumber;
 }
@@ -16,17 +14,17 @@ ParkingTicket PoliceOfficer::makeParkingTicket(ParkedCar parkedCar) {
     return ParkingTicket(parkedCar, *this);
 }
 
-void PoliceOfficer::setName(string name){
+void PoliceOfficer::setName(std::string name){
     this->name = name;
 }
 
-void PoliceOfficer::setBadgeNumber(string badgeNumber){
+void PoliceOfficer::setBadgeNumber(std::string badgeNumber){
     this->badgeNumber = badgeNumber;
 }
 
- string PoliceOfficer::getPoliceOfficer(){
-    ostringstream officer;
-    officer << "\nOfficer Information:\n   Name: " << name << "\n   Badge Number: " << badgeNumber << endl;
+ std::string PoliceOfficer::getPoliceOfficer(){
+    std::ostringstream officer;
+    officer << "\nOfficer Information:\n   Name: " << name << "\n   Badge Number: " << badgeNumber << std::endl;
      return officer.str();
  }
 

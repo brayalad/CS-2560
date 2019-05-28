@@ -8,8 +8,6 @@
 #include <string>
 #include "ParkingTicket.h"
 
-using namespace std;
-
 
 ParkingTicket::ParkingTicket(ParkedCar car, PoliceOfficer &officer) {
     parkedCar = car;
@@ -49,17 +47,17 @@ double ParkingTicket::getFine() {
     return fine;
 }
 
-string ParkingTicket::getParkingTicket() {
+std::string ParkingTicket::getParkingTicket() {
 
-    ostringstream fineString;
-    fineString << fixed << setprecision(2) << fine << endl;
+    std::ostringstream fineString;
+    fineString << std::fixed << std::setprecision(2) << fine << std::endl;
 
-    ostringstream ticket;
+    std::ostringstream ticket;
     ticket << "\n-----------------------------------------------------------------------------------------"
            << "\nPARKING TICKET:\n" << policeOfficer->getPoliceOfficer()
            << "\n" << parkedCar.getParkedCar() << "\nTime Parked: "
-           << parkedCar.getMinParked() << " minutes\nFine: $" << fixed << setprecision(2) << fine
-           << "\n-----------------------------------------------------------------------------------------" << endl;
+           << parkedCar.getMinParked() << " minutes\nFine: $" << std::fixed << std::setprecision(2) << fine
+           << "\n-----------------------------------------------------------------------------------------" << std::endl;
 
     return ticket.str();
 }

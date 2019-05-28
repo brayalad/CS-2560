@@ -8,17 +8,15 @@
 #include "ParkingTicket.h"
 #include "PoliceOfficer.h"
 
-using namespace std;
-
 const int parkingTimeLimit = 60;
 const int amountOfMeters = 20;
 bool initiailized = false;
 ParkingMeter meters[amountOfMeters];
 PoliceOfficer officer;
 
-string getInput(){
-    string userInput;
-    getline(cin,userInput);
+std::string getInput(){
+    std::string userInput;
+    getline(std::cin,userInput);
     return userInput;
 }
 
@@ -65,48 +63,48 @@ void seeAllMeters(){
         }
     }
 
-    cout << "\n----------------------------------------------------------------------------------\n"
-            "\nThis parking lot has " << sizeOfMeters << " parking spots:\n" << endl;
+    std::cout << "\n----------------------------------------------------------------------------------\n"
+            "\nThis parking lot has " << sizeOfMeters << " parking spots:\n" << std::endl;
     for(int i=0; i<sizeOfMeters; ++i){
-        cout << "Time on Meter " + to_string(i+1) + ": " + to_string(meters[i].getParkedTime()) + " minute(s)";
+        std::cout << "Time on Meter " + std::to_string(i+1) + ": " + std::to_string(meters[i].getParkedTime()) + " minute(s)";
         if(meters[i].getParkedTime() > parkingTimeLimit)
-            cout << " (EXPIRED)" << endl;
+            std::cout << " (EXPIRED)" << std::endl;
         else
-            cout << "\n";
+            std::cout << "\n";
     }
-    cout << "\n----------------------------------------------------------------------------------\n" << endl;
+    std::cout << "\n----------------------------------------------------------------------------------\n" << std::endl;
 }
 
 void makePoliceOfficer(){
 
-    cout << "\nThis is a Parking Ticket Simulator\n"
-         << "-------------------------------------\n" << endl;
-    cout << "Please enter your name: ";
-    string name = getInput();
-    cout << "Please enter your assigned badge number: ";
-    string badge = getInput();
+    std::cout << "\nThis is a Parking Ticket Simulator\n"
+         << "-------------------------------------\n" << std::endl;
+    std::cout << "Please enter your name: ";
+    std::string name = getInput();
+    std::cout << "Please enter your assigned badge number: ";
+    std::string badge = getInput();
 
     officer = PoliceOfficer(name, badge);
 
-    cout << "\nHello " + officer.getName() + ". Welcome to your first day as a police officer.\n"
+    std::cout << "\nHello " + officer.getName() + ". Welcome to your first day as a police officer.\n"
              "Your job is to save lives, and you will be doing that by giving out parking tickets.\n"
              "You will check the meters and see if a car's time has expired. If it has, write them a parking ticket.\n"
              "Make sure to include your name and badge number as well as the vehicles make, model, color, and licence plate number.\n"
              "Check the meter time to calculate how much the fine will be. Do this for every parked car who's time has expired.\n"
-             "Good luck, stay safe, and go out there and protect the world.\n" << endl;
+             "Good luck, stay safe, and go out there and protect the world.\n" << std::endl;
 
 }
 
 ParkedCar getParkedCar(int minParked){
 
-    cout << "Enter Car Make: ";
-    string make = getInput();
-    cout << "Enter Car Model: ";
-    string model = getInput();
-    cout << "Enter Car Color: " ;
-    string color = getInput();
-    cout << "Enter Licence Plate Number: ";
-    string licence = getInput();
+    std::cout << "Enter Car Make: ";
+    std::string make = getInput();
+    std::cout << "Enter Car Model: ";
+    std::string model = getInput();
+    std::cout << "Enter Car Color: " ;
+    std::string color = getInput();
+    std::cout << "Enter Licence Plate Number: ";
+    std::string licence = getInput();
 
     return ParkedCar(make, model, color, licence, minParked);
 }
@@ -125,39 +123,39 @@ void patrolMeters(){
 
     seeAllMeters();
 
-    string userInput;
+    std::string userInput;
     while(userInput!="no") {
-        cout << "Do you want to issue a ticket to an expired meter? (yes/no)" << endl;
+        std::cout << "Do you want to issue a ticket to an expired meter? (yes/no)" << std::endl;
         userInput = getInput();
         if (userInput == "yes") {
-            cout << "Enter which meter to write ticket for: ";
+            std::cout << "Enter which meter to write ticket for: ";
             int meterNumber = stoi(getInput()) - 1;
             if(meterNumber>=0 && meterNumber<amountOfMeters) {
                 if (meters[meterNumber].getParkedTime() > parkingTimeLimit) {
-                    cout << writeParkingTicket(meterNumber).getParkingTicket() << endl;
+                    std::cout << writeParkingTicket(meterNumber).getParkingTicket() << std::endl;
                     break;
                 }
                 else
-                    cout << "\nParking meter chosen is not expired.\nMake sure meter is expired next time out on patrol.\n" << endl;
+                    std::cout << "\nParking meter chosen is not expired.\nMake sure meter is expired next time out on patrol.\n" << std::endl;
             }
             else
-                cout << "\nParking meter chosen does not exist.\nPlease input a valid meter number.\n" << endl;
+                std::cout << "\nParking meter chosen does not exist.\nPlease input a valid meter number.\n" << std::endl;
         }
         else if (userInput=="no")
-            cout << "\nYou did not issue a ticket." << endl;
+            std::cout << "\nYou did not issue a ticket." << std::endl;
         else
-            cout << "\nInvalid Input.\nPlease Try Again.\n" << endl;
+            std::cout << "\nInvalid Input.\nPlease Try Again.\n" << std::endl;
     }
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char *argv[]) {
 
     makePoliceOfficer();
 
-    string userInput;
+    std::string userInput;
     while(userInput!="2"){
 
-        cout << "\nWhat would you like to do?\n"
+        std::cout << "\nWhat would you like to do?\n"
                 "   1.  Go out on patrol\n"
                 "   2.  Go home\n"
                 "\nEnter your choice: ";
@@ -168,9 +166,9 @@ int main(int argc, char **argv) {
         if (userInput == "1")
             patrolMeters();
         else if (userInput == "2") 
-            cout << "\nThank You for using using this simulation" << endl;
+            std::cout << "\nThank You for using using this simulation" << std::endl;
         else
-            cout << "\nInvalid Input.\nPlease Try Again.\n" << endl;
+            std::cout << "\nInvalid Input.\nPlease Try Again.\n" << std::endl;
     
     }
 

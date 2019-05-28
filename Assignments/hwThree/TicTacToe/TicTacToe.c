@@ -26,13 +26,15 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+const int GAMEBOARD_SIZE = 3;
+
 /*Two-dimentional array to represent the game board*/
-char gameBoard [3][3];
+char gameBoard [GAMEBOARD_SIZE][GAMEBOARD_SIZE];
 
 /*
 	Initializes the board with asteriks (*)
 */
-void initializeBoard(){
+void initializeBoard(void){
 
 	for(int i=0; i<3; ++i)
 		for(int j=0; j<3;++j)
@@ -44,7 +46,7 @@ void initializeBoard(){
 	Prints the two-dimentional array representing the 
 	game board to the console
 */
-void printBoard(){
+void printBoard(void){
 
 	printf("\n    1   2   3\n");
 	printf("  -----------\n");
@@ -88,7 +90,7 @@ void checkInputError(int row, int column){
 	Player 1 inputs both the row and column they wish to take their 
 	turn on and adds an X
 */
-void playerOne(){
+void playerOne(void){
 
 	int playerOneRow;
 	int playerOneColumn;
@@ -125,7 +127,7 @@ void playerOne(){
 	Player 2 inputs both the row and column they wish to take their 
 	turn on and adds an O
 */
-void playerTwo(){
+void playerTwo(void){
 
 	int playerTwoRow;
 	int playerTwoColumn;
@@ -160,7 +162,7 @@ void playerTwo(){
 /*
 	Function checks after every turn if a player has won or if their is a tie
 */
-void checkGameOver(){
+void checkGameOver(void){
 
 	/* Checks if Player One Won */
 	if(gameBoard[0][0] == 'X' && gameBoard[0][1] == 'X' && gameBoard[0][2] == 'X'){
@@ -252,7 +254,7 @@ void checkGameOver(){
 	both users to take their respective turns and check if the 
 	game is over after every player's turn is taken
 */
-int main(){
+int main(int argc, char *argv[]){
 
 	initializeBoard();
 	printBoard();

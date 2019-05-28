@@ -8,33 +8,31 @@
 #include <string>
 
 
-using namespace std;
-
 class ParkedCar {
 
 private:
-    string make;
-    string model;
-    string color;
-    string licenceNumber;
+    std::string make;
+    std::string model;
+    std::string color;
+    std::string licenceNumber;
     int minParked;
 
 public:
-    explicit ParkedCar(string = "", string = "", string = "", string = "", int = 0 );
+    explicit ParkedCar(std::string = "", std::string = "", std::string = "", std::string = "", int = 0 );
 
-    void setMake(string make);
-    void setModel(string model);
-    void setColor(string color);
-    void setLicenceNumber(string licenceNumber);
+    void setMake(std::string make);
+    void setModel(std::string model);
+    void setColor(std::string color);
+    void setLicenceNumber(std::string licenceNumber);
     void setMinParked(int minParked);
 
-    string getMake();
-    string getModel();
-    string getColor();
-    string getLicenceNumber();
+    std::string getMake();
+    std::string getModel();
+    std::string getColor();
+    std::string getLicenceNumber();
     int getMinParked();
 
-    string getParkedCar();
+    std::string getParkedCar();
 
 };
 

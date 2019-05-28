@@ -71,7 +71,7 @@ void areaOfTriangle(int base, int height){
 /*
 	Function displays menu to the console
 */
-void printMenu(){
+void printMenu(void){
 
 	printf("Geometry Calculator\n\n"
 			"1. Calculate the Area of a Circle\n"
@@ -87,7 +87,7 @@ void printMenu(){
 	Program runs on a while loop until user decides
 	to end the program.
 */
-void runProgram(){
+void runProgram(void){
 
 	bool runProgram = true;
 
@@ -159,7 +159,7 @@ void runProgram(){
 	from this method. This method calls on the runProgram 
 	method in order to begin the program
 */
-int main(){
+int main(int argc, char *argv[]){
 
  runProgram();
 

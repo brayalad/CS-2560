@@ -49,7 +49,7 @@ void calculatePopulationSize(int startingSize, double birthRate, double deathRat
 	Main function of the program responsible for starting the loop that 
 	will run the program until the user decides to terminate it
 */
-int main(){
+int main(int argc, char *argv[]){
 
 	int startingSize;
 	double birthRate;

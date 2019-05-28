@@ -4,23 +4,21 @@
 #include <ctime>
 #include "ProductionWorker.h"
 
-using namespace std;
-
 int main() {
 
-    cout << "\nExceptions Project\n" << endl;
+    std::cout << "\nExceptions Project\n" << std::endl;
 
     ProductionWorker *productionWorker;
-    string choice;
+    std::string choice;
 
     while(choice!="no") {
 
-        cout << "\nRun driver code?(yes/no)" << endl;
-        getline(cin,choice);
+        std::cout << "\nRun driver code?(yes/no)" << std::endl;
+        std::getline(std::cin,choice);
 
         if(choice=="yes") {
-            string name = "Bryan Ayala";
-            string hireDate = "07/29/2008";
+            std::string name = "Bryan Ayala";
+            std::string hireDate = "07/29/2008";
             int id;
             int shift;
             double hourlyPay;
@@ -45,46 +43,46 @@ int main() {
                             } else if (k == 2) {
                                 hourlyPay = 14.50;
                             }
-                            cout << "\nData Entered:"
+                            std::cout << "\nData Entered:"
                                     "\nName: " << name <<
                                  "\nHire Date: " << hireDate <<
                                  "\nID: " << id <<
                                  "\nShift: " << shift <<
-                                 "\nHourly Pay: " << hourlyPay << endl;
+                                 "\nHourly Pay: " << hourlyPay << std::endl;
                             try {
                                 productionWorker = new ProductionWorker(name, id, hireDate, shift, hourlyPay);
                                 valid = true;
                             }
                             catch (Employee::InvalidEmployeeNumber) {
-                                cout << "Exception Caught: Invalid Employee Number" << endl;
+                                std::cout << "Exception Caught: Invalid Employee Number" << std::endl;
                             }
                             catch (ProductionWorker::InvalidShift) {
-                                cout << "Exception Caught: Invalid Shift" << endl;
+                                std::cout << "Exception Caught: Invalid Shift" << std::endl;
                             }
                             catch (ProductionWorker::InvalidPayRate) {
-                                cout << "Exception Caught: Invalid Pay Rate" << endl;
+                                std::cout << "Exception Caught: Invalid Pay Rate" << std::endl;
                             }
                         }
                     }
                 }
             }
 
-            cout << "\nEmployee Profile has been generated bellow:\n" << endl;
-            cout << "   Name: " << productionWorker->getName() << endl;
-            cout << "   Employee ID: " << productionWorker->getNumber() << endl;
-            cout << "   Hire Date: " << productionWorker->getHireDate() << endl;
+            std::cout << "\nEmployee Profile has been generated bellow:\n" << std::endl;
+            std::cout << "   Name: " << productionWorker->getName() << std::endl;
+            std::cout << "   Employee ID: " << productionWorker->getNumber() << std::endl;
+            std::cout << "   Hire Date: " << productionWorker->getHireDate() << std::endl;
             if (productionWorker->getShift() == 1)
-                cout << "   You have been assigned the day shift" << endl;
+                std::cout << "   You have been assigned the day shift" << std::endl;
             else
-                cout << "   You have been assigned the night shift" << endl;
-            cout << "   Your hourly pay will be $" << productionWorker->getHourlyPay() << endl;
+                std::cout << "   You have been assigned the night shift" << std::endl;
+            std::cout << "   Your hourly pay will be $" << productionWorker->getHourlyPay() << std::endl;
 
         }
         else if(choice=="no"){
-            cout << "\nThank you for using this program!" << endl;
+            std::cout << "\nThank you for using this program!" << std::endl;
         }
         else{
-            cout << "\nInvalid Input.Please Try Again." << endl;
+            std::cout << "\nInvalid Input.Please Try Again." << std::endl;
         }
     }
 

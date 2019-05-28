@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 class FloatArray{
 
 private:
@@ -56,7 +54,7 @@ public:
 
 
 
-int main() {
+int main(int argc, char *argv[]) {
 
     FloatArray list = FloatArray(5);
 
@@ -67,10 +65,10 @@ int main() {
     list.add(4,12.5);
 
     for(int i=0; i<5; ++i)
-        cout << "Element " << (i+1) <<": " << list.getNumber(i) << endl;
+        std::cout << "Element " << (i+1) <<": " << list.getNumber(i) << std::endl;
 
-    cout << "Highest Value:" << list.getHigestValue() << endl;
-    cout << "Lowest ValueL " << list.getLowestValue() << endl;
+    std::cout << "Highest Value:" << list.getHigestValue() << std::endl;
+    std::cout << "Lowest ValueL " << list.getLowestValue() << std::endl;
 
 
 

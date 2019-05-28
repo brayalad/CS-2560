@@ -17,6 +17,6 @@ void ParkingMeter::addTime(int addedTime) {
     parkedTime += addedTime;
 }
 
-int ParkingMeter::getParkedTime() {
+int ParkingMeter::getParkedTime() const{
     return parkedTime;
 }

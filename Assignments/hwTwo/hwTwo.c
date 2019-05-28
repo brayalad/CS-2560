@@ -44,7 +44,7 @@
  *	be 20 percent of the total after adding the tax. Display the meal cost, tax amount, tip
  *	amount, and coral bill on the screen.
  */
-void restaurantBill(){
+void restaurantBill(void){
 
 	printf("\nRestaurant Bill\n-------------------------------------------------------------------------------------------------------------\n");
 
@@ -77,7 +77,7 @@ void restaurantBill(){
  *		• The number of millimeters higher than the current level that t he ocean's level will
  *		be in 10 years.
  */
-void oceanLevels(){
+void oceanLevels(void){
 
 	printf("\nOcean Levels\n-------------------------------------------------------------------------------------------------------------\n");
 
@@ -143,7 +143,7 @@ void stockTransaction(){
  *	Write a program that uses a loop to display Pattern A bellow, followed by another loop
  *	that displays pattern B.
  */
-void patternDisplays(){
+void patternDisplays(void){
 
 	printf("\nPattern Displays\n-------------------------------------------------------------------------------------------------------------\n");
 
@@ -182,13 +182,15 @@ void patternDisplays(){
  * the input is an integer and if so then checks if it is a valid option.
  * @return ending execution code
  */
-int main(){
+int main(int argc, char *argv[])
+{
 
 	int booleanControl = -1; /**< variable used to keep the program while loop running */
 	int userInput; /**< The users input into the console */
 	char inputValidation; /**< variable where input is sent if it is not an integer */
 
-	while(booleanControl == -1){
+	while(booleanControl == -1)
+	{
 
 		printf("These are the available options:\n"
 				" 1. Restaurant Bill\n"

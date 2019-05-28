@@ -3,38 +3,36 @@
 #include <vector>
 #include "Prime.h"
 
-using namespace std;
-
-string getInput(){
-    string input;
-    getline(cin,input);
+std::string getInput(){
+    std::string input;
+    std::getline(std::cin,input);
     return input;
 }
 
-int main() {
+int main(int argc, char *argv[]) {
 
-    cout << "\nPrime Number Generation\n" << endl;
+    std::cout << "\nPrime Number Generation\n" << std::endl;
 
-    vector<int> prime;
+    std::vector<int> prime;
 
-    string choice;
+    std::string choice;
     while(choice!="no") {
 
-        cout << "\nDo you want to generate a list of Prime Numbers?(yes/no)" << endl;
+        std::cout << "\nDo you want to generate a list of Prime Numbers?(yes/no)" << std::endl;
         choice = getInput();
 
         if (choice == "yes") {
             int userNumber = 1;
             while (userNumber < 2) {
-                cout << "\nEnter Number for Prime Generator: ";
+                std::cout << "\nEnter Number for Prime Generator: ";
                 try {
                     userNumber = stoi(getInput());
                 }
-                catch (exception &e) {
+                catch (std::exception &e) {
                     userNumber = 1;
                 }
                 if (userNumber < 2) {
-                    cout << "Number must be greater than 2" << endl;
+                    std::cout << "Number must be greater than 2" << std::endl;
                 }
             }
 
@@ -43,17 +41,17 @@ int main() {
                 prime.push_back(count++);
             }
 
-            cout << "Prime Numbers between 2 and " << userNumber << ": ";
+            std::cout << "Prime Numbers between 2 and " << userNumber << ": ";
             for_each(prime.begin(), prime.end(), Prime());
-            cout << "\n";
+            std::cout << "\n";
             prime.clear();
 
         }
         else if(choice=="no"){
-            cout << "\nThank you for using this program!" << endl;
+            std::cout << "\nThank you for using this program!" << std::endl;
         }
         else{
-            cout << "\nInvalid Input. Please Try Again." << endl;
+            std::cout << "\nInvalid Input. Please Try Again." << std::endl;
         }
     }
 

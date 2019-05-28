@@ -3,7 +3,6 @@
 #include "GameOf21.h"
 #include "ParkingTicketSimulator.h"
 
-using namespace std;
 
 int main(int argc, char **argv){
 

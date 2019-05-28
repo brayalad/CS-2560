@@ -9,7 +9,6 @@
 #include "ParkedCar.h"
 #include "PoliceOfficer.h"
 
-using namespace std;
 
 class PoliceOfficer;
 
@@ -31,7 +30,7 @@ public:
     PoliceOfficer getPoliceOfficer();
     double getFine();
 
-    string getParkingTicket();
+    std::string getParkingTicket();
 
 };
 

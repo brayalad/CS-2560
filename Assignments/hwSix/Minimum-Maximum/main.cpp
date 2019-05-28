@@ -13,7 +13,7 @@ T const& minimum(T const& data1, T const& data2){
     return(data1 < data2)? data1:data2;
 }
 
-int main() {
+int main(int argc, char *argv[]) {
 
     cout << "\nMinimum/Maximum Templates\n" << endl;
 
